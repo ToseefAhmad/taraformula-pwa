@@ -1,0 +1,18 @@
+.root,
+.address {
+    composes: grid from global;
+    composes: text-base from global;
+    composes: leading-[22px] from global;
+    composes: gap-y-0 from global;
+    composes: pt-4 from global;
+}
+
+.address {
+    composes: pt-6 from global;
+    composes: lg_pt-5.5 from global;
+}
+
+.telephone {
+    composes: rtl_text-right from global;
+    direction: ltr;
+}

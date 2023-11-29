@@ -1,0 +1,43 @@
+.root {
+    composes: bg-neutral-100 from global;
+    composes: text-[14px] from global;
+    composes: py-1.5 from global;
+    composes: rtl_pt-2 from global;
+    composes: rtl_pb-1 from global;
+    composes: mb-5 from global;
+    composes: lg_px-2 from global;
+    composes: lg_flex from global;
+    composes: lg_justify-between from global;
+}
+.deliveryFrom {
+    composes: text-green-1 from global;
+    composes: leading-4 from global;
+    composes: pl-2.5 from global;
+    composes: lg_pl-0 from global;
+    composes: rtl_pl-0 from global;
+    composes: rtl_pr-2.5 from global;
+    composes: rtl_lg_pr-0 from global;
+}
+.deliveryFromLabel {
+    composes: inline-block from global;
+    composes: px-[3px] from global;
+}
+.deliveryTo {
+    composes: text-brown from global;
+    composes: leading-4 from global;
+    composes: pl-[42px] from global;
+    composes: lg_pl-0 from global;
+    composes: rtl_pl-0 from global;
+    composes: rtl_pr-[42px] from global;
+    composes: rtl_lg-pr-0 from global;
+}
+.iconWrapper {
+    composes: align-bottom from global;
+    composes: rtl_align-middle from global;
+    composes: inline-block from global;
+}
+.icon {
+    composes: mr-[8px] from global;
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-[8px] from global;
+}

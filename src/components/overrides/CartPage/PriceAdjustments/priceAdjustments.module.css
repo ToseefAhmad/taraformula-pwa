@@ -1,0 +1,61 @@
+.sectionTitle {
+    composes: text-base from global;
+
+    composes: lg_text-sm from global;
+}
+
+.sectionTitleContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: w-full from global;
+    composes: cursor-pointer from global;
+    composes: pt-[9px] from global;
+    composes: pr-4 from global;
+    composes: mt-[3px] from global;
+
+    /* Desktop */
+    composes: lg_pt-[7px] from global;
+    composes: lg_pb-[4px] from global;
+
+    composes: rtl_pr-0 from global;
+    composes: rtl_pl-4 from global;
+}
+
+.sectionContentsContainer {
+    composes: pt-1 from global;
+    composes: pb-5 from global;
+    composes: pb-[14px] from global;
+
+    /* Desktop */
+    composes: lg_pt-0 from global;
+}
+
+.sectionSubtitle {
+    composes: text-xxs from global;
+    composes: mt-[-4px] from global;
+
+    /* Desktop */
+    composes: lg_mt-[-3px] from global;
+}
+
+.sectionIcon {
+    composes: h-[16px] from global;
+    composes: stroke-current from global;
+    composes: text-green from global;
+    composes: mx-2.5 from global;
+
+    composes: ltr_ml_[9px] from global;
+    composes: rtl_mr-[9px] from global;
+}
+
+.sectionTitleWrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+}
+
+.accordionRoot {
+    @apply
+        border-b
+        border-[#D2CCCC];
+}

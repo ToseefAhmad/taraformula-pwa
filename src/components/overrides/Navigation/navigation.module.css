@@ -1,0 +1,127 @@
+/* animation helpers */
+
+.enter {
+    composes: duration-300 from global;
+    composes: ease-out from global;
+}
+
+.exit {
+    composes: duration-200 from global;
+    composes: ease-in from global;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* module */
+
+.root {
+    composes: exit hidden;
+    composes: bg-white from global;
+    composes: bottom-0 from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: left-0 from global;
+    composes: max-w-[375px] from global;
+    composes: overflow-hidden from global;
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: -translate-x-full from global;
+    transition-property: opacity, transform, visibility;
+    composes: w-full from global;
+    composes: z-3 from global;
+    composes: pt-[7px] from global;
+
+    /* RTL */
+    composes: rtl_translate-x-100vw from global;
+}
+
+.root_open {
+    composes: root enter visible;
+    box-shadow: 1px 0 rgb(var(--venia-global-color-border));
+    composes: translate-x-0 from global;
+    composes: h-screen from global;
+
+    /* RTL */
+    composes: rtl_translate-x-100vw-100% from global;
+}
+
+.header {
+    composes: content-center from global;
+    composes: bg-gray from global;
+    box-shadow: 0 1px rgb(var(--venia-global-color-border));
+    composes: grid from global;
+    composes: auto-cols-[3.5rem] from global;
+    composes: grid-flow-col from global;
+    composes: auto-rows-[3.5rem] from global;
+    grid-template-columns: 3.5rem 1fr 3.5rem;
+    composes: h-14 from global;
+    composes: relative from global;
+    composes: z-1 from global;
+}
+
+.body {
+    composes: exit visible;
+    composes: min-h-0 from global;
+    composes: overflow-auto from global;
+    composes: h-full from global;
+    composes: pb-24 from global;
+    transition-property: opacity, transform, visibility;
+}
+
+.body_masked {
+    composes: body enter hidden;
+}
+
+.switchers {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-between from global;
+    composes: bg-gray-20 from global;
+    composes: w-full from global;
+}
+
+@media (min-width: 641px) {
+    .switchers {
+        composes: hidden from global;
+    }
+}
+
+.modal {
+    composes: exit hidden;
+    composes: bg-white from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: overflow-auto from global;
+    composes: absolute from global;
+    composes: right-0 from global;
+    composes: top-14 from global;
+    composes: -translate-x-full from global;
+    transition-property: opacity, transform;
+}
+
+.modal_open {
+    composes: modal enter visible;
+    composes: translate-x-0 from global;
+}
+
+.customLink {
+    composes: border-green-90 from global;
+    composes: border-solid from global;
+    composes: border-b from global;
+    composes: items-center from global;
+    composes: flex from global;
+    composes: p-4 from global;
+    composes: pt-[17px] from global;
+}
+
+.customLinkContainer {
+    composes: w-full from global;
+}

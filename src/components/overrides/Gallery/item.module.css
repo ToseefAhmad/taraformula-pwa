@@ -1,0 +1,194 @@
+.root {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: h-full from global;
+    composes: content-between from global;
+    composes: content-start from global;
+    composes: pb-1.5 from global;
+
+    /* Desktop */
+    composes: lg_pb-9 from global;
+}
+
+.contentWrapper {
+    composes: w-full from global;
+}
+
+.actionWrapper {
+    composes: mt-1.5 from global;
+    composes: w-full from global;
+
+    /* Desktop */
+    composes: lg_mt_0 from global;
+}
+
+.images {
+    padding-bottom: unset !important;
+    grid-template-areas: 'main';
+    composes: grid from global;
+    composes: w-full from global;
+    composes: pb-1.5 from global;
+    composes: relative from global;
+
+    /* Desktop */
+    composes: lg_pb-3.5 from global;
+}
+
+.imageContainer {
+    grid-area: main;
+
+    composes: overflow-hidden from global;
+    composes: h-0 from global;
+    composes: pb-[86%] from global;
+}
+
+.imageContainer:hover .imageWithHover {
+    @apply lg_hidden;
+}
+
+.imageContainer:hover .hoverImage {
+    @apply lg_opacity-100;
+}
+
+.imageContainer:hover .image {
+    @apply lg_scale-110;
+}
+
+.image,
+.imageWithHover,
+.hoverImage {
+    composes: h-full from global;
+    composes: object-cover from global;
+    composes: w-full from global;
+}
+
+.imageWithHover,
+.hoverImage {
+    transition: opacity 512ms ease-out;
+}
+
+.image,
+.imageWithHover {
+    composes: block from global;
+}
+
+.image {
+    @apply lg_transition-transform;
+}
+
+.hoverImage {
+    composes: opacity-0 from global;
+}
+
+.imageLoaded {
+    composes: loaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-0 from global;
+}
+
+.placeholder {
+    composes: image;
+    background-color: rgb(var(--venia-global-color-gray));
+    composes: absolute from global;
+    composes: opacity-100 from global;
+}
+
+.actionsContainer {
+    composes: mt-2.5 from global;
+    composes: lg_mt-3 from global;
+}
+
+.actionsContainer:empty {
+    @apply hidden;
+}
+
+.nameWrapper {
+    composes: mt-[0.5rem] from global;
+    composes: block from global;
+    composes: w-full from global;
+}
+
+.type {
+    composes: lg_pr-1 from global;
+    composes: rtl_block from global;
+    composes: rtl_pr-0 from global;
+}
+
+.category {
+    composes: link from '@app/components/StyleGuide/elementsSection.module.css';
+    composes: text-xs from global;
+    composes: block from global;
+    composes: uppercase from global;
+    composes: font-bold from global;
+    composes: border-b-1 from global;
+    composes: border-transparent from global;
+    composes: pb-0 from global;
+    composes: w-max from global;
+
+    /* Override inline styles */
+    @apply mb-[2px]
+        text-xs
+        text-green !important;
+
+    /* RTL */
+    @apply
+        rtl_ml-auto
+        rtl_font-arabicText
+        rtl_text-right;
+}
+
+.category:hover {
+    @apply lg_border-green;
+}
+
+.categoryTitle {
+    composes: category;
+    composes: border-b-0 from global;
+}
+
+.name {
+    composes: block from global;
+    composes: lg_contents from global;
+}
+
+.name span {
+    @apply
+        lg_border-b-2
+        lg_border-solid
+        lg_border-transparent
+        lg_hover_border-green;
+}
+
+.price {
+    composes: lg_mt-1.5 from global;
+}
+
+.price,
+.type {
+    composes: font-bold from global;
+}
+
+.type,
+.name,
+.price {
+    composes: text-sm from global;
+    composes: leading-4 from global;
+}
+
+.unavailableContainer {
+    composes: items-center from global;
+    composes: grid from global;
+    composes: justify-start from global;
+    composes: w-100 from global;
+    composes: p-3 from global;
+    composes: grid-flow-col from global;
+    composes: gap-2 from global;
+    composes: italic from global;
+    background-color: rgb(var(--venia-global-color-gray));
+    color: rgb(var(--venia-global-color-gray-700));
+    font-size: var(--venia-global-fontSize-100);
+}

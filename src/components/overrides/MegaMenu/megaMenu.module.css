@@ -1,0 +1,51 @@
+.megaMenu {
+    composes: col-end-8 from global;
+    composes: col-start-2 from global;
+    composes: flex-grow from global;
+    composes: hidden from global;
+
+    @apply 2xl_pl-[61px];
+
+    /* RTL */
+    @apply 1.5xl_rtl_pl-0
+        1.5xl_rtl_pr-[61px];
+
+    /* Desktop screen */
+    composes: xl_flex from global;
+
+    /* responsive gap */
+    @apply xl_gap-[calc(((100vw-1280px)*32)/(1441-1280))]
+        2xl_gap-8;
+}
+
+.megaMenu:last-child {
+    @apply mr-8
+        rtl_mr-0
+        rtl_ml-8;
+}
+
+.megaMenuCompact {
+    composes: megaMenu;
+    composes: gap-0 from global;
+    composes: justify-between from global;
+}
+
+.shimmerWrapper {
+    composes: px-[11px] from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+
+    @apply 1.5xl_min-w-26;
+}
+
+.overflowElement {
+    composes: megaMenu;
+    composes: block from global;
+    composes: h-0 from global;
+    composes: overflow-hidden from global;
+    composes: invisible from global;
+    composes: w-[fit-content] from global;
+    composes: row-start-2 from global;
+}

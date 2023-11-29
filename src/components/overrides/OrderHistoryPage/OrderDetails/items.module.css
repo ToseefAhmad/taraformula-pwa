@@ -1,0 +1,44 @@
+.root {
+    composes: w-full from global;
+    composes: mt-6 from global;
+}
+
+.heading {
+    composes: p-2 from global;
+    composes: pb-0 from global;
+    composes: uppercase from global;
+    composes: font-normal from global;
+    composes: text-pastelBrown from global;
+}
+
+.items {
+    composes: heading;
+    composes: text-left from global;
+    composes: rtl_text-right from global;
+}
+
+.qty {
+    composes: heading;
+    composes: text-left from global;
+    composes: rtl_text-right from global;
+    composes: w-[10%] from global;
+}
+
+.price {
+    composes: heading;
+    composes: text-right from global;
+    composes: rtl_text-left from global;
+    composes: w-[21%] from global;
+}
+
+th:first-child,
+td:first-child {
+    @apply ltr_pl-0
+        rtl_pr-0;
+}
+
+th:last-child,
+td:last-child {
+    @apply ltr_pr-0
+        rtl_pl-0;
+}

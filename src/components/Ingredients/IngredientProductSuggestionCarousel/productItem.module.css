@@ -1,0 +1,59 @@
+.root {
+    composes: root from '~@app/components/overrides/Gallery/item.module.css';
+
+    @apply lg_pb-6;
+}
+
+.imageContainer {
+    composes: imageContainer from '~@app/components/overrides/Gallery/item.module.css';
+
+    @apply
+        pb-[87%]
+        lg_pb-[89%];
+}
+
+.imageWithHover {
+    composes: imageWithHover from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageContainer:hover .imageWithHover {
+    @apply lg_hidden;
+}
+
+.imageContainer:hover .image {
+    @apply
+        lg_scale-110
+        lg_opacity-100;
+}
+
+.image {
+    composes: lg_transition-transform from global;
+}
+
+.images {
+    composes: images from '~@app/components/overrides/Gallery/item.module.css';
+
+    @apply
+        pb-[0.27rem]
+        lg_pb-[0.6rem];
+}
+
+.titleWrapper {
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+}
+
+.titleWrapper span {
+    @apply lg_text-base lg_border-b-2 lg_border-transparent;
+}
+
+.titleWrapper:hover span {
+    @apply lg_border-green;
+}
+
+.influenceType {
+    composes: font-bold from global;
+    composes: pr-[3px] from global;
+    composes: rtl_pl-[3px] from global;
+    composes: rtl_pr-0 from global;
+}

@@ -1,0 +1,68 @@
+.counter {
+    composes: absolute from global;
+    composes: top-1.5 from global;
+    composes: left-4 from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: leading-none from global;
+    composes: bg-[#F2EBE9] from global;
+    composes: font-bold from global;
+    composes: text-[8px] from global;
+    composes: text-brown from global;
+    composes: h-3 from global;
+    composes: min-w-3 from global;
+    composes: rounded-full from global;
+    composes: px-[2px] from global;
+
+    composes: xl_left-2 from global;
+
+    /* RTL */
+    composes: rtl_left-auto from global;
+    composes: rtl_right-5 from global;
+    composes: rtl_xl_left-auto from global;
+    composes: rtl_xl_right-[0.9rem] from global;
+    composes: rtl_font-sans from global;
+}
+
+.trigger {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: relative from global;
+
+    /* Desktop screen */
+    composes: xl_translate-y-[-2px] from global;
+    composes: xl_w-[19px] from global;
+}
+
+.trigger:hover path {
+    @apply lg_stroke-2;
+}
+
+.triggerContainer {
+    composes: hidden from global;
+
+    /* Desktop screen */
+    composes: xl_grid from global;
+}
+
+.triggerContainer_open {
+    composes: triggerContainer;
+}
+
+.link {
+    composes: trigger;
+
+    composes: flex from global;
+
+    /* Desktop screen */
+    composes: xl_hidden from global;
+}
+
+.icon {
+    composes: text-green from global;
+}
+
+.icon_empty {
+    composes: text-[#806958] from global;
+}

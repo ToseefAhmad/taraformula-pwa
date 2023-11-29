@@ -1,0 +1,99 @@
+.root {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: gap-2.5 from global;
+    composes: mb-9 from global;
+}
+
+@media screen and (min-width: 532px) {
+    .root {
+        @apply grid-cols-3;
+    }
+}
+
+@media screen and (min-width: 702px) {
+    .root {
+        @apply grid-cols-4;
+    }
+}
+
+.productRoot {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: h-full from global;
+    composes: content-between from global;
+    composes: content-start from global;
+    composes: pb-1.5 from global;
+}
+
+.productType {
+    composes: text-sm from global;
+    composes: text-green from global;
+    composes: leading-[16px] from global;
+    composes: font-bold from global;
+    composes: tracking-normal from global;
+    composes: block from global;
+
+    composes: lg_pr-1 from global;
+    composes: lg_text-base from global;
+
+    composes: rtl_block from global;
+    composes: rtl_pr-0 from global;
+}
+
+.productName {
+    composes: block from global;
+    composes: text-sm from global;
+    composes: leading-[16px] from global;
+
+    composes: lg_text-base from global;
+}
+
+.productName span {
+    @apply
+        lg_border-b-2
+        lg_border-solid
+        lg_border-transparent
+        lg_hover_border-green;
+}
+
+.productPrice {
+    composes: font-bold from global;
+    composes: text-sm from global;
+    composes: leading-4 from global;
+
+    composes: lg_text-base from global;
+}
+
+.productImages {
+    composes: relative from global;
+    grid-template-areas: 'main';
+    composes: grid from global;
+    composes: pb-0 from global;
+    composes: mb-2 from global;
+
+    composes: lg_pb-0 from global;
+}
+
+.productActionWrapper {
+    composes: mt-1.5 from global;
+    composes: w-full from global;
+
+    composes: lg_mt-0.5 from global;
+}
+
+.productActionsContainer {
+    composes: mt-2 from global;
+
+    composes: lg_mt-2.5 from global;
+}
+
+.productActionsContainer :global([class^='addToCartButton-root']) {
+    @apply text-left;
+    @apply rtl_text-right;
+}
+
+.productActionsContainer :global([class^='button-content']) {
+    @apply text-sm;
+    @apply lg_text-base;
+}

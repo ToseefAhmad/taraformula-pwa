@@ -1,0 +1,124 @@
+.defaultTitleShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: mb-6 from global;
+}
+
+.additionalTitleShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: mb-6 from global;
+    composes: mt-12 from global;
+    composes: lg_mt-13 from global;
+}
+
+.addAddressShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[60px] from global;
+    composes: sm_h-[290px] from global;
+    composes: mt-[-40px] from global;
+    composes: sm_mt-0 from global;
+}
+
+.addressCardShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: border-0 from global;
+    composes: h-[221px] from global;
+    composes: sm_h-[290px] from global;
+}
+
+.header {
+    composes: hidden from global;
+    composes: sm_flex from global;
+    composes: justify-between from global;
+    composes: items-end from global;
+    composes: sm_mt-[-0.75rem] from global;
+    composes: lg_mt-0 from global;
+}
+
+.title {
+    composes: mb-6 from global;
+    composes: tracking-normal from global;
+    composes: lg_leading-9 from global;
+}
+
+.additionalTitle {
+    composes: sm_mb-6 from global;
+    composes: tracking-normal from global;
+    composes: lg_leading-9 from global;
+    composes: mt-12 from global;
+    composes: lg_mt-13 from global;
+}
+
+.addButtonLink {
+    composes: uppercase from global;
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: font-bold from global;
+    composes: h-min from global;
+    composes: mb-5 from global;
+    composes: pb-1 from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+
+    composes: hover_border-b-2 from global;
+    composes: hover_mb-4.5 from global;
+}
+
+.cardsContainer {
+    composes: grid from global;
+    composes: sm_gap-5 from global;
+    composes: lg_gap-6.5 from global;
+    composes: auto-rows-min from global;
+    composes: md_auto-rows-fr from global;
+    composes: grid-cols-1 from global;
+    composes: md_grid-cols-2 from global;
+}
+
+.content {
+    composes: cardsContainer;
+    composes: gap-12.5 from global;
+}
+
+.additionalContent {
+    composes: cardsContainer;
+    composes: gap-[17px] from global;
+}
+
+.addButton {
+    composes: root_primary_solid from '@app/components/overrides/Button/button.module.css';
+    composes: sm_h-full from global;
+    composes: mt-[-40px] from global;
+    composes: sm_mt-0 from global;
+    composes: md_font-base from global;
+    composes: md_font-bold from global;
+    composes: md_text-green from global;
+    composes: md_flex from global;
+    composes: md_flex-row from global;
+    composes: md_justify-center from global;
+    composes: md_items-center from global;
+    composes: md_border from global;
+    composes: md_border-solid from global;
+    composes: md_border-green from global;
+    composes: md_bg-almostWhite from global;
+
+    composes: hover_sm_border-2 from global;
+    composes: hover_sm_bg-almostWhite from global;
+
+    composes: focus_sm_border-2 from global;
+    composes: focus_sm_bg-almostWhite from global;
+}
+
+.addButton span:only-child {
+    @apply grid-flow-row;
+}
+
+.addButtonIcon {
+    composes: hidden from global;
+    composes: md_flex from global;
+    composes: self-center from global;
+}
+
+.addButtonContent {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: md_gap-4.5 from global;
+}

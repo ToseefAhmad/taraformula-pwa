@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default 1`] = `
+<form
+  onKeyDown={[Function]}
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <form
+    onKeyDown={[Function]}
+    onReset={[Function]}
+    onSubmit={[Function]}
+  >
+    <h3>
+      test
+    </h3>
+    <RichContent
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+      html="test"
+    />
+    <AccountCheckbox
+      index={0}
+      item={
+        Object {
+          "actionCode": "test",
+          "content": "test",
+          "hidePassword": false,
+          "title": "test",
+        }
+      }
+    />
+    <PasswordField
+      index={0}
+      isShowPassword={false}
+      item={
+        Object {
+          "actionCode": "test",
+          "content": "test",
+          "hidePassword": false,
+          "title": "test",
+        }
+      }
+      name="passwordtest"
+    />
+    <FormError
+      scrollOnError={false}
+    />
+    <SuccessMessage />
+  </form>
+</form>
+`;
+
+exports[`renders with checkboxes 1`] = `
+<form
+  onKeyDown={[Function]}
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <h3>
+    test
+  </h3>
+  <RichContent
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    html="test"
+  />
+  <AccountCheckbox
+    index={0}
+    item={
+      Object {
+        "actionCode": "given_consents",
+        "content": "test",
+        "hidePassword": false,
+        "title": "test",
+      }
+    }
+  />
+  <PasswordField
+    index={0}
+    isShowPassword={false}
+    item={
+      Object {
+        "actionCode": "given_consents",
+        "content": "test",
+        "hidePassword": false,
+        "title": "test",
+      }
+    }
+    name="passwordgiven_consents"
+  />
+  <AmCheckbox
+    isAccountSettingsPage={true}
+    location="privacy_settings"
+  />
+  <FormError
+    scrollOnError={false}
+  />
+  <SuccessMessage />
+</form>
+`;

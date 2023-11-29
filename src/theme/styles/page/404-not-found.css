@@ -1,0 +1,54 @@
+[class*='no-route'][class*='page_wrapper'] {
+    @apply grid-cols-1 py-0;
+}
+
+[class*='no-route'] [class*='cms-sidebar'] {
+    @apply hidden !important;
+}
+
+[class*='no-route'] [class*='cms-content'] {
+    @apply py-0 my-0;
+}
+
+.not-found-main {
+    @apply flex
+        justify-center
+        lg_mt-[88px]
+        mt-5
+        mb-10
+        lg_mb-[73px]
+        py-0;
+}
+
+.not-found-main > * > * {
+    @apply self-center px-0;
+}
+
+.not-found-main h1 {
+    @apply lg_mb-[39px]
+        mb-[18px]
+        text-center
+        leading-8
+        px-[90px];
+}
+.not-found-main p {
+    @apply lg_mb-15
+        mb-[33px]
+        text-center
+        lg_text-base
+        text-sm;
+}
+
+.not-found-button div {
+    @apply m-0 !important;
+}
+
+.not-found-main button {
+    @apply w-[326px]
+        lg_w-[306px]
+        h-15
+        bg-white
+        text-green
+        betterHover_hover_text-white
+        betterHover_hover_bg-green;
+}

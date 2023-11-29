@@ -1,0 +1,8 @@
+.root {
+    composes: flex from global;
+}
+
+.root :global .slick-slide {
+    /* slide always visible */
+    @apply visible !important;
+}

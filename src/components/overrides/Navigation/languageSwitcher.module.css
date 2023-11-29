@@ -1,0 +1,46 @@
+.dropdownMenu {
+    composes: max-h-[205px] from global;
+    composes: overflow-auto from global;
+    composes: relative from global;
+    composes: my-0 from global;
+
+    /* RTL */
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-[30px] from global;
+}
+
+.dropdownMenuItem {
+    composes: text-[14px] from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: uppercase from global;
+    composes: text-pastelBrown from global;
+}
+
+.dropdownMenuItem:first-child button {
+    @apply pt-0;
+}
+
+.dropdownMenuItem:last-child button {
+    @apply pb-4;
+}
+
+.dropdownTriggerOpen {
+    composes: trigger from './navigationItemDropdown.module.css';
+    composes: font-bold from global;
+    composes: pb-2 from global;
+}
+
+.dropdownTriggerOpen:focus {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.trigger {
+    composes: root from './navigationItemDropdown.module.css';
+    composes: trigger from './navigationItemDropdown.module.css';
+}
+
+.trigger button {
+    @apply px-0
+        py-0;
+}

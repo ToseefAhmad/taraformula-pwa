@@ -1,0 +1,34 @@
+.terms-and-conditions .paragraph {
+    @apply lg_max-w-[662px];
+}
+
+.terms-and-conditions .paragraph:last-child {
+    @apply mb-[-20px];
+}
+
+.terms-and-conditions p {
+    @apply mb-[20px]
+        leading-[20px];
+}
+
+.terms-and-conditions h5 {
+    @apply lg_max-w-[662px]
+        font-sans
+        font-bold
+        text-base
+        mt-[20px]
+        lg_mt-[30px]
+        mb-[15px]
+        lg_mb-[7px];
+}
+
+.terms-and-conditions .caption {
+    @apply lg_max-w-[662px]
+        font-sans
+        font-bold
+        text-base
+        mt-[20px]
+        lg_mt-[30px]
+        mb-[15px]
+        lg_mb-[7px];
+}

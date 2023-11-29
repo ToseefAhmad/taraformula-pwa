@@ -1,0 +1,9 @@
+.title {
+    composes: items-center from global;
+    composes: inline-flex from global;
+    composes: text-[1rem] from global;
+    composes: font-normal from global;
+    composes: p-0 from global;
+    composes: py-2 from global;
+    composes: capitalize from global;
+}

@@ -1,0 +1,27 @@
+.closeIcon {
+    composes: absolute from global;
+    composes: right-[20px] from global;
+}
+
+.iconClose {
+    composes: w-[30px] from global;
+    composes: h-[30px] from global;
+    composes: mt-[10px] from global;
+}
+
+.iconBack {
+    composes: w-[50px] from global;
+    composes: h-[50px] from global;
+}
+
+.backIcon {
+    composes: rtl_left-[20px] from global;
+    composes: absolute from global;
+    composes: rtl_left-[10px] from global;
+    composes: rtl_transform from global;
+    composes: rtl_rotate-[180deg] from global;
+}
+
+.actionContainer {
+    composes: h-[60px] from global;
+}

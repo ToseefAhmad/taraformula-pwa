@@ -1,0 +1,138 @@
+.root {
+    composes: border-b from global;
+    composes: border-solid from global;
+    composes: border-green-20 from global;
+
+    composes: grid from global;
+    composes: grid-cols-orders-table from global;
+    composes: xs_grid-cols-orders-table-xs from global;
+    composes: sm_grid-cols-orders-table-sm from global;
+    composes: md_grid-cols-orders-table-md from global;
+    composes: lg_grid-cols-orders-table-lg from global;
+    composes: xl_grid-cols-orders-table-xl from global;
+}
+
+.shimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: mb-px from global;
+}
+
+.cell {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: p-1 from global;
+    composes: min-h-[47px] from global;
+    composes: break-words from global;
+}
+
+.orderNumber,
+.orderDate,
+.orderShipTo,
+.orderTotal,
+.orderStatus,
+.reOrder,
+.viewOrder {
+    composes: cell;
+}
+
+.orderNumber,
+.orderDate,
+.orderTotal {
+    composes: break-all from global;
+}
+
+.orderNumber {
+    composes: ltr_pl-6 from global;
+
+    composes: rtl_pr-6 from global;
+}
+
+.orderShipTo {
+    composes: hidden from global;
+    composes: xl_flex from global;
+}
+
+.orderTotal {
+    composes: hidden from global;
+    composes: xs_flex from global;
+    composes: sm_hidden from global;
+    composes: md_flex from global;
+}
+
+.reOrder,
+.viewOrder {
+    composes: justify-end from global;
+}
+
+.reOrder {
+    composes: hidden from global;
+    composes: xs_flex from global;
+}
+
+.viewOrder {
+    composes: ltr_pr-[15px] from global;
+    composes: ltr_lg_pr-6 from global;
+
+    composes: rtl_pl-[15px] from global;
+    composes: rtl_lg_pl-0 from global;
+}
+
+.cell:first-child {
+    @apply ltr_pl-[15px]
+        ltr_lg_pl-6;
+    @apply rtl_pr-[15px]
+        rtl_lg_pr-6;
+}
+
+.label {
+    composes: text-xs from global;
+    composes: leading-normal from global;
+}
+
+.value {
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+}
+
+.orderNumberLabel,
+.orderDateLabel,
+.orderTotalLabel,
+.orderStatusLabel {
+    composes: label;
+}
+
+.content {
+    composes: border-t-2 from global;
+    composes: border-b from global;
+    composes: border-solid from global;
+    composes: border-default from global;
+    composes: col-span-7 from global;
+    composes: p-[15px] from global;
+    composes: lg_p-6 from global;
+    composes: border-[#023527] from global;
+    composes: bg-[#CAC3C3] from global;
+    composes: bg-opacity-10 from global;
+}
+
+.contentCollapsed {
+    composes: hidden from global;
+}
+
+.reorderButton {
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: underline from global;
+
+    composes: lg_hover_text-red from global;
+    composes: focus-visible_outline-none from global;
+}
+
+.openedOrderText {
+    composes: text-red from global;
+    composes: underline from global;
+    composes: decoration-red from global;
+}
+
+.viewOrderButton {
+    composes: reorderButton;
+}

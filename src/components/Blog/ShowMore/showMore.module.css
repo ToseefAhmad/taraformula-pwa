@@ -1,0 +1,23 @@
+.pagination {
+    composes: pb-14 from global;
+    composes: lg_pr-7 from global;
+    composes: lg_pb-[74px] from global;
+    composes: lg_mt-[27px] from global;
+    composes: text-center from global;
+}
+
+.pagination button {
+    @apply lg_py-5
+        max-w-[250px]
+        rtl_lg_ml-[30px]
+        ltr_lg_max-w-[390px];
+}
+
+.pagination button span {
+    @apply lg_leading-6
+        lg_p-px;
+}
+
+.showMorePlaceHolder {
+    composes: pb-2 from global;
+}

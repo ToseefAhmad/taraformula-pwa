@@ -1,0 +1,30 @@
+.root {
+    composes: container-fluid from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: bg-green from global;
+    composes: text-center from global;
+    composes: min-h-5.5 from global;
+    composes: py-[2px] from global;
+}
+
+.topBarContent {
+    composes: font-sans from global;
+}
+
+.topBarContent p {
+    @apply font-sans
+        font-bold
+        text-white
+        text-xs
+        m-0;
+
+    /* Desktop screen */
+    @apply xl_text-[14px];
+}
+
+.topBarShimmer {
+    composes: w-full from global;
+    composes: h-[22px] from global;
+}

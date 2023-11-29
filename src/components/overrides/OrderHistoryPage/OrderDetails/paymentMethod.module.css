@@ -1,0 +1,9 @@
+.root {
+    composes: grid from global;
+    composes: grid-1.5 from global;
+}
+
+.heading {
+    composes: uppercase from global;
+    composes: text-pastelBrown from global;
+}

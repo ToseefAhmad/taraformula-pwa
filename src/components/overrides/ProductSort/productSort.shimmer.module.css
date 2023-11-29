@@ -1,0 +1,7 @@
+.root {
+    composes: root from './productSort.module.css';
+}
+
+.sortButtonShimmerWrapper {
+    composes: sortButton from './productSort.module.css';
+}

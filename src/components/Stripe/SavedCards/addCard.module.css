@@ -1,0 +1,25 @@
+.root {
+    composes: max-w-[631px] from global;
+    composes: mx-auto from global;
+    composes: grid from global;
+    composes: gap-7.5 from global;
+}
+
+.title {
+    composes: hidden from global;
+    composes: sm_block from global;
+}
+
+.actions {
+    composes: block from global;
+    composes: xs_flex from global;
+    composes: justify-center from global;
+    composes: space-y-2.5 from global;
+    composes: xs_space-y-0 from global;
+    composes: xs_space-x-2.5 from global;
+    composes: sm_mt-7 from global;
+}
+
+.actions button {
+    @apply xs_max-w-[310px];
+}

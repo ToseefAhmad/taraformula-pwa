@@ -1,0 +1,39 @@
+.root {
+    composes: items-stretch from global;
+    composes: bg-white from global;
+    composes: grid from global;
+    composes: gap-3 from global;
+    composes: grid-flow-col from global;
+    composes: h-12.5 from global;
+    composes: border-b from global;
+    composes: border-default from global;
+}
+
+.wrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+}
+
+.accountButton {
+    composes: w-full from global;
+}
+
+.signOutButton {
+    composes: flex-shrink-0 from global;
+}
+
+.contents {
+    composes: items-center from global;
+    composes: grid from global;
+    composes: auto-flow-col from global;
+    composes: grid-col-1 from global;
+    composes: justify-items-start from global;
+    composes: px-4 from global;
+    composes: uppercase from global;
+    composes: text-ss from global;
+}
+
+.signOut {
+    composes: contents;
+    composes: capitalize from global;
+}

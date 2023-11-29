@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default successMessage 1`] = `
+<p>
+  test
+</p>
+`;
+
+exports[`renders no message 1`] = `null`;

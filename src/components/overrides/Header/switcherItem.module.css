@@ -1,0 +1,26 @@
+.root {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: w-full from global;
+    composes: text-[14px] from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: uppercase from global;
+    composes: text-pastelBrown from global;
+    composes: justify-between from global;
+    composes: text-left from global;
+    composes: px-2 from global;
+    composes: py-4 from global;
+}
+
+.title {
+    composes: fontBold-width-fix from global;
+    composes: ltr_tracking-normal from global;
+    composes: rtl_text-right from global;
+}
+
+.arabicTitle {
+    composes: title;
+    composes: font-arabicText from global;
+    composes: lg_mt-[3px] from global;
+}

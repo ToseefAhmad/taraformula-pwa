@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders no checkbox 1`] = `null`;
+
+exports[`renders versionChanged false 1`] = `
+<div>
+  <Checkbox
+    field="privacy.checkbox0"
+    label="test"
+    validate={[Function]}
+    validateOnBlur={true}
+  />
+</div>
+`;

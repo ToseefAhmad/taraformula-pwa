@@ -1,0 +1,163 @@
+.relatedProductsShimmer {
+    composes: pt-[10px] from global;
+    composes: pb-[52px] from global;
+    composes: lg_w-[39%] from global;
+    composes: lg_pt-[12px] from global;
+    composes: lg_pb-[8rem] from global;
+}
+
+.discoverProductsShimmer {
+    composes: pt-[10px] from global;
+    composes: pb-[52px] from global;
+    composes: lg_w-[50%] from global;
+    composes: lg_pt-[12px] from global;
+    composes: lg_pb-[8rem] from global;
+}
+
+.relatedProductsShimmerTitle {
+    composes: h-[23px] from global;
+    composes: w-[40%] from global;
+    composes: lg_h-[24px] from global;
+    composes: lg_mb-[12px] from global;
+}
+
+.relatedProductsShimmerProductTitle {
+    composes: mt-[8px] from global;
+    composes: h-[23px] from global;
+    composes: lg_h-[24px] from global;
+}
+
+.relatedProductsShimmerSlider {
+    composes: flex from global;
+    composes: space-x-[10px] from global;
+    composes: lg_space-x-[13px] from global;
+    composes: rtl_space-x-reverse from global;
+    composes: rtl_lg_space-x-reverse from global;
+}
+
+.relatedProductsShimmerContainer {
+    composes: mt-[7px] from global;
+    composes: mb-[7px] from global;
+    composes: w-1/2 from global;
+    composes: sm_w-1/3 from global;
+    composes: lg_w-1/2 from global;
+}
+
+.relatedProductsShimmerImage {
+    composes: h-full from global;
+}
+
+.relatedProductsShimmerImage [class*='shimmer-root'],
+.relatedProductsShimmerImageLoaded [class*='shimmer-root'] {
+    @apply pb-[64%] md_pb-[71%];
+}
+
+.discoverProductsShimmer .relatedProductsShimmerImage [class*='shimmer-root'],
+.discoverProductsShimmer .relatedProductsShimmerImageLoaded [class*='shimmer-root'] {
+    @apply pb-[47%] md_pb-[55%];
+}
+
+.suggestionBlocks {
+    composes: lg_flex from global;
+    composes: justify-between from global;
+}
+
+.relatedProductsShimmerButton {
+    composes: h-[60px] from global;
+    composes: mt-[5.3rem] from global;
+    composes: md_mt-[5.4rem] from global;
+    composes: md_w-[68%] from global;
+    composes: lg_w-full from global;
+}
+
+.ingredientDetailsShimmer {
+    composes: pt-[30px] from global;
+    composes: pb-[10px] from global;
+    composes: lg_pt-[39px] from global;
+    composes: lg_pb-[2.5rem] from global;
+}
+
+.ingredientDetailsShimmerBigImage {
+    composes: hidden from global;
+    composes: md_block from global;
+    composes: md_relative from global;
+    composes: md_w-full from global;
+}
+
+.ingredientDetailsShimmerBigImage [class*='shimmer-root'] {
+    @apply md_pb-[70%];
+}
+
+.ingredientDetailsShimmerSmallImage {
+    composes: md_hidden from global;
+    composes: mt-[1.5rem] from global;
+    composes: lg_mt-4 from global;
+}
+
+.ingredientDetailsShimmerSmallImage [class*='shimmer-root'] {
+    @apply pb-[70%];
+}
+
+.ingredientDetailsShimmerTop {
+    composes: md_flex from global;
+    composes: md_justify-between from global;
+}
+
+.ingredientDetailsShimmerRight {
+    composes: md_w-[49.5%] from global;
+    composes: md_mt-[20px] from global;
+}
+
+.ingredientDetailsShimmerLeft {
+    composes: md_w-[40%] from global;
+}
+
+.ingredientDetailsShimmerTitle {
+    composes: h-[34px] from global;
+    composes: lg_h-[72px] from global;
+    composes: mb-6 from global;
+    composes: w-1/2 from global;
+}
+
+.ingredientDetailsShimmerFlexItem {
+    composes: flex from global;
+    composes: flex-row from global;
+    composes: md_flex-col from global;
+}
+
+.ingredientDetailsShimmerKnown {
+    composes: w-1/6 from global;
+    composes: h-[15px] from global;
+    composes: lg_h-[18px] from global;
+    composes: md_mb-[4px] from global;
+}
+
+.ingredientDetailsShimmerValue {
+    composes: w-5/12 from global;
+    composes: h-[15px] from global;
+    composes: lg_h-[18px] from global;
+}
+
+.ingredientDetailsShimmerPTitle {
+    composes: w-3/6 from global;
+    composes: h-[26px] from global;
+    composes: mt-[1.5rem] from global;
+    composes: mb-[0.7rem] from global;
+    composes: lg_h-[30px] from global;
+    composes: lg_mt-[3.2rem] from global;
+    composes: lg_mb-4 from global;
+}
+
+.bottomBlockText .ingredientDetailsShimmerPTitle {
+    @apply
+        md_w-1/5
+        md_mt-0;
+}
+
+.bottomBlockText .ingredientDetailsShimmerText {
+    @apply md_w-3/5;
+}
+
+.referenceBlock {
+    @apply md_w-[40%];
+}

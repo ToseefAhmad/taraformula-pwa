@@ -1,0 +1,157 @@
+.root {
+    composes: bg-brown-20 from global;
+    animation: change-background-color 3s linear;
+}
+
+.postPage {
+    composes: lg_bg-gray-20 from global;
+    composes: bg-gray-40 from global;
+}
+
+.container {
+    composes: max-w-[1440px] from global;
+    composes: xl_mx-auto from global;
+}
+
+.featuredPosts {
+    composes: pt-[55px] from global;
+    composes: lg_pt-5 from global;
+}
+
+.heroPost {
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: lg_grid from global;
+    composes: lg_grid-cols-2 from global;
+}
+
+.images {
+    composes: block from global;
+    composes: mb-8 from global;
+    composes: overflow-hidden from global;
+    composes: min-h-[228px] from global;
+    composes: max-h-[228px] from global;
+    composes: lg_min-h-[450px] from global;
+    composes: lg_max-h-[450px] from global;
+}
+
+.imagesBlock {
+    composes: overflow-hidden from global;
+    composes: max-w-[703px] from global;
+    composes: mx-auto from global;
+    composes: lg_mx-0 from global;
+}
+
+.imagesLoading {
+    composes: images;
+    composes: w-full from global;
+}
+
+.images img {
+    @apply max-h-[228px]
+        min-h-[228px]
+        object-cover
+        lg_min-h-[450px]
+        lg_max-h-[450px]
+        mx-auto
+        lg_hover_scale-110
+        lg_transition-transform
+        lg_m-0;
+}
+
+.heroPostContent {
+    composes: justify-self-center from global;
+    composes: text-center from global;
+    composes: max-w-[500px] from global;
+    composes: mx-[40px] from global;
+    composes: my-[34px] from global;
+
+    composes: sm_mx-auto from global;
+
+    composes: lg_m-5 from global;
+
+    composes: xl_mt-0 from global;
+    composes: xl_mb-5 from global;
+    composes: xl_mr-20 from global;
+    composes: xl_ml-0 from global;
+}
+
+.heroPostContent .title {
+    @apply lg_hover_underline
+        lg_transition-transform;
+}
+
+.heroPostContentLoading {
+    composes: heroPostContent;
+    composes: w-full from global;
+    composes: mx-0 from global;
+}
+
+.date {
+    composes: text-sm from global;
+    composes: font-bold from global;
+    composes: leading-4	from global;
+}
+
+.title {
+    composes: mt-[-5px] from global;
+    composes: lg_mt-0 from global;
+}
+
+.content {
+    composes: mt-[10px] from global;
+    composes: text-sm from global;
+    composes: leading-4	from global;
+    composes: lg_text-[18px] from global;
+    composes: lg_mt-[14px] from global;
+    composes: lg_leading-[22px] from global;
+}
+
+.tags {
+    composes: mt-[10px] from global;
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: justify-center from global;
+}
+
+.tagsItem {
+    composes: text-xs from global;
+    composes: rounded-xl from global;
+    composes: border from global;
+    composes: px-[10px] from global;
+    composes: py-0 from global;
+    composes: ml-[5px] from global;
+    composes: lg_hover_bg-green from global;
+    composes: mt-[5px] from global;
+
+    @apply font-sans !important; /* In latin, so preserve latin typeface */
+}
+
+.tagsItem:hover span {
+    @apply lg_text-white;
+}
+
+.heading {
+    composes: text-center from global;
+    composes: py-10 from global;
+}
+
+.customTags {
+    composes: mt-[3px] from global;
+}
+
+@keyframes change-background-color {
+    0% {
+        @apply bg-white;
+    }
+    50% {
+        @apply bg-brown-10;
+    }
+    100% {
+        @apply bg-brown-20;
+    }
+}
+
+.title > a {
+    font-family: inherit;
+}

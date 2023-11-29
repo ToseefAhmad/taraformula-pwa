@@ -1,0 +1,116 @@
+.root {
+    composes: relative from global;
+    align-content: start;
+    composes: grid from global;
+    composes: w-[214px] from global;
+    composes: gap-y-0 from global;
+    composes: border-b-2 from global;
+    composes: pb-1 from global;
+}
+
+:global(.submenu-products) .root {
+    @apply border-transparent;
+}
+
+.images {
+    composes: relative from global;
+    grid-template-areas: 'main';
+    composes: grid from global;
+    padding-bottom: unset;
+}
+
+.imageContainer {
+    grid-area: main;
+}
+
+:global(.submenu-products) .image {
+    transition: opacity 512ms ease-out;
+
+    @apply
+        block
+        h-[186px]
+        object-cover
+        w-full
+        m-0;
+}
+
+.imageLoaded {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: visible from global;
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: invisible from global;
+    composes: opacity-0 from global;
+}
+
+:global(.submenu-products) .imagePlaceholder {
+    transition: opacity 512ms ease-out;
+
+    @apply block
+        h-[186px]
+        object-cover
+        w-full
+        m-0
+        bg-gray;
+}
+
+.actionsContainer {
+    grid-template-columns: auto auto;
+    composes: gap-x-4 from global;
+    composes: grid from global;
+    composes: pl-2 from global;
+}
+
+.actionsContainer:empty {
+    @apply hidden;
+}
+
+.name {
+    composes: text-green from global;
+    composes: text-sm from global;
+    composes: font-normal from global;
+    composes: leading-[17px] from global;
+    composes: tracking-normal from global;
+    composes: text-center from global;
+    composes: normal-case from global;
+}
+
+.name span {
+    @apply
+        lg_border-b-2
+        lg_border-solid
+        lg_border-transparent
+        lg_hover_border-green;
+}
+
+.influence_type {
+    composes: mt-[0.5rem] from global;
+    composes: text-green from global;
+    composes: text-sm from global;
+    composes: font-bold from global;
+    composes: leading-[17px] from global;
+    composes: tracking-normal from global;
+    composes: text-center from global;
+    composes: normal-case from global;
+}
+
+.unavailableContainer {
+    justify-content: start;
+    composes: items-center from global;
+    composes: bg-gray from global;
+    composes: text-gray from global;
+    composes: gap-x-2 from global;
+    composes: grid from global;
+    composes: italic from global;
+    composes: grid-flow-col from global;
+    composes: p-3 from global;
+    composes: w-full from global;
+    composes: text-sm from global;
+}

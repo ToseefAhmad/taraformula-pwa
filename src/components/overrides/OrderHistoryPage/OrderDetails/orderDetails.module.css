@@ -1,0 +1,57 @@
+.root {
+    composes: grid from global;
+    composes: gap-y-3.5 from global;
+    composes: grid-cols-4 from global;
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: relative from global;
+}
+
+.reorderButton {
+    composes: xs_hidden from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: ltr_right-0 from global;
+    composes: rtl_left-0 from global;
+    composes: text-sm from global;
+    composes: underline from global;
+
+    composes: hover_text-red from global;
+    composes: focus-visible_outline-none from global;
+}
+
+.rowContainer {
+    composes: row-span-1 from global;
+    composes: col-span-4 from global;
+    composes: xs_col-span-2 from global;
+
+    @apply 1.5xl_col-span-1;
+}
+
+.billingInformationContainer,
+.gridRowContainer {
+    composes: rowContainer;
+}
+
+.gridRowContainer {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: lg_block from global;
+    composes: lg_px-2.5 from global;
+}
+
+.gridRowContainer:first-of-type {
+    @apply pl-0;
+    @apply rtl_pr-0;
+    @apply rtl_pl-2.5;
+    @apply mt-10;
+    @apply lg_mt-0;
+}
+
+.paymentMethodContainer {
+    composes: lg_mb-10 from global;
+}
+
+.itemsContainer {
+    composes: col-span-4 from global;
+}

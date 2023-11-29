@@ -1,0 +1,67 @@
+.root {
+    composes: grid from global;
+    composes: mt-4 from global;
+    composes: pb-8 from global;
+}
+
+.root::after {
+    @apply
+        z-1
+        absolute
+        bottom-0
+        h-px
+        border-t
+        border-solid
+        border-gray4
+        left-[-17px]
+        right-[-17px]
+        md_left-0
+        content-['']
+        md_right-0;
+}
+
+.radioRoot {
+    composes: root from '@magento/venia-ui/lib/components/RadioGroup/radio.module.css';
+
+    @apply
+        border-0
+        px-0
+        gap-x-2;
+}
+
+.radioRoot [class*='radioContainer'] {
+    @apply
+        mb-2
+        gap-x-2;
+}
+
+.radio_group {
+    composes: grid from global;
+}
+
+.radioWithMessageContainer {
+    display: flex;
+}
+
+.payment_method {
+    composes: mb-2 from global;
+}
+
+.paymentContent {
+    composes: py-6 from global;
+}
+
+.paymentContent [class*='radioGroup-root'] label {
+    @apply mb-2;
+}
+
+.radio_label {
+    composes: font-bold from global;
+    composes: justify-self-start from global;
+}
+
+.payment_errors {
+    composes: grid from global;
+    composes: gap-2 from global;
+    composes: text-red from global;
+}

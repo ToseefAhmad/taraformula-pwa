@@ -1,0 +1,10 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: h-10 from global;
+    composes: w-10 from global;
+    -webkit-tap-highlight-color: transparent;
+
+    /* Desktop screen */
+    composes: xl_hidden from global;
+}

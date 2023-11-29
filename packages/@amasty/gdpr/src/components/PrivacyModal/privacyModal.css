@@ -1,0 +1,44 @@
+.cancelButton {
+  display: none;
+}
+
+.richContent table td,
+.richContent table th {
+  text-align: left;
+  padding: 0.44rem;
+  font-size: 0.875rem;
+  line-height: 1.125em;
+  border-right: 1px solid rgb(var(--venia-global-color-border));
+  border-bottom: 1px solid rgb(var(--venia-global-color-border));
+  word-break: break-word;
+}
+
+.richContent {
+  composes: root from '~@magento/venia-ui/lib/components/RichContent/richContent.module.css';
+}
+
+.versionChanged {
+  margin-bottom: 0.5rem;
+  padding: 1.5rem;
+  font-weight: 600;
+  background: #ffeaac;
+}
+
+.body {
+  composes: body from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+  max-height: calc(100vh - 55px);
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 960px) {
+  .dialog {
+    composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 768px) {
+    .dialog {
+        width: 320px;
+    }
+}

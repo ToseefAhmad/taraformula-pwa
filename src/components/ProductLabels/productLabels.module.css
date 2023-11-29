@@ -1,0 +1,142 @@
+.root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+.rootCat {
+    composes: root;
+    width: 100%;
+}
+
+.groupRoot {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    font-size: 1em;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.topLeft {
+    top: 0;
+    left: 0;
+    height: 33%;
+    width: 33%;
+    justify-content: start;
+}
+
+.topCenter {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 33%;
+    width: 33%;
+    align-items: center;
+    justify-content: start;
+}
+
+.topRight {
+    bottom: 0;
+    height: 33%;
+    width: 33%;
+    top: 0;
+    right: 0;
+    text-align: right;
+    justify-content: start;
+}
+
+.middleLeft {
+    width: 33%;
+    height: 33%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.middleCenter {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 33%;
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.middleRight {
+    height: 33%;
+    width: 33%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+}
+
+.bottomLeft {
+    justify-content: end;
+    bottom: 0;
+    left: 0;
+    width: 33%;
+    height: 33%;
+}
+
+.bottomCenter {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: end;
+    width: 33%;
+    height: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottomRight {
+    right: 0;
+    bottom: 0;
+    width: 33%;
+    height: 33%;
+    text-align: right;
+    justify-content: end;
+}
+
+.vertical.bottomRight,
+.vertical.topRight,
+.vertical.middleRight,
+.horizontal.bottomRight,
+.horizontal.bottomCenter,
+.horizontal.bottomLeft {
+    align-items: flex-end;
+}
+
+.vertical.bottomLeft,
+.vertical.topLeft,
+.vertical.middleLeft {
+    align-items: flex-start;
+}

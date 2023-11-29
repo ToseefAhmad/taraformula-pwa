@@ -1,0 +1,13 @@
+.input {
+    composes: inline-flex from global;
+    composes: w-full from global;
+    composes: h-15 from global;
+    composes: appearance-none from global;
+    composes: outline-none from global;
+    composes: bg-transparent from global;
+    composes: text-2xl from global;
+    composes: font-serif from global;
+    composes: placeholder-green from global;
+
+    composes: lg_text-5xl from global;
+}

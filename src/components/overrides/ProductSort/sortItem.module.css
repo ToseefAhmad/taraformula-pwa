@@ -1,0 +1,27 @@
+.root {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: w-full from global;
+}
+
+.content {
+    composes: px-4 from global;
+    composes: grid from global;
+    composes: items-center from global;
+    composes: h-10 from global;
+    composes: w-full from global;
+    composes: gap-3 from global;
+    composes: grid-flow-col from global;
+    composes: grid-cols-1 from global;
+}
+
+.text {
+    composes: text-left from global;
+    composes: rtl_text-right from global;
+    composes: whitespace-no-wrap from global;
+}
+
+.isActive {
+    composes: text-green from global;
+    composes: font-bold from global;
+}

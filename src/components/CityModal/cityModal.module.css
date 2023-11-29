@@ -1,0 +1,74 @@
+.enter {
+    composes: enter from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.exit {
+    composes: exit from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.hidden {
+    composes: hidden from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.visible {
+    composes: visible from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.heading {
+    composes: text-green from global;
+    composes: font-serif from global;
+    composes: text-lg from global;
+    composes: px-4 from global;
+    composes: py-2 from global;
+}
+
+.root {
+    composes: root from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.root_open {
+    composes: root_open from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.body {
+    composes: overflow-auto from global;
+    composes: lg_overflow-visible from global;
+    composes: exit visible;
+    composes: min-h-0 from global;
+    composes: h-full from global;
+    composes: pb-24 from global;
+    transition-property: opacity, transform, visibility;
+}
+
+.body_masked {
+    composes: body enter hidden;
+}
+
+.modal {
+    composes: modal from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.modal_open {
+    composes: modal_open from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.customLink {
+    composes: border-gray9 from global;
+    composes: text-green from global;
+    composes: text-base from global;
+    composes: leading-5 from global;
+    composes: border-solid from global;
+    composes: border-b from global;
+    composes: items-center from global;
+    composes: flex from global;
+    composes: p-4 from global;
+    composes: pt-[17px] from global;
+}
+
+.customLinkContainer {
+    composes: customLinkContainer from '@app/components/overrides/Navigation/navigation.module.css';
+}
+
+.openButton {
+    composes: cursor-pointer from global;
+}

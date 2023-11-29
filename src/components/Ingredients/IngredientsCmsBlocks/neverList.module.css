@@ -1,0 +1,59 @@
+.neverList :global(.container) {
+    @apply
+        mx-auto
+        translate-x-0;
+}
+
+.neverList :global([class*='column-root']) span {
+    @apply
+        text-[15px]
+        lg_leading-[20px]
+        lg_text-[18px] !important;
+}
+
+.neverList :global(.ingredientGrid) {
+    @apply grid !important;
+    @apply
+        gap-y-[26px]
+        gap-x-[11px]
+        grid-cols-2;
+
+    /* Desktop */
+    @apply
+        lg_gap-x-[11px]
+        lg_gap-y-[33px];
+}
+
+.neverList h4 {
+    @apply mb-[31px];
+}
+
+.neverList :global([class*='text-root']) p:first-child {
+    @apply
+        mb-[15px]
+        leading-[19px];
+
+    /* Desktop */
+    @apply lg_mb-[13px];
+}
+
+.neverList :global([class*='text-root']) p:last-child {
+    @apply lg_pr-16;
+
+    /* RTL */
+    @apply rtl_lg_pl-16 rtl_lg_pr-0;
+}
+
+.neverList :global([class*='text-root']) p:last-child span,
+.neverList :global([class*='text-root']) p:last-child {
+    @apply leading-[16px];
+}
+
+.neverList :global(.heading) {
+    @apply md_w-[34%] !important;
+}
+
+.neverList :global(.ingredientGrid) {
+    @apply md_w-[66%] !important;
+    @apply lg_mt-[2px];
+}

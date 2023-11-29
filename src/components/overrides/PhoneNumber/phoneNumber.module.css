@@ -1,0 +1,49 @@
+.root {
+    composes: relative from global;
+}
+.root :global(.form-control) {
+    @apply w-full;
+    @apply h-15;
+    @apply rounded-none;
+    @apply text-sm;
+    @apply pt-[28px] pb-[12px];
+    @apply border-green;
+    @apply font-bold;
+}
+[dir='rtl'] .root :global(.form-control) {
+    @apply pl-0;
+    @apply pr-[48px];
+    @apply text-right;
+}
+.root :global(.form-control::placeholder) {
+    @apply font-normal;
+}
+.root :global(.form-control:focus) {
+    @apply border-2;
+}
+.root :global(.form-control:focus ~ .flag-dropdown) {
+    @apply border-r-2;
+}
+.root :global(.form-control:placeholder-shown) {
+    @apply py-5;
+}
+.root :global(.form-control:placeholder-shown ~ .label) {
+    @apply hidden;
+}
+.root :global(.flag-dropdown) {
+    @apply border-green;
+    @apply rounded-none;
+}
+.root :global(.flag-dropdown .selected-flag) {
+    @apply pl-2.5;
+}
+[dir='rtl'] .root :global(.flag-dropdown .selected-flag) {
+    @apply pl-0;
+    @apply pr-2.5;
+}
+.label {
+    composes: top-[11px] text-[13px] from global;
+    composes: absolute from global;
+    composes: ltr_left-11.5 from global;
+    composes: rtl_right-11.5 from global;
+}

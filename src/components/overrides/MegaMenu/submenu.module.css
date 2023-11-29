@@ -1,0 +1,65 @@
+.submenu {
+    composes: bg-white from global;
+    composes: hidden from global;
+    composes: flex-wrap from global;
+    composes: justify-between from global;
+    composes: left-0 from global;
+    composes: absolute from global;
+    composes: right-0 from global;
+    composes: top-full from global;
+}
+
+.submenu::before {
+    box-shadow: inset 0 2px rgb(var(--venia-global-color-gray-100));
+    content: '';
+
+    @apply h-2.5
+        left-0
+        pointer-events-none
+        absolute
+        right-0
+        top-0;
+}
+
+.submenu_active {
+    composes: submenu;
+    composes: flex from global;
+}
+
+.subMenuContainer {
+    composes: bg-gray-20 from global;
+    composes: w-full from global;
+    composes: py-2.5 from global;
+    composes: pt-14 from global;
+    composes: pb-[11px] from global;
+}
+
+.submenuBlock {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: justify-center from global;
+    composes: mx-auto from global;
+    composes: w-full from global;
+    composes: mb-6 from global;
+}
+
+.submenuItems {
+    composes: submenuBlock;
+}
+
+.submenuActions {
+    composes: submenuBlock;
+}
+
+.submenuActionsLink {
+    composes: link from '@app/components/StyleGuide/elementsSection.module.css';
+    composes: text-base from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: tracking-normal from global;
+    composes: text-green from global;
+}
+
+.submenuActionsLink:hover {
+    @apply border-green;
+}

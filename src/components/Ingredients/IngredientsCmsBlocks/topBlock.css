@@ -1,0 +1,227 @@
+:global(.topContent) {
+    @apply pb-[17px];
+
+    /* Desktop */
+    @apply lg_pb-[3.5rem];
+}
+
+:global(.topContent) img {
+    @apply
+        w-full
+        m-0;
+}
+
+:global(.topContent) img {
+    @apply
+        lg_h-full
+        lg_object-cover;
+}
+
+:global(.topContent) figure {
+    @apply lg_h-full;
+}
+
+:global(.topContent .container) {
+    @apply
+        lg_pb-[8px]
+        lg_pt-[2.8rem]
+        xl_pl-[7.5rem];
+
+    /* RTL */
+    @apply
+        rtl_xl_pl-[52px]
+        rtl_xl_pr-[7.5rem];
+}
+
+:global(.topContent) h1 {
+    @apply
+        leading-8
+        mb-[12px]
+        mt-[17px];
+
+    /* Desktop */
+    @apply
+        lg_leading-[4rem]
+        lg_mt-0;
+}
+
+:global(.topContent) [class*='text-root'] {
+    @apply
+        lg_mt-[0.7rem]
+        xl_w-[53%];
+}
+
+:global(.columnOilEmpty) {
+    @apply lg_w-[73.5%] !important;
+}
+
+:global(.columnOil) {
+    @apply
+        relative
+        lg_pr-[3.75rem]
+        2xl_pr-0;
+    @apply lg_w-[26.5%] !important;
+
+    /* RTL */
+    @apply
+        rtl_lg_pr-0
+        rtl_lg_pl-[3.75rem]
+        rtl_2xl_pl-0;
+}
+
+:global(.columnOil) button,
+:global(.columnSand) button,
+:global(.columnAcid) button {
+    @apply
+        border-solid
+        border-b-2
+        border-transparent
+        hover_border-green
+        no-underline;
+}
+
+:global(.columnOil) [class*='buttons-root'] {
+    @apply
+        lg_bottom-[-16%]
+        lg_absolute;
+}
+
+:global(.columnOil) button span,
+:global(.columnSand) button span,
+:global(.columnAcid) button span {
+    @apply
+        text-sm
+        text-green
+        font-bold
+        uppercase;
+}
+
+:global(.columnSand) {
+    @apply
+        relative
+        lg_pl-[2.6rem]
+        lg_pr-[0.5rem];
+
+    /* RTL */
+    @apply
+        rtl_lg_pr-[2.6rem]
+        rtl_lg_pl-[0.5rem];
+}
+
+:global(.columnAcidEmpty) {
+    @apply lg_w-[58%] !important;
+}
+
+:global(.columnAcid) {
+    @apply
+        lg_pr-[24px]
+        lg_relative;
+    @apply lg_w-[32%] !important;
+
+    /* RTL */
+    @apply
+        rtl_lg_pr-0
+        rtl_lg_pl-[24px];
+}
+
+:global(.columnAcid) [class*='buttons-root'],
+:global(.columnSand) [class*='buttons-root'] {
+    @apply
+        lg_bottom-[-12%]
+        lg_absolute;
+}
+
+:global(.allButton),
+:global(.columnOil),
+:global(.columnSand),
+:global(.columnAcid) {
+    @apply hidden !important;
+
+    /* Desktop */
+    @apply lg_flex !important;
+}
+
+:global(.allButton) {
+    @apply
+        lg_mt-[2rem]
+        xl_mt-[4.2rem];
+}
+
+:global(.allButton) span {
+    @apply
+        border-b-2
+        border-transparent
+        hover_border-green
+        font-bold
+        uppercase;
+}
+
+:global(.allButton) button {
+    @apply no-underline;
+}
+
+:global(.topContent) [class*='columnGroup-root']:first-child [class*='image-shimmer'] {
+    @apply
+        min-h-[396px]
+        lg_min-h-[414px];
+}
+
+:global(.topContent) [class*='columnGroup-root'] {
+    @apply
+        px-0
+        lg_px-0
+        2xl_px-desktop
+        2xl_max-w-[1440px]
+        2xl_w-full
+        2xl_mx-auto !important;
+}
+
+:global(.columnOil) [class*='image-root'] {
+    @apply
+        pb-[81.5%]
+        relative;
+}
+
+:global(.columnOil) img,
+:global(.columnSand) img,
+:global(.columnAcid) img {
+    @apply absolute;
+}
+
+:global(.columnSand) [class*='image-root'] {
+    @apply
+        pb-[63.8%]
+        relative;
+}
+
+:global(.columnAcid) [class*='image-root'] {
+    @apply
+        pb-[79.5%]
+        relative;
+}
+
+:global(.topContent) [class*='columnGroup-root']:nth-child(2) [class*='image-shimmer'] {
+    @apply lg_min-h-[261px];
+}
+
+:global(.topContent) [class*='columnGroup-root']:nth-child(3) [class*='image-shimmer'] {
+    @apply lg_min-h-[353px];
+}
+
+:global(.topContent) [class*='columnGroup-root']:nth-child(4) [class*='image-shimmer'] {
+    @apply lg_min-h-[347px];
+}
+
+[class*='buttons-shimmer'] {
+    @apply w-[22%] min-h-[23px];
+}
+
+.topBlock [class*='richContent'] [class*='columnGroup-root'] {
+    @apply
+        px-mobile
+        lg_px-desktop
+        2xl_max-w-[1440px]
+        2xl_w-full
+        2xl_mx-auto
+        2xl_px-desktop;
+}

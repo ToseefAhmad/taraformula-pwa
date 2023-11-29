@@ -1,0 +1,7 @@
+.root {
+}
+
+.savedCard {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,126 @@
+.root {
+    composes: root from '@app/components/overrides/Gallery/item.module.css';
+    composes: text-left	from global;
+    composes: rtl_text-right from global;
+    composes: pb-0 from global;
+    composes: rtl_lg_pb-4 from global;
+    composes: ltr_lg_pb-6 from global;
+}
+
+.contentWrapper {
+    composes: contentWrapper from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.actionWrapper {
+    composes: actionWrapper from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.images {
+    composes: images from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageContainer {
+    composes: imageContainer from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageContainer:hover .hoverImage {
+    @apply opacity-100;
+}
+
+.image,
+.hoverImage {
+    composes: h-full from global;
+    composes: object-cover from global;
+    transition: opacity 512ms ease-out;
+    composes: w-full from global;
+}
+.images,
+.imageContainer img {
+    @apply lg_max-h-[282px];
+}
+
+.image {
+    composes: image from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.hoverImage {
+    composes: hoverImage from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageLoaded {
+    composes: imageLoaded from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageNotLoaded {
+    composes: imageNotLoaded from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imagePlaceholder {
+    composes: imagePlaceholder from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.actionsContainer {
+    composes: actionsContainer from '@app/components/overrides/Gallery/item.module.css';
+    composes: ltr_mt-0 from global;
+    composes: rtl_mt-0 from global;
+    composes: rtl_lg_mt-1.5 from global;
+    composes: ltr_lg_mt-1.5 from global;
+}
+
+.actionsContainer:empty {
+    @apply hidden;
+}
+
+.nameWrapper {
+    composes: nameWrapper from '@app/components/overrides/Gallery/item.module.css';
+    composes: mt-2 from global;
+}
+
+.type {
+    composes: type from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.name {
+    composes: name from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.name > span {
+    @apply border-b-2
+        border-transparent
+        pb-1
+        lg_hover_border-green;
+}
+
+.price {
+    composes: price from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.price,
+.type {
+    composes: font-bold from global;
+}
+
+.type,
+.name,
+.price {
+    composes: text-sm from global;
+    composes: leading-4 from global;
+}
+
+.unavailableContainer {
+    composes: unavailableContainer from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.addToCart button span {
+    @apply text-[15px];
+}
+
+.addToCart button {
+    @apply text-left;
+    @apply rtl_text-right;
+}
+
+.categoryNameInTitle {
+    composes: rtl_text-[0.75rem] from global;
+    composes: rtl_sm_text-[1.125rem] from global;
+}

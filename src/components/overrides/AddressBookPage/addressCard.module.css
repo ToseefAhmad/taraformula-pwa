@@ -1,0 +1,99 @@
+.root {
+    composes: relative from global;
+    composes: p-0 from global;
+    composes: sm_border from global;
+    composes: sm_border-solid from global;
+    composes: sm_border-green from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-between from global;
+    composes: sm_p-5 from global;
+    composes: lg_px-6 from global;
+    composes: lg_pb-[27px] from global;
+    composes: min-h-none from global;
+    composes: lg_min-h-72.5 from global;
+}
+
+.rootAdditional {
+    composes: root;
+    composes: border-t from global;
+    composes: border-green-20 from global;
+    composes: pt-[33px] from global;
+    composes: lg_min-h-[247px] from global;
+}
+
+.rootAdditional:first-child {
+    @apply border-0
+        sm_border;
+}
+
+.rootAdditional dl {
+    @apply w-9/10;
+}
+
+.confirmDeleteContainer {
+    composes: items-center from global;
+    composes: bg-white from global;
+    composes: bg-opacity-95 from global;
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: grid-cols-2 from global;
+    composes: justify-center from global;
+    composes: py-5 from global;
+    composes: px-6 from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.confirmDeleteButton {
+    composes: root_normalPriorityNegative from '@magento/venia-ui/lib/components/Button/button.module.css';
+    composes: bg-white from global;
+    composes: order-1 from global;
+}
+.cancelDeleteButton {
+    composes: root_lowPriority from '@magento/venia-ui/lib/components/Button/button.module.css';
+    composes: bg-white from global;
+}
+
+.contentContainer {
+    composes: mb-[33px] from global;
+    composes: sm_mb-[15px] from global;
+}
+
+.contentContainer dd {
+    @apply leading-dd;
+}
+
+.actionContainer {
+    composes: justify-self-end from global;
+    composes: mt-auto from global;
+}
+
+.defaultBadge {
+    composes: mb-4.5 from global;
+    composes: lg_mb-[15px] from global;
+    composes: text-base from global;
+    composes: font-bold from global;
+    composes: lg_leading-7 from global;
+}
+
+.deleteButton {
+    composes: absolute from global;
+    composes: top-[33px] from global;
+    composes: ltr_right-0 from global;
+    composes: rtl_left-0 from global;
+    composes: sm_top-[23px] from global;
+    composes: ltr_sm_right-5 from global;
+    composes: ltr_lg_right-6 from global;
+    composes: rtl_sm_left-5 from global;
+    composes: rtl_lg_left-6 from global;
+    composes: outline-none from global;
+}
+
+.telephone {
+    composes: rtl_text-right from global;
+    direction: ltr;
+}

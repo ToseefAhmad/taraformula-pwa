@@ -1,0 +1,27 @@
+.root {
+    composes: mx-auto from global;
+    composes: py-24 from global;
+
+    @apply max-w-[1720px];
+}
+
+.columns {
+    composes: flex from global;
+    composes: gap-x-24 from global;
+}
+
+.column {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-y-12 from global;
+}
+
+.title {
+    composes: pb-7 from global;
+}
+
+.logoWrapper {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: pb-24 from global;
+}

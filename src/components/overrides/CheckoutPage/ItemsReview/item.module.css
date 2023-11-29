@@ -1,0 +1,227 @@
+.root {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    --transition-function: var(--venia-global-anim-standard);
+    transition: opacity 384ms var(--transition-function) 64ms, visibility 384ms var(--transition-function) 64ms;
+    composes: bg-gray3-40 from global;
+
+    @apply mt-0
+        mb-[3px]
+        flex
+        opacity-100
+        visible;
+    @apply rtl_mb-[10px]
+        rtl_font-arabicText;
+}
+
+.root_hidden {
+    composes: root;
+
+    @apply mt-0
+        h-0
+        invisible
+        opacity-0;
+}
+
+.image {
+    composes: image from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.images {
+    composes: images from '@app/components/overrides/Gallery/item.module.css';
+    composes: self-center from global;
+
+    @apply pb-0;
+}
+
+.imageContainer {
+    composes: imageContainer from '@app/components/overrides/Gallery/item.module.css';
+
+    @apply
+        pb-0
+        h-full;
+}
+
+.imageContainer:hover .imageWithHover {
+    @apply lg_hidden;
+}
+
+.imageContainer:hover .image {
+    @apply
+        lg_scale-110
+        lg_opacity-100;
+}
+
+.imageContainer:hover .hoverImage {
+    @apply lg_opacity-100;
+}
+
+.imageWithHover {
+    composes: imageWithHover from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.image,
+.hoverImage {
+    composes: h-full from global;
+    composes: object-cover from global;
+    composes: w-full from global;
+}
+
+.imageWithHover {
+    composes: imageWithHover from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.images,
+.imageContainer img {
+    @apply w-[75px]
+        min-w-[75px]
+        h-[80px]
+        object-cover;
+    @apply rtl_w-[102px]
+        rtl_min-w-[102px]
+        rtl_h-[87px];
+    @apply lg_w-[102px]
+        lg_min-w-[102px]
+        lg_h-[87px];
+}
+
+.hoverImage {
+    composes: hoverImage from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageLoaded {
+    composes: imageLoaded from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageNotLoaded {
+    composes: imageNotLoaded from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.name {
+    font-weight: 600;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.linkName {
+    @apply lg_hover_underline;
+}
+
+.name :global span {
+    @apply lg_text-[17px];
+}
+
+.quantity {
+    grid-column: 1;
+
+    @apply text-[85%];
+    @apply rtl_tracking-[0.24px];
+    @apply lg_text-[10px]
+        lg_flex-grow;
+}
+
+.quantity :global b {
+    @apply lg_ml-[3px]
+        lg_text-[18px]
+        lg_align-middle;
+    @apply rtl_mr-[10px];
+}
+
+.options {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+
+    @apply grid
+        gap-2
+        text-[15px];
+}
+
+.itemInfo {
+    @apply pt-[6px]
+        pr-[22px]
+        pb-[10px]
+        pl-[15px]
+        flex
+        flex-wrap
+        items-center
+        flex-grow
+        justify-between;
+    @apply rtl_pr-[5px]
+        rtl_pb-[7px];
+    @apply lg_pt-[20px]
+        lg_pr-[29px]
+        lg_pr-[37px];
+}
+
+.itemInfo :global div {
+    @apply mb-[2px]
+        w-full
+        text-[15px]
+        leading-[20px];
+    @apply rtl_mb-[6px];
+    @apply lg_max-w-[inherit]
+        lg_flex-grow
+        lg_text-[17px];
+}
+
+.itemInfo :global span {
+    @apply text-[15px];
+    @apply rtl_text-[16px]
+        rtl_leading-[25px];
+    @apply lg_text-[17px];
+}
+
+.price {
+    font-weight: 600;
+
+    @apply rtl_tracking-[0.24px];
+    @apply lg_min-w-[107px]
+        lg_text-right;
+}
+
+.free {
+    font-weight: 600;
+    composes: flex from global;
+    composes: justify-end from global;
+
+    composes: rtl_tracking-[0.24px] from global;
+    composes: lg_min-w-[107px] from global;
+    composes: lg_text-right from global;
+}
+
+.optionLabel {
+    composes: flex from global;
+    composes: text-xs from global;
+}
+
+div.optionLabel {
+    @apply text-xs;
+}
+
+.itemName {
+    composes: block from global;
+}
+
+.itemShimmerContainer {
+    composes: mb-4 from global;
+}
+
+.itemShimmer {
+    composes: h-[80px] from global;
+    composes: h-[89px] from global;
+    composes: mb-2 from global;
+    composes: h-auto from global;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+@media (min-width: 1024px) {
+    .quantity {
+        grid-column: 2;
+    }
+
+    .itemInfo :global div {
+        flex-basis: 40%;
+    }
+}

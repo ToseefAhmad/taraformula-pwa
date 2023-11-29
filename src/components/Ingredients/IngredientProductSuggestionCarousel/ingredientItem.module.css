@@ -1,0 +1,64 @@
+.root {
+    composes: root from '~@app/components/overrides/Gallery/item.module.css';
+
+    @apply
+        pb-[1.4rem]
+        lg_pb-[1.9rem];
+}
+
+.imageContainer {
+    composes: imageContainer from '~@app/components/overrides/Gallery/item.module.css';
+
+    @apply
+        pb-[71%]
+        lg_pb-[70%];
+}
+
+.imageContainer .image {
+    @apply lg_transition-transform;
+}
+
+.imageContainer:hover .image {
+    @apply lg_scale-110;
+}
+
+.images {
+    composes: pb-[0.27rem] from global;
+    composes: lg_pb-[0.6rem] from global;
+}
+
+.imageContainer [loading='eager'] {
+    background: linear-gradient(270deg, #fff, #f4f5f5) 0 0/400% 400%;
+
+    @apply animate-content-loader;
+}
+
+.imageContainer .image {
+    @apply
+        absolute
+        w-full
+        h-full
+        object-cover;
+}
+
+.titleWrapper span {
+    @apply lg_text-base;
+}
+
+.ingredientTitleWrapper {
+    composes: leading-none from global;
+    composes: break-words from global;
+    composes: font-bold from global;
+    composes: mt-[7px] from global;
+    composes: lg_mt-[13px] from global;
+    composes: rtl_text-right from global;
+}
+
+.ingredientName {
+    composes: lg_border-b-2 from global;
+    composes: lg_border-transparent from global;
+}
+
+.ingredientName:hover {
+    @apply lg_border-green;
+}

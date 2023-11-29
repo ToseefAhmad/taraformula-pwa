@@ -1,0 +1,120 @@
+.about-us {
+    @apply pb-[23px]
+        bg-gray-40;
+
+    /* Desktop */
+    @apply lg_pb-[111px];
+}
+
+.about-us .pagebuilder-column {
+    @apply max-w-[1440px]
+        flex-wrap;
+
+    /* Override inline styles */
+    @apply flex-row !important;
+
+    /* Desktop */
+    @apply lg_items-end
+        2xl_m-auto;
+}
+
+.about-us img {
+    @apply m-0;
+}
+
+.about-us .image-wide {
+    /* Desktop */
+    @apply lg_max-w-[57%];
+
+    /* LTR */
+    @apply ltr_lg_mr-[10%]
+        ltr_xl_mr-[133px];
+
+    /* RTL */
+    @apply rtl_lg_ml-[10%]
+        rtl_xl_ml-[133px];
+    flex-basis: 813px;
+}
+
+.about-us .image-wide img {
+    @apply w-full
+        h-[496px];
+
+    /* Desktop */
+    @apply object-cover
+        lg_h-auto
+        xl_h-[617px];
+}
+
+.about-us .image-small {
+    @apply hidden;
+    flex-basis: 326px;
+
+    /* Desktop */
+    @apply lg_block
+        lg_max-w-[30%];
+}
+
+.about-us h1 {
+    /* Desktop */
+    @apply lg_w-[916px]
+        lg_max-w-[64%];
+
+    /* LTR */
+    @apply ltr_mt-[12px]
+        ltr_mr-[33px]
+        ltr_mb-[13px]
+        ltr_ml-[15px]
+        ltr_leading-[33px]
+        ltr_lg_mt-[33px]
+        ltr_lg_mb-[38px]
+        ltr_lg_mr-0
+        ltr_lg_ml-[50px]
+        ltr_lg_leading-[65px];
+
+    /* RTL */
+    @apply rtl_mt-[16px]
+        rtl_mr-[21px]
+        rtl_mb-[48px]
+        rtl_ml-[33px]
+        rtl_text-[54px]
+        rtl_leading-[44px]
+        rtl_lg_mt-[43px]
+        rtl_lg_mr-[50px]
+        rtl_lg_mb-[90px]
+        rtl_lg_ml-0
+        rtl_lg_leading-[80px]
+        rtl_lg_text-[80px];
+}
+
+.about-us [class*='text-root'],
+.about-us [class*='buttons-root'] {
+    /* Desktop */
+    @apply lg_w-full;
+
+    /* LTR */
+    @apply ltr_ml-[15px]
+        ltr_lg_ml-[50px];
+
+    /* RTL */
+    @apply rtl_mr-[21px]
+        rtl_lg_mr-[50px];
+}
+
+.about-us [class*='buttons-root'] button {
+    @apply
+        lg_border-solid
+        lg_hover_border-green
+        lg_border-b-2
+        lg_border-transparent
+        font-bold
+        no-underline;
+}
+
+.about-us [class*='buttons-shimmer'] {
+    @apply
+        absolute
+        w-15
+        ltr_hidden
+        min-h-[23px];
+}

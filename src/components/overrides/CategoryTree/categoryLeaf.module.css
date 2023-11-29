@@ -1,0 +1,21 @@
+.root {
+    composes: items-center from global;
+    composes: border-b from global;
+    composes: border-green-90 from global;
+    composes: border-solid from global;
+    composes: flex from global;
+}
+
+.target {
+    composes: flex from global;
+    composes: p-4 from global;
+    composes: pt-[17px] from global;
+    composes: w-full from global;
+}
+
+.text {
+    composes: inline-block from global;
+    composes: overflow-hidden from global;
+    composes: overflow-ellipsis from global;
+    composes: whitespace-nowrap from global;
+}

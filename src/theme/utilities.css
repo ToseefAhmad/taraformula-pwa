@@ -1,0 +1,49 @@
+@layer utilities {
+    .container {
+        @apply px-mobile lg_max-w-desktop lg_px-desktop;
+    }
+
+    .container-fluid {
+        @apply w-full px-mobile lg_px-desktop;
+    }
+
+    .fontBold-width-fix::before {
+        content: attr(title);
+
+        @apply block font-bold h-0 overflow-hidden invisible;
+    }
+
+    .scrollbar-x::-webkit-scrollbar {
+        @apply
+            rounded-[3px]
+            bg-zircon
+            overflow-x-auto
+            h-[3px];
+    }
+
+    .scrollbar-x::-webkit-scrollbar-thumb {
+        @apply
+            rounded-[3px]
+            bg-green-80;
+    }
+
+    .basis-1\/2 {
+        flex-basis: 50%;
+    }
+
+    .basis-9\/19 {
+        flex-basis: 47.3684%;
+    }
+
+    .basis-42\/85 {
+        flex-basis: 49.4117%;
+    }
+
+    .basis-full {
+        flex-basis: 100%;
+    }
+
+    .basis-unset {
+        flex-basis: unset;
+    }
+}

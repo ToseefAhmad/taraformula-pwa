@@ -1,0 +1,164 @@
+.lineItem {
+    composes: col-span-2 from global;
+    composes: flex from global;
+    composes: justify-between from global;
+}
+
+.subTotal {
+    composes: lineItem;
+    composes: mb-[9px] from global;
+}
+
+.shippingSummary,
+.codSummary,
+.discountSummary {
+    composes: lineItem;
+    composes: lg_mb-[9px] from global;
+    composes: mb-[3px] from global;
+}
+
+.taxSummary {
+    composes: lineItem;
+}
+
+.taxSummary .price,
+.shippingSummary .price,
+.discountSummary .price {
+    @apply self-baseline;
+}
+
+.grandTotalSummary {
+    composes: lineItem;
+    composes: mt-[23px] lg_mt-5 from global;
+}
+
+.grandTotalSummaryCheckout {
+    composes: grandTotalSummary;
+    composes: pt-4 from global;
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-gray4 from global;
+    composes: mt-5 from global;
+}
+
+.doubleLabel {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.doubleLabelSecond {
+    composes: text-xs from global;
+    composes: lg_mt-[-3px] from global;
+    composes: lg_text-xxs from global;
+    composes: uppercase from global;
+}
+
+.errorText {
+    composes: text-red from global;
+}
+
+.lineItems {
+    composes: grid from global;
+    composes: grid-cols-[1fr auto] from global;
+}
+
+.lineItemLabel {
+    composes: self-start from global;
+    composes: font-bold from global;
+    composes: text-base lg_text-sm from global;
+}
+
+.couponContainer {
+    composes: col-span-2 from global;
+}
+
+.price {
+    composes: flex from global;
+    composes: justify-self-end from global;
+    composes: self-center from global;
+    composes: lg_text-sm from global;
+    composes: uppercase from global;
+}
+
+.subTotalLabel {
+    composes: lineItemLabel;
+}
+
+.discountLabel,
+.codLabel {
+    composes: lineItemLabel;
+}
+
+.totalLabel {
+    composes: lineItemLabel;
+    composes: text-base from global;
+}
+
+.grandTotalLabel {
+    composes: lg_text-base text-lg from global;
+    composes: flex from global;
+}
+
+.totalPrice {
+    composes: price;
+    composes: lg_text-base text-lg from global;
+    composes: lg_font-normal from global;
+}
+
+.priceUpdating {
+    composes: price;
+    composes: z-1 from global;
+    composes: animate-content-loader from global;
+    composes: w-16 from global;
+    composes: max-h-[20px] from global;
+
+    background: linear-gradient(270deg, #fff, #f4f5f5) 0 0/400% 400%;
+}
+
+.priceUpdating > span {
+    @apply opacity-0;
+}
+
+.checkoutButton_container {
+    composes: lg_mt-[21px] mt-[22px] from global;
+    composes: items-center from global;
+    composes: inline-flex from global;
+    composes: justify-center from global;
+    composes: h-min-[5.5rem] from global;
+    composes: w-full from global;
+}
+
+.checkoutButton_container button span {
+    @apply -ml-1
+        mt-[-2px];
+}
+
+.taxesExcluded {
+    composes: ml-[5px] from global;
+    composes: text-xs from global;
+    composes: lg_mt-[6px] from global;
+    composes: mt-[5px] from global;
+}
+
+.summaryShimmerTop {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[185px] from global;
+    composes: mb-2.5 from global;
+}
+
+.summaryShimmerBottom {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[118px] from global;
+}
+
+.tabby {
+    composes: pt-5 from global;
+}
+
+.freeShipping {
+    composes: mt-5 from global;
+}
+
+.promotion {
+    composes: mt-3 from global;
+}

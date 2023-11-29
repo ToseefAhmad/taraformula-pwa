@@ -1,0 +1,56 @@
+.title {
+    composes: mb-[10px] from global;
+}
+
+.root [class*='couponCode-entryForm'] input {
+    @apply
+        w-full
+        py-5
+        pr-14
+        pl-3.5
+        rtl_pl-14
+        rtl_pr-3.5
+        max-h-[60px]
+        h-[unset];
+}
+
+.root [class*='couponCode-entryForm'] button {
+    @apply
+        border-0
+        lg_hover_text-green
+        min-h-full
+        bg-transparent
+        h-[unset];
+}
+.root [class*='couponCode-entryForm'] button:disabled span {
+    @apply lg_hover_border-transparent;
+}
+
+.root [class*='couponCode-entryForm'] button span {
+    @apply
+        text-base
+        uppercase
+        lg_border-solid
+        lg_border-b-2
+        lg_border-transparent
+        lg_hover_border-green;
+}
+
+.root [class*='couponCode-entryForm'] {
+    @apply
+        relative
+        flex-col;
+}
+
+.root [class*='couponCode-entryForm'] div:last-child {
+    @apply
+        ltr_right-0
+        rtl_left-0
+        h-full
+        content-center
+        absolute;
+}
+
+.root [class*='couponCode-loaderIcon'] {
+    @apply ltr_right-4 rtl_left-4 !important;
+}

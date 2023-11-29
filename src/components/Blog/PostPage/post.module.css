@@ -1,0 +1,180 @@
+.root h1 {
+    @apply ltr_lg_text-[5rem]
+        ltr_lg_leading-[5rem]
+        ltr_lg_tracking-wide;
+}
+
+.title {
+    composes: text-[2.188rem] from global;
+    composes: mt-5 from global;
+    composes: mb-5 from global;
+    composes: leading-8	from global;
+    composes: lg_text-7xl from global;
+    composes: lg_mt-2.5 from global;
+    composes: lg_mb-[15px] from global;
+    composes: rtl_text-[2.75rem] from global;
+    composes: rtl_mt-2 from global;
+    composes: rtl_mb-2 from global;
+    composes: rtl_leading-[2.75rem] from global;
+    composes: rtl_lg_text-7xl from global;
+    composes: rtl_lg_mt-2.5 from global;
+    composes: rtl_lg_mb-[15px] from global;
+}
+
+.images {
+    composes: max-h-[660px] from global;
+    composes: max-w-[886px] from global;
+    composes: lg_max-w-[662px] from global;
+    composes: w-auto from global;
+    composes: mx-auto from global;
+    composes: mb-2.5 from global;
+    composes: lg_mt-9 from global;
+    composes: lg_mb-[60px] from global;
+}
+
+.images img {
+    @apply max-h-[660px]
+        object-cover
+        w-full;
+}
+
+.date {
+    composes: text-[16px] from global;
+    composes: leading-6 from global;
+    composes: tracking-[0.015rem] from global;
+
+    @apply font-sans !important; /* In latin, so preserve latin typeface */
+}
+
+.main {
+    composes: px-[17px] from global;
+    composes: pt-[25px] from global;
+    composes: lg_pt-9 from global;
+    composes: lg_pl-[50px] from global;
+    composes: lg_pr-[55px] from global;
+    composes: text-center from global;
+    composes: rtl_pt-[20px] from global;
+    composes: rtl_lg_pt-9 from global;
+    composes: col-stat-2 from global;
+    composes: col-span-8 from global;
+}
+
+.desktopAuthor {
+    composes: text-[16px] from global;
+    composes: leading-[16px] from global;
+    composes: invisible from global;
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: lg_visible from global;
+}
+
+.desktopAuthor span {
+    @apply font-sans !important; /* In latin, so preserve latin typeface */
+}
+
+.mobileAuthor {
+    composes: mt-[30px] from global;
+    composes: mb-[2.188rem] from global;
+    composes: text-[16px] from global;
+    composes: leading-[16px] from global;
+    composes: lg_invisible from global;
+    composes: lg_hidden from global;
+
+    @apply font-sans !important; /* In latin, so preserve latin typeface */
+}
+
+.mobileAuthor a {
+    @apply block;
+}
+
+.mobileAuthor span {
+    @apply font-sans !important; /* In latin, so preserve latin typeface */
+}
+
+.blogPostContent :global(.instagram-media) {
+    margin: 15px auto 45px !important;
+}
+
+.blogPostContent :global(.pagebuilder-column-group) {
+    @apply flex-wrap
+        place-content-center
+        lg_flex-nowrap;
+}
+
+.blogPostContent :global(.desktopMaxW) {
+    @apply lg_max-w-[660px];
+}
+
+.blogPostContent ul {
+    @apply list-disc;
+}
+
+.blogPostContent li {
+    @apply ltr_ml-5
+        rtl_mr-5;
+}
+
+.blogPostContent figure {
+    @apply bg-inherit
+        mb-2
+        min-w-[50%]
+        mr-[3px];
+    background: unset;
+}
+
+.blogPostContent figure img {
+    @apply mx-auto;
+}
+
+.blogPostContent p {
+    @apply text-[15px]
+        my-[15px]
+        lg_text-[18px];
+}
+
+.blogPostContent p span {
+    @apply rtl_leading-8;
+}
+
+.blogPostContent a {
+    @apply underline
+        font-bold;
+}
+
+.postHead {
+    composes: lg_flex from global;
+    composes: lg_justify-between from global;
+    composes: items-center from global;
+}
+
+.postHead,
+.title,
+.blogPostContent,
+.footer {
+    composes: max-w-[886px] from global;
+    composes: mx-auto from global;
+}
+
+.navigation {
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: lg_mb-5 from global;
+    composes: min-w-[100px] from global;
+}
+
+.container {
+    composes: lg_grid from global;
+    composes: lg_grid-cols-10 from global;
+}
+
+.navigationRight {
+    composes: navigation;
+    composes: col-start-1 from global;
+    composes: col-span-1 from global;
+}
+
+.navigationLeft {
+    composes: navigation;
+    composes: col-end-10 from global;
+    composes: col-span-1 from global;
+}

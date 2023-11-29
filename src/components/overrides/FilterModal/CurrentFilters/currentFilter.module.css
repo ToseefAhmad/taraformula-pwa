@@ -1,0 +1,13 @@
+.root {
+    composes: p-2 from global;
+    composes: flex from global;
+    composes: bg-gray8 from global;
+    composes: text-green from global;
+    composes: w-full from global;
+}
+
+.text {
+    composes: text-[11px] from global;
+    composes: ml-2 from global;
+    composes: leading-[15px] from global;
+}

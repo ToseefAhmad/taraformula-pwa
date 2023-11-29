@@ -1,0 +1,104 @@
+.root {
+    composes: block from global;
+    composes: h-full from global;
+}
+
+.popup {
+    composes: fixed from global;
+    composes: bottom-0 from global;
+    composes: right-0 from global;
+    composes: md_right-[17px] from global;
+    composes: lg_right-[52px] from global;
+    composes: px-[17px] from global;
+    composes: pt-14 from global;
+    composes: z-99999 from global;
+    composes: overflow-hidden from global;
+    composes: sm_bg-gray6 from global;
+    composes: bg-gray6 from global;
+    composes: h-full from global;
+    composes: text-center from global;
+    composes: sm_h-min from global;
+    composes: sm_pt-[10px] from global;
+    composes: sm_px-[22px] from global;
+    composes: sm_pb-[28px] from global;
+    composes: sm_max-w-[520px] from global;
+    composes: sm_border-green from global;
+    composes: sm_border from global;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.cookies {
+    composes: sm_grid from global;
+    composes: sm_grid-cols-2 from global;
+    composes: sm_gap-x-2 from global;
+    composes: flex from global;
+    composes: flex-col-reverse from global;
+}
+
+.addCookies {
+    composes: cookies;
+    composes: mt-[39px] from global;
+    composes: sm_mb-1 from global;
+    composes: sm_mt-[16px] from global;
+}
+
+.manageCookies {
+    composes: cookies;
+    composes: mt-[48px] from global;
+    composes: sm_mt-[30px] from global;
+}
+
+.addCookies button,
+.manageCookies button {
+    @apply mb-2.5
+        sm_mb-0;
+}
+
+.checkboxRow {
+    composes: sm_flex from global;
+    composes: ml-[22%] from global;
+    composes: sm_ml-0 from global;
+    composes: sm_justify-between from global;
+    composes: mt-[30px] from global;
+}
+.checkboxRow span {
+    @apply text-base;
+}
+
+.popupHeader {
+    composes: mt-[37px] from global;
+    composes: text-4xl from global;
+    composes: mb-3.5 from global;
+    composes: sm_mb-[22px] from global;
+    composes: sm_text-5xl from global;
+}
+
+.header {
+    composes: sm_mt-11 from global;
+    composes: popupHeader;
+}
+
+.manageHeader {
+    composes: sm_mt-10 from global;
+    composes: popupHeader;
+}
+
+.message {
+    composes: px-[37px] from global;
+    composes: px-[37px] from global;
+    composes: text-sm from global;
+    composes: sm_text-base from global;
+    composes: sm_leading-5 from global;
+    composes: leading-[17px] from global;
+}
+
+.message a {
+    @apply underline;
+}
+
+.checkbox {
+    composes: mb-1.5 from global;
+}

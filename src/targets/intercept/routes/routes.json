@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Style Guide",
+        "pattern": "/style-guide",
+        "exact": true,
+        "path": "@app/components/StyleGuide",
+        "layout": "empty",
+        "direction": "ltr"
+    },
+    {
+        "name": "Style Guide RTL",
+        "pattern": "/style-guide-rtl",
+        "exact": true,
+        "path": "@app/components/StyleGuide",
+        "layout": "empty",
+        "direction": "rtl"
+    },
+    {
+        "name": "Blog",
+        "pattern": "/blog/:slug?/:id?",
+        "path": "@app/components/Blog",
+        "exact": true
+    },
+    {
+        "name": "Blog Post Preview",
+        "pattern": "/blog/post/preview/id/:previewKey?",
+        "path": "@app/components/Blog/PostPreview",
+        "exact": true
+    },
+    {
+        "name": "Ingredients",
+        "pattern": "/ingredients/:slug?/:id?",
+        "exact": true,
+        "path": "@app/components/Ingredients"
+    },
+    {
+        "name": "My Account",
+        "pattern": "/account",
+        "exact": true,
+        "path": "@app/components/MyAccountPage",
+        "layout": "main"
+    },
+    {
+        "name": "Payment Methods",
+        "pattern": "/payment-methods",
+        "exact": true,
+        "path": "@app/components/Stripe/SavedCards"
+    },
+    {
+        "name": "Account Information",
+        "pattern": "/account-information/:slug?",
+        "exact": true,
+        "path": "@magento/venia-ui/lib/components/AccountInformationPage",
+        "layout": "main"
+    },
+    {
+        "name": "Address Book",
+        "pattern": "/address-book/:slug?",
+        "exact": true,
+        "path": "@magento/venia-ui/lib/components/AddressBookPage",
+        "layout": "main"
+    },
+    {
+        "name": "Social Login",
+        "pattern": "/amsociallogin/social/login",
+        "exact": true,
+        "path": "@app/components/SocialLogin/Callback",
+        "layout": "empty"
+    },
+    {
+        "name": "Checkout",
+        "pattern": "/checkout",
+        "exact": true,
+        "path": "@magento/venia-ui/lib/components/CheckoutPage",
+        "layout": "empty"
+    },
+    {
+        "name": "Afterpay Order Confirmation",
+        "pattern": "/checkout/afterpay",
+        "exact": true,
+        "path": "@magebit/pwa-studio-afterpay/src/components/Success"
+    },
+    {
+        "name": "Myfatoorah Order Confirmation",
+        "pattern": "/checkout/success",
+        "exact": true,
+        "path": "@magebit/pwa-studio-myfatoorah/src/components/Success"
+    },
+    {
+        "name": "Tabby Order Confirmation",
+        "pattern": "/checkout-tabby/success",
+        "exact": true,
+        "path": "@app/components/overrides/CheckoutPage/OrderConfirmationPage"
+    },
+    {
+        "name": "Recover Abandoned Cart",
+        "pattern": "/cart/recover/:token?",
+        "exact": true,
+        "path": "@app/components/AbandonedCart/RecoverPage",
+        "layout": "empty"
+    }
+]

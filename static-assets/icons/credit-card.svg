@@ -1,0 +1,28 @@
+<svg id="credit-card" xmlns="http://www.w3.org/2000/svg" width="33.862" height="22.575" viewBox="0 0 33.862 22.575">
+  <rect id="Rectangle_94" data-name="Rectangle 94" width="33.456" height="21.849" rx="2" transform="translate(0 0.254)" fill="#fff"/>
+  <g id="Group_1079" data-name="Group 1079" transform="translate(0 0)">
+    <g id="Group_1078" data-name="Group 1078">
+      <path id="Path_184" data-name="Path 184" d="M30.335,85.333H3.527A3.532,3.532,0,0,0,0,88.86v15.52a3.532,3.532,0,0,0,3.527,3.527H30.335a3.532,3.532,0,0,0,3.527-3.527V88.86A3.532,3.532,0,0,0,30.335,85.333Zm2.116,19.047a2.119,2.119,0,0,1-2.116,2.116H3.527a2.119,2.119,0,0,1-2.116-2.116V88.86a2.119,2.119,0,0,1,2.116-2.116H30.335a2.119,2.119,0,0,1,2.116,2.116v15.52Z" transform="translate(0 -85.333)" fill="#cec9c9"/>
+    </g>
+  </g>
+  <g id="Group_1081" data-name="Group 1081" transform="translate(0 4.233)">
+    <g id="Group_1080" data-name="Group 1080" transform="translate(0 0)">
+      <path id="Path_185" data-name="Path 185" d="M33.156,149.333H.705a.706.706,0,0,0-.705.705v4.233a.706.706,0,0,0,.705.705H33.157a.706.706,0,0,0,.705-.705v-4.233A.706.706,0,0,0,33.156,149.333Zm-.705,4.233H1.411v-2.822h31.04v2.822Z" transform="translate(0 -149.333)" fill="#cec9c9"/>
+    </g>
+  </g>
+  <g id="Group_1083" data-name="Group 1083" transform="translate(4.233 14.109)">
+    <g id="Group_1082" data-name="Group 1082" transform="translate(0 0)">
+      <path id="Path_186" data-name="Path 186" d="M73.171,298.667H64.705a.705.705,0,1,0,0,1.411h8.465a.705.705,0,1,0,0-1.411Z" transform="translate(-64 -298.667)" fill="#cec9c9"/>
+    </g>
+  </g>
+  <g id="Group_1085" data-name="Group 1085" transform="translate(4.233 16.931)">
+    <g id="Group_1084" data-name="Group 1084">
+      <path id="Path_187" data-name="Path 187" d="M73.171,341.333H64.705a.705.705,0,1,0,0,1.411h8.465a.705.705,0,1,0,0-1.411Z" transform="translate(-64 -341.333)" fill="#cec9c9"/>
+    </g>
+  </g>
+  <g id="Group_1087" data-name="Group 1087" transform="translate(23.986 12.698)">
+    <g id="Group_1086" data-name="Group 1086" transform="translate(0 0)">
+      <path id="Path_188" data-name="Path 188" d="M366.194,277.333h-1.411a2.119,2.119,0,0,0-2.116,2.116v1.411a2.119,2.119,0,0,0,2.116,2.116h1.411a2.119,2.119,0,0,0,2.116-2.116v-1.411A2.119,2.119,0,0,0,366.194,277.333Zm.706,3.527a.706.706,0,0,1-.706.705h-1.411a.706.706,0,0,1-.706-.705v-1.411a.706.706,0,0,1,.706-.705h1.411a.706.706,0,0,1,.706.705Z" transform="translate(-362.667 -277.333)" fill="#cec9c9"/>
+    </g>
+  </g>
+</svg>

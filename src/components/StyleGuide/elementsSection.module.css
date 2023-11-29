@@ -1,0 +1,57 @@
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.section {
+    composes: section from './index.module.css';
+}
+
+.columns {
+    composes: columns from './index.module.css';
+}
+
+.column {
+    composes: column from './index.module.css';
+}
+
+.label {
+    composes: inline-block from global;
+    composes: bg-green from global;
+    composes: font-bold from global;
+    composes: text-white from global;
+    composes: text-xs from global;
+    composes: px-2 from global;
+    composes: py-1 from global;
+
+    composes: lg_text-sm from global;
+    composes: lg_py-2.5 from global;
+    composes: lg_px-3.5 from global;
+}
+
+.labelMobile {
+    composes: inline-block from global;
+    composes: text-xs from global;
+    composes: bg-green from global;
+    composes: font-bold from global;
+    composes: text-white from global;
+    composes: px-2 from global;
+    composes: py-1 from global;
+}
+
+.link {
+    composes: relative from global;
+    composes: uppercase from global;
+    composes: text-base from global;
+    composes: font-bold from global;
+    composes: border-b-2 from global;
+    composes: border-transparent from global;
+    composes: pb-1 from global;
+}
+
+.link:hover {
+    @apply border-green;
+}
+
+.accordionTitle {
+    composes: pb-4 from global;
+}

@@ -1,0 +1,106 @@
+.root {
+    composes: relative from global;
+    composes: text-white from global;
+    composes: text-sm from global;
+    composes: py-3.5 from global;
+    composes: px-5 from global;
+    composes: min-h-[48px] from global;
+}
+
+.container {
+    composes: relative from global;
+    composes: w-full from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: gap-2.5 from global;
+}
+
+.messageContainer {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-2.5 from global;
+}
+
+.messageContainer svg {
+    @apply stroke-current;
+}
+
+.infoToast {
+    composes: text-green from global;
+    composes: bg-[#ffebe8] from global;
+}
+
+.infoToast .progress {
+    @apply bg-[#ff7965];
+}
+
+.warningToast {
+    composes: text-green from global;
+    composes: bg-[#ffebe8] from global;
+}
+
+.warningToast .progress {
+    @apply bg-[#ff7965];
+}
+
+.errorToast {
+    composes: bg-lightRed from global;
+}
+
+.errorToast .progress {
+    @apply bg-[#f8664c];
+}
+
+.successToast {
+    composes: bg-green from global;
+}
+
+.successToast .progress {
+    @apply bg-[#86e70c];
+}
+
+.progress {
+    animation: progress-bar;
+
+    composes: absolute from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: w-0 from global;
+    composes: ease-linear from global;
+    composes: h-[2px] from global;
+}
+
+.messageContainerText {
+    composes: flex from global;
+    composes: gap-1 from global;
+}
+
+.messageLink {
+    composes: underline from global;
+    composes: lg_hover_font-bold from global;
+}
+
+[dir='rtl'] .progress {
+    animation: progress-bar-rtl;
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes progress-bar-rtl {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

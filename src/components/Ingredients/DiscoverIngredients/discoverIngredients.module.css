@@ -1,0 +1,5 @@
+.buttonDiscover {
+    composes: root_primary_outline from '@app/components/overrides/Button/button.module.css';
+    composes: mt-[2.4rem] from global;
+    composes: lg_mt-[2rem] from global;
+}

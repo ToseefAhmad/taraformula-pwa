@@ -1,0 +1,31 @@
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.section {
+    composes: section from './index.module.css';
+}
+
+.columns {
+    composes: columns from './index.module.css';
+
+    composes: pb-7 from global;
+}
+
+.column {
+    composes: column from './index.module.css';
+}
+
+.list {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-y-2.5 from global;
+}
+
+.newsletterTitle {
+    composes: hidden from global;
+}
+
+.newsletterText {
+    composes: hidden from global;
+}

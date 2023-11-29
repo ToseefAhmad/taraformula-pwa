@@ -1,0 +1,46 @@
+.root {
+    composes: h-min-[260px] from global;
+    composes: lg_min-h-[382px] from global;
+}
+.shimmerRoot {
+    composes: h-full from global;
+    composes: w-full from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-center from global;
+}
+
+.shimmerHeading {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+
+    composes: w-[326px] from global;
+    composes: h-[74px] from global;
+    composes: mt-[15px] from global;
+
+    composes: lg_h-[88px] from global;
+    composes: lg_w-[726px] from global;
+    composes: lg_mt-15 from global;
+}
+
+.shimmerSubtitle {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+
+    composes: w-[326px] from global;
+    composes: h-[19px] from global;
+    composes: mt-[13px] from global;
+
+    composes: lg_h-[23px] from global;
+    composes: lg_w-[550px] from global;
+    composes: lg_mt-3 from global;
+}
+
+.shimmerButton {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+
+    composes: h-15 from global;
+    composes: w-[326px] from global;
+    composes: mt-[34px] from global;
+
+    composes: lg_w-[306px] from global;
+    composes: lg_mt-[61px] from global;
+}

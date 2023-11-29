@@ -1,0 +1,37 @@
+.root {
+    composes: text-sm from global;
+    composes: mt-auto from global;
+    composes: lg_text-[16px] from global;
+}
+.rootCart {
+    composes: bg-neutral-100 from global;
+    composes: col-span-2 from global;
+    composes: pl-1.5 from global;
+    composes: rtl_pl-0 from global;
+    composes: rtl_pr-1.5 from global;
+    composes: pt-1 from global;
+    composes: pb-1 from global;
+    composes: rtl_pb-0 from global;
+    composes: rtl_pt-1.5 from global;
+
+    @apply mt-[9px] !important;
+}
+.rootCartShip {
+    composes: mb-[9px] from global;
+
+    @apply mt-0 !important;
+}
+.icon {
+    composes: mr-2 from global;
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-2 from global;
+    composes: relative from global;
+    composes: top-[1px] from global;
+}
+.orderWithin {
+    composes: text-brown from global;
+    composes: pl-8 from global;
+    composes: rtl_pl-0 from global;
+    composes: rtl_pr-8 from global;
+    composes: mt-[-4px] from global;
+}

@@ -1,0 +1,118 @@
+.blockShimmer {
+    composes: bg-gray-20 from global;
+}
+
+.firstContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: md_flex-row from global;
+
+    @apply
+        2xl_max-w-[1440px]
+        2xl_mx-auto;
+}
+
+.shimmerImageBig {
+    composes: relative from global;
+    composes: pb-[108%] from global;
+    composes: md_pb-[27%] from global;
+    composes: lg_pb-[31%] from global;
+    composes: md_w-[41.6667%] from global;
+    composes: w-full from global;
+}
+
+.firstContainerTextContainer {
+    composes: py-[17px] from global;
+    composes: md_w-[58.3333%] from global;
+    composes: px-mobile from global;
+    composes: xl_pl-[7.5rem] from global;
+    composes: lg_pr-[52px] from global;
+    composes: lg_pl-[52px] from global;
+    composes: lg_pt-[2.8rem] from global;
+    composes: lg_pb-[8px] from global;
+    composes: rtl_xl_pr-[7.5rem] from global;
+    composes: rtl_xl_pl-[52px] from global;
+}
+
+.firstContainerButton {
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: w-[22%] from global;
+    composes: mt-8 from global;
+    composes: lg_mt-[4.2rem] from global;
+}
+
+.firstContainerTextHeading {
+    composes: h-[32px] from global;
+    composes: lg_h-[52px] from global;
+    composes: lg_mb-[10px] from global;
+}
+
+.firstContainerTextHeading:nth-child(1) {
+    @apply
+        mb-4
+        w-3/4;
+}
+
+.firstContainerTextHeading:nth-child(2) {
+    @apply
+        hidden
+        lg_block
+        w-3/5;
+}
+
+.firstContainerText {
+    composes: lg_w-[50%] from global;
+}
+
+.additionalContainers {
+    composes: mx-auto from global;
+    composes: lg_px-desktop from global;
+    composes: lg_max-w-[1440px] from global;
+    composes: w-full from global;
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: lg_pb-32 from global;
+}
+
+.secondContainer .shimmerImage {
+    @apply
+        ml-auto
+        pb-[20%]
+        relative
+        w-[23.5%];
+    @apply
+        rtl_ml-0
+        rtl_mr-auto;
+}
+
+.shimmerImage [class*='shimmer-root'],
+.shimmerImageBig [class*='shimmer-root'] {
+    @apply absolute;
+}
+
+.thirdContainer {
+    composes: pl-[6.5rem] from global;
+}
+
+.thirdContainer .shimmerImage {
+    @apply
+        pb-[28%]
+        relative
+        w-[43%];
+}
+
+.fourthContainer .shimmerImage {
+    @apply
+        ml-auto
+        pb-[26%]
+        relative
+        w-[37%];
+    @apply
+        rtl_ml-0
+        rtl_mr-auto;
+}
+
+.fourthContainer {
+    composes: pr-24 from global;
+}

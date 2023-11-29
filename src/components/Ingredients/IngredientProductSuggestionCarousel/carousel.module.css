@@ -1,0 +1,64 @@
+.carousel {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: mx-[-5px] from global;
+    composes: lg_mx-[-7px] from global;
+}
+
+.carousel :global .slick-slide {
+    @apply
+        px-[5px]
+        lg_px-[6.5px]
+        opacity-100;
+    @apply visible !important;
+}
+
+.carousel :global .slick-line {
+    @apply flex !important;
+    @apply
+        mt-[4px]
+        mx-[5px];
+}
+
+.carousel :global .slick-line li {
+    @apply
+        flex-grow
+        h-[3px]
+        text-transparent;
+}
+
+.carousel :global .slick-line li button {
+    @apply
+        p-0
+        block
+        w-full
+        h-[3px]
+        text-[0px]
+        bg-green/[0.12]
+        rounded-[2px]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300
+        lg_hover_bg-green-60;
+    @apply lg_h-[3px];
+}
+
+.carousel :global .slick-line li.slick-active {
+    @apply bg-green;
+}
+
+.itemsList {
+    composes: flex from global;
+    composes: lg_mt-[14px] from global;
+    composes: space-x-[10px] from global;
+    composes: lg_space-x-[13px] from global;
+    composes: rtl_space-x-reverse from global;
+    composes: rtl_lg_space-x-reverse from global;
+}
+
+.itemsList [class*='productItem-root'] {
+    @apply
+        w-1/2
+        lg_w-1/2
+        sm_w-1/3;
+}

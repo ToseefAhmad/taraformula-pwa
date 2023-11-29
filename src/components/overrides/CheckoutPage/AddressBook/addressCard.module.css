@@ -1,0 +1,89 @@
+.root {
+    composes: grid from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-green from global;
+    composes: cursor-pointer from global;
+    composes: relative from global;
+    composes: content-start from global;
+    composes: p-[10px] from global;
+    composes: lg_p-[23px] from global;
+    composes: outline-none from global;
+    transition: border-color 384ms var(--venia-global-anim-in);
+}
+
+.root_selected {
+    composes: root;
+    composes: lg_p-[22px] from global;
+    composes: border-2 from global;
+    composes: border-green from global;
+    composes: cursor-default from global;
+}
+
+.root:hover {
+    @apply
+        lg_p-[22px]
+        lg_border-2
+        lg_border-green;
+}
+
+.root_updated {
+    composes: root_selected;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+.root span {
+    @apply text-base;
+}
+
+.defaultCard {
+    grid-area: 1 / 1;
+}
+
+.defaultBadge {
+    composes: text-base from global;
+    composes: font-bold from global;
+    composes: mb-4 from global;
+}
+
+.buttonContainer {
+    composes: mt-8 from global;
+}
+
+.checkboxItem p {
+    @apply hidden;
+}
+
+.checkmarkIcon {
+    composes: absolute from global;
+    composes: ltr_right-0 from global;
+    composes: rtl_left-0 from global;
+    composes: top-0 from global;
+    composes: p-[10px] from global;
+    composes: lg_p-[22px] from global;
+}
+
+.checkmarkIcon svg {
+    @apply
+        text-white
+        bg-green
+        w-4
+        h-4;
+}
+
+.telephone {
+    composes: rtl_text-right from global;
+    direction: ltr;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

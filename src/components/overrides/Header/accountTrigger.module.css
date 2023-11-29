@@ -1,0 +1,30 @@
+.root {
+    composes: hidden from global;
+
+    /* Desktop screen */
+    composes: xl_block from global;
+}
+
+.root_open {
+    composes: root;
+}
+
+.root_open .accountLink {
+    @apply font-bold
+        tracking-[0];
+}
+
+.trigger {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+}
+
+.accountLink {
+    composes: text-pastelBrown from global;
+    composes: text-[16px] from global;
+    composes: uppercase from global;
+    composes: ltr_tracking-[0.16px] from global;
+
+    /* Hover state */
+    composes: hover_font-bold from global;
+    composes: ltr_hover_tracking-[-0.05px] from global;
+}

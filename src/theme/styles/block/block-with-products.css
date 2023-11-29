@@ -1,0 +1,183 @@
+.block-with-products {
+    @apply lg_mb-[56px];
+}
+
+.block-with-products > div {
+    @apply lg_pr-[50px]
+        lg_pl-[50px];
+}
+
+.block-with-products img {
+    @apply m-0
+        w-full
+        object-cover;
+    @apply lg_max-w-[550px];
+}
+
+.block-with-products figure,
+.block-with-products figure img {
+    @apply h-full w-full;
+}
+
+.block-with-products [class*='image-root'] img {
+    @apply rtl_lg_ml-[10px];
+    @apply rtl_lg_mr-[10px]
+        rtl_lg_relative
+        rtl_lg_left-[10px];
+}
+
+.block-with-products .item-first {
+    @apply mb-[25px]
+        order-[-1];
+    @apply lg_mb-0
+        md_order-[inherit];
+}
+
+.block-with-products h1 {
+    @apply mr-[17px]
+        ml-[17px];
+    @apply ltr_mb-[6px]
+        ltr_max-w-[190px]
+        ltr_leading-[34px];
+    @apply rtl_mb-[3px]
+        rtl_max-w-[inherit]
+        rtl_text-[54px]
+        rtl_leading-[44px];
+    @apply lg_mr-0
+        lg_ml-0;
+    @apply ltr_lg_mb-[10px]
+        ltr_lg_pt-[10px]
+        ltr_lg_max-w-[440px]
+        ltr_lg_leading-[65px];
+    @apply rtl_lg_mb-[10px]
+        rtl_lg_pt-[24px]
+        rtl_lg_max-w-[440px]
+        rtl_lg_text-[80px]
+        rtl_lg_leading-[80px];
+}
+
+.block-with-products h2 {
+    @apply text-[34px];
+    @apply lg_text-[72px];
+    @apply mr-[17px]
+        ml-[17px];
+    @apply ltr_mb-[6px]
+        ltr_max-w-[190px]
+        ltr_leading-[34px];
+    @apply rtl_mb-[3px]
+        rtl_max-w-[inherit]
+        rtl_text-[54px]
+        rtl_leading-[44px];
+    @apply lg_mr-0
+        lg_ml-0;
+    @apply ltr_lg_mb-[10px]
+        ltr_lg_pt-[10px]
+        ltr_lg_max-w-[440px]
+        ltr_lg_leading-[65px];
+    @apply rtl_lg_mb-[10px]
+        rtl_lg_pt-[24px]
+        rtl_lg_max-w-[440px]
+        rtl_lg_text-[80px]
+        rtl_lg_leading-[80px];
+}
+
+.hair-care h2 {
+    @apply text-[2.2rem];
+    @apply lg_text-[4.5rem];
+    @apply mt-[26px];
+    @apply ltr_max-w-[200px];
+    @apply rtl_mt-[21px]
+        rtl_mb-[6px];
+    @apply lg_mt-0;
+    @apply ltr_lg_mb-[13px]
+        ltr_lg_max-w-[440px];
+    @apply rtl_lg_mt-0
+        rtl_lg_mb-[13px];
+}
+
+.block-with-products [class*='text-root'] {
+    @apply mr-[17px]
+        ml-[17px]
+        w-[271px]
+        max-w-[79%];
+    @apply ltr_mb-[6px];
+    @apply rtl_mb-[19px];
+    @apply lg_w-[327px]
+        lg_mr-0
+        lg_mb-[25px]
+        lg_ml-0;
+    @apply ltr_lg_mb-[20px];
+}
+
+.hair-care {
+    @apply lg_mt-[50px];
+}
+
+.hair-care .content > * {
+    @apply ltr_lg_ml-[9%];
+    @apply rtl_lg_mr-[15%];
+}
+
+.hair-care h1 {
+    @apply mt-[26px];
+    @apply ltr_max-w-[200px];
+    @apply rtl_mt-[21px]
+        rtl_mb-[6px];
+    @apply lg_mt-0;
+    @apply ltr_lg_mb-[13px]
+        ltr_lg_max-w-[440px];
+    @apply rtl_lg_mt-0
+        rtl_lg_mb-[13px];
+}
+
+.hair-care [class*='text-root'] {
+    @apply lg_w-[440px]
+        lg_max-w-[70%];
+    @apply rtl_mb-[6px]
+        rtl_w-[330px]
+        rtl_max-w-[95%]
+        rtl_text-[19px];
+    @apply ltr_lg_mb-[19px];
+    @apply rtl_lg_w-[440px]
+        rtl_max-w-[inherit];
+}
+
+.block-with-products figure {
+    @apply min-h-[250px];
+    @apply lg_max-w-[550px];
+}
+
+.block-with-products [class*='image-shimmer'] {
+    @apply lg_min-h-[516px]
+        xl_min-h-[750px];
+}
+
+.block-with-products button {
+    @apply
+        lg_border-solid
+        lg_hover_border-green
+        lg_border-b-2
+        lg_border-transparent
+        font-bold
+        no-underline;
+}
+
+.hair-care [class*='buttons-root'] {
+    @apply
+        mx-[17px]
+        lg_mx-0
+        ltr_lg_ml-[9%]
+        rtl_lg_mr-[15%];
+}
+
+.block-with-products [class*='buttons-root'] {
+    @apply
+        mx-[17px]
+        lg_mx-0;
+}
+
+.block-with-products [class*='buttons-shimmer'] {
+    @apply
+        w-1/3
+        min-h-[23px];
+}

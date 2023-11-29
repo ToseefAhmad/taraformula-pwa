@@ -1,0 +1,84 @@
+.wrapper {
+    composes: flex from global;
+    composes: flex-row from global;
+    composes: container from global;
+    composes: pt-4 from global;
+
+    composes: lg_pl-0 from global;
+    composes: lg_pt-0 from global;
+
+    composes: lg_rtl_pl-[52px] from global;
+    composes: lg_rtl_pr-0 from global;
+}
+
+.imageSide {
+    composes: hidden from global;
+
+    composes: lg_block from global;
+    composes: lg_w-[55.2%] from global;
+    composes: lg_h-[759.3px] from global;
+    composes: lg_pr-[46px] from global;
+
+    composes: lg_rtl_pr-0 from global;
+    composes: lg_rtl_pl-[51px] from global;
+}
+
+.rightSide {
+    composes: w-full from global;
+
+    composes: lg_w-[44.8%] from global;
+    composes: lg_pt-12 from global;
+}
+
+.header {
+    composes: pb-5 from global;
+
+    composes: lg_pb-10 from global;
+
+    composes: rtl_pt-[6px] from global;
+    composes: rtl_pb-[14px] from global;
+    composes: lg_rtl_lb-10 from global;
+    composes: lg_rtl_pt-0 from global;
+    composes: text-[2.2rem] from global;
+    composes: lg_text-[4.5rem] from global;
+}
+
+.accordion {
+    composes: border-t from global;
+    composes: border-[#D2CCCC] from global;
+}
+
+.accordion :global(button) {
+    @apply pr-[4px]
+        lg_py-5
+        rtl_py-[14px]
+        rtl_pl-1
+        lg_rtl_py-5
+        lg_rtl_pl-2;
+}
+
+.accordion > div {
+    @apply pb-[6px];
+}
+
+.accordion :global(button span) {
+    @apply text-left
+        rtl_text-right
+        font-normal;
+}
+
+.accordion :global(.pb-5) {
+    @apply -mt-3
+        pb-[36px]
+        lg_pb-[43px];
+}
+
+.imageContainer {
+    composes: h-full from global;
+}
+
+.faqImage {
+    composes: h-full from global;
+    composes: w-full from global;
+    object-fit: inherit;
+}

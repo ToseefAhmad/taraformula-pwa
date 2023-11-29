@@ -1,0 +1,91 @@
+.page_wrapper {
+    composes: max-w-desktop from global;
+    composes: container-fluid from global;
+    composes: m-auto from global;
+    composes: pb-12 from global;
+    composes: lg_pb-14 from global;
+
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: gap-x-7.5 from global;
+
+    composes: sm_gap-y-6 from global;
+    composes: sm_gap-x-mobile from global;
+    composes: lg_gap-x-desktop from global;
+}
+
+.oneColumn {
+    composes: lg_grid-cols-1 from global;
+}
+
+.twoColumnsLeft {
+    composes: sm_grid-cols-2-mobile from global;
+    composes: lg_grid-cols-2-min-desktop from global;
+    composes: xl_grid-cols-2-desktop from global;
+}
+
+.twoColumnsRight {
+    composes: sm_grid-cols-2-mobile-reverse from global;
+    composes: lg_grid-cols-2-min-desktop-reverse from global;
+    composes: xl_grid-cols-2-desktop-reverse from global;
+}
+
+.twoColumnsRight .sidebar {
+    @apply sm_order-2;
+}
+
+.twoColumnsLeft .sidebar,
+.twoColumnsRight .sidebar {
+    @apply
+        lg_my-[44px]
+        sm_sticky
+        sm_top-[82px]
+        lg_top-[116px];
+}
+
+.sidebar {
+    composes: mt-[22px] from global;
+    composes: mb-[31px] from global;
+    composes: sm_mb-[17px] from global;
+    composes: h-min from global;
+}
+
+.heading {
+    composes: font-serif from global;
+    composes: text-green from global;
+    composes: break-words from global;
+    composes: text-4xl from global;
+    composes: lg_text-7xl from global;
+    composes: leading-8 from global;
+    composes: lg_leading-[65px] from global;
+}
+
+.headingLtr {
+    composes: heading;
+    composes: rtl_font-serif from global;
+}
+
+.description {
+    composes: leading-[20px] from global;
+    composes: pt-8 from global;
+    composes: lg_pt-[17px] from global;
+    composes: lg_max-w-[326px] from global;
+}
+
+.content {
+    composes: sm_my-[17px] from global;
+    composes: lg_my-[44px] from global;
+}
+
+.twoColumnsLeft .content,
+.twoColumnsRight .content {
+    @apply sm_pt-18 lg_pt-[82px];
+}
+
+.layout_default {
+    composes: p-0 from global;
+}
+
+.layout_1column {
+    composes: layout_default;
+}

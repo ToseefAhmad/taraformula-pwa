@@ -1,0 +1,43 @@
+.productSection {
+    composes: border-solid from global;
+    composes: border-b from global;
+    composes: border-default from global;
+    composes: pb-1 from global;
+    composes: lg_pb-1 from global;
+}
+
+.productSection:last-of-type {
+    @apply border-b-0;
+}
+
+.productSection :global(.container) {
+    @apply px-0;
+}
+
+.productSection :local(button) {
+    @apply
+        pt-2
+        pb-0
+        pr-0
+        lg_pt-1
+        lg_pb-0
+        lg_pr-1.5
+        rtl_pl-0;
+}
+
+.productSection > :local(div) {
+    @apply p-0 pb-3 lg_mb-1.5 lg_max-w-[449px];
+}
+
+.productSection :local(button svg) {
+    @apply mb-1.5
+        -mt-1.5
+        mr-0.5
+        lg_m-0
+        rtl_m-0;
+}
+
+/* Fix all products unneeded paddings added in page builder */
+.productSection > :local(div) > div > div > div {
+    @apply p-0 !important;
+}

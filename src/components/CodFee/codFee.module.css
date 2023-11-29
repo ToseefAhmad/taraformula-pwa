@@ -1,0 +1,3 @@
+.codFeeDisclaimer {
+    composes: mx-[10px] from global;
+}

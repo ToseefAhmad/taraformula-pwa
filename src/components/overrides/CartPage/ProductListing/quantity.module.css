@@ -1,0 +1,54 @@
+.root {
+    composes: inline-flex from global;
+    composes: items-center from global;
+    composes: h-[62px] from global;
+    composes: w-[107px] from global;
+    composes: border from global;
+    composes: border-green from global;
+
+    composes: rtl_flex-row-reverse from global;
+}
+
+.button {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: h-full from global;
+    composes: w-[41px] from global;
+    composes: outline-none from global;
+
+    composes: lg_hover_bg-green from global;
+
+    composes: disabled_bg-transparent from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    /* remove blue highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.icon svg {
+    @apply text-[#9B9B9B] stroke-current;
+}
+
+.button_decrement {
+    composes: button;
+}
+
+.button_increment {
+    composes: button;
+}
+
+.input {
+    composes: h-15 from global;
+    composes: w-full from global;
+    composes: text-center from global;
+    composes: bg-transparent from global;
+    composes: font-bold from global;
+    composes: text-[#545454] from global;
+    composes: text-base from global;
+    composes: outline-none from global;
+    composes: rtl_font-sans from global;
+}

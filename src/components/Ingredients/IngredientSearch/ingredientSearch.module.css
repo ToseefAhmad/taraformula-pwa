@@ -1,0 +1,164 @@
+.filters {
+    composes: pt-[12px] from global;
+    composes: pb-[6px] from global;
+    composes: bg-gray-20 from global;
+
+    /* Desktop */
+    composes: lg_pb-[7px] from global;
+    composes: lg_pt-[5.75rem] from global;
+}
+
+.categorySection {
+    /* Desktop */
+    composes: lg_flex from global;
+    composes: container from global;
+}
+
+.optionContainer {
+    composes: w-full from global;
+}
+
+.textArea {
+    composes: mb-[7px] from global;
+    composes: text-ss from global;
+
+    /* Desktop */
+    composes: lg_text-base from global;
+    composes: lg_uppercase from global;
+    composes: lg_mr-[40px] from global;
+    composes: lg_text-base from global;
+
+    /* RTL */
+    composes: rtl_lg_ml-[40px] from global;
+    composes: rtl_lg_mr-0 from global;
+}
+
+.listContainer {
+    composes: overflow-x-auto from global;
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: mb-[4px] from global;
+    composes: scrollbar-x from global;
+
+    /* Desktop */
+    composes: lg_mb-[17px] from global;
+}
+
+.letterListContainer {
+    composes: listContainer;
+    composes: flex-nowrap from global;
+    composes: mx-[-9px] from global;
+    composes: pb-[6px] from global;
+    composes: mb-[0px] from global;
+
+    /* Desktop */
+    composes: lg_justify-between from global;
+    composes: lg_pb-[10px] from global;
+    composes: lg_mx-[-10px] from global;
+}
+
+.categoryButton {
+    composes: relative from global;
+    composes: mr-[22px] from global;
+    composes: mb-[11px] from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: text-sm from global;
+
+    /* Desktop */
+    composes: lg_mr-[80px] from global;
+    composes: lg_text-base from global;
+    composes: lg_mb-[7px] from global;
+
+    /* RTL */
+    composes: rtl_ml-[22px] from global;
+    composes: rtl_mr-0 from global;
+    composes: rtl_lg_ml-[80px] from global;
+}
+
+.categoryButton:last-child {
+    @apply
+        mr-0
+        rtl_ml-0;
+}
+
+.letterButton {
+    composes: relative from global;
+    composes: px-[10px] from global;
+    composes: mr-[15px] from global;
+    composes: uppercase from global;
+    composes: text-sm from global;
+    composes: fontBold-width-fix from global;
+
+    /* Desktop */
+    composes: lg_mr-0 from global;
+    composes: lg_text-base from global;
+}
+
+.categoryButton:hover::after,
+.letterButton:hover:enabled::after,
+.selected::after {
+    content: '';
+
+    @apply
+        w-full
+        bg-green
+        absolute
+        left-0
+        bottom-px
+        border-b-[2px]
+        border-solid;
+
+    /* Desktop */
+    @apply lg_bottom-[-5px];
+}
+
+.letterButton:hover:enabled::after,
+.letterButton.selected::after {
+    @apply
+        w-[60%]
+        -translate-x-1/2
+        left-[50%];
+}
+
+.letterButton:disabled {
+    touch-action: auto;
+
+    @apply
+        opacity-50
+        cursor-not-allowed;
+}
+
+.letterButton:hover:enabled,
+.letterButton.selected {
+    @apply font-bold;
+}
+
+.ingredientList {
+    composes: container from global;
+    composes: pt-[5px] from global;
+
+    /* Desktop */
+    composes: lg_grid from global;
+    composes: lg_grid-cols-3 from global;
+    composes: lg_gap-x-[10px] from global;
+    composes: lg_pt-[26px] from global;
+    composes: lg_pb-[17px] from global;
+}
+
+.listSection {
+    @apply bg-gray-10;
+}
+
+.shimmerAlpha {
+    composes: h-[29px] from global;
+    composes: lg_h-[34px] from global;
+    composes: lg_mb-[17px] from global;
+}
+
+.shimmerCategory {
+    composes: h-[29px] from global;
+    composes: mb-[6px] from global;
+    composes: lg_mb-[17px] from global;
+    composes: lg_h-[31px] from global;
+}

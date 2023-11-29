@@ -1,0 +1,54 @@
+.navigation {
+    composes: sticky from global;
+    top: 50%;
+    composes: max-w-[200px] from global;
+    composes: pb-3 from global;
+}
+
+.link span:last-child {
+    @apply mt-4;
+}
+
+.link:hover span {
+    @apply lg_underline;
+}
+
+.navigationLeft {
+    composes: navigation;
+    composes: lg_ml-[50px] from global;
+    composes: ml-[10px] from global;
+    composes: rtl_mr-[10px] from global;
+    composes: rtl_lg_mr-[50px] from global;
+    composes: text-left from global;
+    composes: rtl_text-right from global;
+
+    composes: rtl_lg_ml-[-20px] from global;
+    composes: lg_mr-[-20px] from global;
+}
+
+.navigationRight {
+    composes: navigation;
+    composes: mr-[10px] from global;
+    composes: lg_mr-[50px] from global;
+    composes: rtl_ml-[10px] from global;
+    composes: rtl_lg_ml-[50px] from global;
+
+    composes: rtl_lg_mr-[-20px] from global;
+    composes: lg_ml-[-20px] from global;
+
+    composes: text-right from global;
+    composes: rtl_text-left from global;
+}
+
+.title {
+    composes: block from global;
+    composes: uppercase from global;
+    composes: text-[16px] from global;
+    composes: font-bold from global;
+}
+
+.text {
+    composes: block from global;
+    composes: lg_text-[12px] from global;
+    composes: xl_text-[15px] from global;
+}

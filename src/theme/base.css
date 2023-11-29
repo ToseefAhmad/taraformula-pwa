@@ -1,0 +1,55 @@
+@layer base {
+    body {
+        @apply text-green text-base rtl_font-arabicText overflow-x-hidden;
+    }
+
+    h1,
+    h1 span {
+        @apply lg_text-7xl text-4xl font-serif font-light rtl_font-arabicHeadline;
+    }
+
+    h2,
+    h2 span {
+        @apply lg_text-5xl text-2xl font-serif font-light rtl_font-arabicHeadline rtl_lg_text-6xl rtl_text-4xl;
+    }
+
+    h3,
+    h3 span {
+        @apply lg_text-3xl text-xl font-serif font-light rtl_font-arabicHeadline rtl_lg_text-4xl rtl_text-3xl;
+    }
+
+    h4,
+    h4 span {
+        @apply lg_text-2xl text-lg rtl_font-arabicHeadline5;
+    }
+
+    h5,
+    h5 span {
+        @apply lg_text-lg text-sm font-bold rtl_font-arabicHeadline5 rtl_font-medium;
+    }
+
+    h6,
+    h6 span {
+        @apply lg_text-lg text-sm font-bold rtl_font-arabicHeadline5 rtl_font-medium;
+    }
+
+    div,
+    span,
+    a,
+    p {
+        @apply rtl_font-arabicText;
+    }
+}
+
+/* Scroll lock fix */
+html[data-scroll-lock='true'] {
+    overflow: hidden;
+}
+
+.text-desktop {
+    @apply hidden lg_block;
+}
+
+.text-mobile {
+    @apply lg_hidden;
+}

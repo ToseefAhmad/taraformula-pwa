@@ -1,0 +1,198 @@
+.root {
+    composes: pb-6 from global;
+    composes: overflow-hidden from global;
+}
+
+.carouselFeatured {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: pb-[7px] from global;
+    composes: ml-[17px] from global;
+    composes: lg_mx-[47px] from global;
+    composes: lg_mt-0 from global;
+    composes: lg_mb-0 from global;
+    composes: lg_pb-8 from global;
+}
+
+.carouselFeatured > div:first-of-type > div:first-of-type > div:first-of-type > div {
+    @apply visible !important;
+    @apply pr-[11px]
+        rtl_scale-x-[-1];
+}
+
+.carouselFeatured h2 {
+    @apply rtl_no-underline;
+}
+
+.carouselFeatured > div:first-of-type > div:first-of-type {
+    @apply rtl_scale-x-[-1]
+        rtl_text-right;
+}
+
+.carouselFeatured > div:first-of-type {
+    @apply ml-0;
+}
+
+.carouselFeatured ul {
+    @apply mt-6
+        flex
+        bg-white
+        p-0
+        lg_mr-0
+        rtl_lg_mr-1.5
+        lg_mt-[33px];
+}
+
+.carouselFeatured :global .slick-slider .slick-arrow {
+    @apply rtl_scale-x-[-1]
+        lg_top-[50%]
+        lg_opacity-0
+        lg_duration-300
+        lg_transition-all;
+}
+
+.carouselFeatured:hover :global .slick-slider .slick-arrow {
+    @apply lg_top-[35%]
+        lg_opacity-100;
+}
+
+.carouselFeatured :global .slick-arrow:hover {
+    @apply bg-white;
+}
+
+.carouselFeatured :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+.carouselFeatured :global .slick-slider .slick-next {
+    @apply rtl_left-[1.6rem]
+        rtl_right-auto;
+}
+
+.carouselFeatured :global .slick-slider .slick-prev {
+    @apply rtl_right-[1.6rem]
+        rtl_left-auto;
+}
+
+.carouselFeatured ul li {
+    @apply flex
+        flex-1
+        h-auto;
+}
+
+.carouselFeatured ul > li > button {
+    filter: brightness(100%);
+    text-indent: -99999px;
+
+    @apply w-full
+        h-[2px]
+        bg-white
+        outline-none
+        rounded-xl
+        shadow-none
+        cursor-pointer
+        block
+        p-0
+        transition;
+}
+.carouselFeatured ul > li > button:hover {
+    @apply bg-green-60;
+}
+
+:global(.slick-line .slick-active button) {
+    background-color: #023527;
+}
+
+.post {
+    composes: border-solid from global;
+    composes: border-t from global;
+}
+.post a {
+    @apply lg_hover_underline;
+}
+
+.post:hover .postTitle {
+    @apply lg_underline;
+}
+
+.images {
+    composes: overflow-hidden from global;
+    composes: block from global;
+    composes: mb-[0.4rem] from global;
+    composes: relative from global;
+    composes: pt-[66.67%] from global;
+    composes: min-h-[247px] from global;
+    composes: lg_min-h-[228px] from global;
+}
+
+.images img {
+    @apply object-cover
+        lg_hover_scale-110
+        lg_transition-transform;
+}
+
+.imageContainer {
+    composes: bg-transparent from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: overflow-hidden from global;
+}
+
+.imageContainer img:first-of-type {
+    @apply absolute
+        w-full
+        h-full;
+}
+
+.image {
+    composes: h-full from global;
+    composes: w-auto from global;
+    composes: min-w-[1rem] from global;
+}
+
+.date {
+    composes: mt-3 from global;
+    composes: font-bold from global;
+    composes: leading-5	from global;
+    composes: lg_mt-[5px] from global;
+    composes: rtl_lg_mt-[10px] from global;
+    composes: lg_leading-4	from global;
+    composes: lg_leading-4	from global;
+    composes: lg_text-sm from global;
+}
+
+.category {
+    composes: text-sm from global;
+    composes: my-[3px] from global;
+    composes: font-bold from global;
+    composes: leading-4	from global;
+}
+
+.postTitle {
+    composes: mt-[8px] from global;
+    composes: lg_text-3xl from global;
+    composes: lg_hover_underline from global;
+}
+
+.widgetTitle {
+    composes: widgetTitle from '@amasty/blog-pro/src/components/root.css';
+}
+
+.more {
+    composes: more from '@amasty/blog-pro/src/components/PostPage/post.css';
+}
+
+.categoryPlaceHolder {
+    composes: h-[23px] from global;
+}
+
+.carouselLoading {
+    composes: md_grid from global;
+    composes: w-full from global;
+    composes: flex from global;
+    composes: lg_grid-cols-4 from global;
+    composes: md_grid-cols-3 from global;
+    composes: md_gap-[11px] from global;
+}

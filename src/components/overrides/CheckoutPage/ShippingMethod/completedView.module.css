@@ -1,0 +1,43 @@
+.root {
+    composes: h-full from global;
+}
+
+.contents {
+    composes: grid from global;
+    composes: mt-4.5 from global;
+    grid-template-rows: auto auto;
+}
+
+.editButton {
+    composes: uppercase from global;
+    composes: font-bold from global;
+    composes: lg_border-b-2 from global;
+    composes: lg_border-transparent from global;
+    composes: lg_border-solid from global;
+}
+
+.editButton:hover {
+    @apply lg_border-green;
+}
+
+.error {
+    composes: self-center from global;
+    composes: text-red from global;
+}
+
+.shippingPrice {
+    composes: font-bold from global;
+    composes: uppercase from global;
+}
+
+.heading {
+    composes: text-lg from global;
+    composes: lg_text-lg from global;
+    composes: font-bold from global;
+}
+
+.titleContainer {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: grid-cols-1 from global;
+}

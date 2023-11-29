@@ -1,0 +1,281 @@
+.root {
+    composes: bg-[#EFEDED] from global;
+    composes: relative from global;
+}
+
+.item,
+.itemDisabled {
+    composes: flex from global;
+    composes: transition-opacity from global;
+}
+
+.itemDisabled {
+    composes: opacity-50 from global;
+    composes: pointer-events-none from global;
+}
+
+.details {
+    composes: pl-[13px] from global;
+    composes: pr-[6px] from global;
+    composes: pt-[12px] from global;
+    composes: pb-[9px] from global;
+    composes: font-sans from global;
+    composes: lg_flex from global;
+    composes: lg_pt-[27px] from global;
+    composes: lg_pb-[21px] from global;
+    composes: lg_pl-4 from global;
+    composes: xl_pl-9 from global;
+    composes: lg_items-center from global;
+
+    composes: rtl_pl-[6px] from global;
+    composes: rtl_pr-[13px] from global;
+
+    composes: rtl_lg_pr-4 from global;
+    composes: rtl_lg_pl-0 from global;
+
+    composes: rtl_xl_pr-9 from global;
+
+    @apply w-[calc(100%-118px)];
+}
+
+.tagLine {
+    composes: font-bold from global;
+    composes: text-[17px] from global;
+    composes: leading-[16px] from global;
+    composes: tracking-[0.17px] from global;
+    composes: text-green from global;
+}
+
+.tagLineMobile {
+    composes: tagLine;
+    composes: lg_hidden from global;
+}
+
+.tagLineDesktop {
+    composes: font-bold from global;
+    composes: text-[17px] from global;
+    composes: leading-[16px] from global;
+    composes: tracking-[0.17px] from global;
+    composes: text-green from global;
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: lg_mb-[2px] from global;
+}
+
+.name {
+    composes: text-[17px] from global;
+    composes: leading-[16px] from global;
+    composes: tracking-[0.17px] from global;
+    composes: lg_order-1 from global;
+    composes: lg_w-[38%] from global;
+}
+
+.name a:hover {
+    @apply lg_underline;
+}
+
+.price {
+    composes: font-bold from global;
+    composes: text-[15px] from global;
+    composes: leading-[21px] from global;
+    composes: text-green from global;
+    composes: block from global;
+    composes: lg_order-3 from global;
+    composes: lg_ml-auto from global;
+    composes: lg_mr-[7%] from global;
+    composes: xl_mr-[13%] from global;
+
+    composes: rtl_lg_ml-[7%] from global;
+    composes: rtl_lg_mr-auto from global;
+
+    composes: rtl_xl_ml-[13%] from global;
+}
+
+.free {
+    composes: font-bold from global;
+    composes: text-[15px] from global;
+    composes: leading-[21px] from global;
+    composes: text-green from global;
+    composes: block from global;
+    composes: lg_order-3 from global;
+    composes: lg_ml-auto from global;
+    composes: rtl_lg_mr-auto from global;
+
+    composes: lg_mr-[15%] from global;
+    composes: xl_mr-[19%] from global;
+
+    composes: rtl_lg_ml-[15%] from global;
+    composes: rtl_xl_ml-[19%] from global;
+}
+
+.quantity {
+    composes: leading-[19px] from global;
+    composes: mt-[2px] from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: lg_order-2 from global;
+    composes: lg_mt-0 from global;
+    composes: lg_mr-[20px] from global;
+    composes: xl_mr-0 from global;
+
+    composes: rtl_lg_mr-0 from global;
+    composes: rtl_lg_ml-[20px] from global;
+
+    composes: rtl_xl_ml-0 from global;
+}
+
+.quantity button:hover svg {
+    @apply lg_text-green-80;
+}
+
+.quantity form {
+    @apply lg_flex;
+}
+
+.removeButton {
+    composes: self-end from global;
+    composes: lg_absolute from global;
+    composes: lg_right-[21px] from global;
+    composes: lg_top-[53%] from global;
+    composes: lg_-translate-y-1/2 from global;
+    composes: lg_w-[16px] from global;
+    composes: lg_h-[16px] from global;
+
+    composes: rtl_lg_right-auto from global;
+    composes: rtl_lg_left-[21px] from global;
+}
+
+.menuItem button {
+    @apply uppercase text-[15px] leading-[15px] text-gray2 block;
+}
+
+.imagePlaceholder {
+    composes: h-[118px] from global;
+    composes: lg_h-[102px] from global;
+}
+
+.removeIcon {
+    composes: hidden from global;
+    composes: lg_block from global;
+}
+
+.mainIcon {
+    composes: text-brown-40 from global;
+}
+
+.sectionText {
+    composes: lg_hidden from global;
+}
+
+.image {
+    composes: h-[101px] from global;
+    composes: lg_w-[102px] from global;
+    composes: lg_h-[87px] from global;
+}
+
+.qtyLabel {
+    composes: hidden from global;
+    composes: xl_block from global;
+    composes: lg_text-[10px] from global;
+    composes: lg_pl-[2px] from global;
+    composes: lg_pr-[17px] from global;
+
+    composes: rtl_lg_pl-[17px] from global;
+    composes: rtl_lg_pr-[2px] from global;
+}
+
+.optionLabel {
+    composes: flex from global;
+    composes: text-xs from global;
+}
+
+.images {
+    composes: self-center from global;
+    composes: images from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageContainer {
+    composes: imageContainer from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageContainer:hover .imageWithHover {
+    @apply lg_hidden;
+}
+
+.imageContainer:hover .image {
+    @apply
+        lg_scale-110
+        lg_opacity-100;
+}
+
+.imageContainer:hover .hoverImage {
+    @apply lg_opacity-100;
+}
+
+.imageWithHover {
+    composes: imageWithHover from '@app/components/overrides/Gallery/item.module.css';
+    composes: h-[101px] from global;
+    composes: lg_w-[102px] from global;
+    composes: lg_h-[87px] from global;
+}
+
+.image,
+.hoverImage {
+    composes: h-full from global;
+    composes: object-cover from global;
+    composes: w-full from global;
+}
+
+.images,
+.imageContainer img {
+    @apply max-h-[101px]
+        max-w-[118px]
+        lg_max-h-[87px]
+        lg_max-w-[102px];
+}
+
+.image {
+    composes: image from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.hoverImage {
+    composes: hoverImage from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageLoaded {
+    composes: imageLoaded from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imageNotLoaded {
+    composes: imageNotLoaded from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.imagePlaceholder {
+    composes: imagePlaceholder from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.stockStatus {
+    composes: quantity;
+}
+
+.stockStatusMessage {
+    composes: font-bold from global;
+    composes: uppercase from global;
+}
+
+.error {
+    composes: bg-lightRed from global;
+    composes: mt-[-10px] from global;
+    composes: pt-1.5 from global;
+    composes: pb-[7px] from global;
+    composes: font-bold from global;
+    composes: text-[15px] from global;
+    composes: leading-[17px] from global;
+    composes: tracking-normal from global;
+    composes: text-white from global;
+    composes: ltr_text-right from global;
+    composes: ltr_pr-4 from global;
+
+    composes: rtl_text-left from global;
+    composes: rtl_pl-4 from global;
+}

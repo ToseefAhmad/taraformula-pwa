@@ -1,0 +1,45 @@
+.input {
+    composes: inline-flex from global;
+    composes: border from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+    composes: rounded-none from global;
+    composes: w-full from global;
+    composes: h-15 from global;
+    composes: appearance-none from global;
+    composes: outline-none from global;
+    composes: py-5 from global;
+    composes: pl-3.5 from global;
+    composes: pr-14 from global;
+    composes: bg-white from global;
+    composes: rounded-t-none from global;
+    composes: rounded-r-none from global;
+    composes: rounded-b-none from global;
+    composes: rounded-l-none from global;
+
+    composes: rtl_pl-14 from global;
+    composes: rtl_pr-3.5 from global;
+
+    composes: font-normal from global;
+    composes: text-sm from global;
+
+    composes: placeholder_text-green from global;
+
+    composes: disabled_pointer-events-none from global;
+    composes: disabled_text-gray from global;
+
+    composes: focus_border-2 from global;
+    composes: focus_py-[19px] from global;
+    composes: focus_pl-[13px] from global;
+    composes: focus_pr-[55px] from global;
+}
+
+.input_error {
+    composes: input;
+    composes: bg-red-5 from global;
+}
+
+.icon {
+    composes: rtl_rotate-180 from global;
+    composes: rtl_translate-y-[-5px] from global;
+}

@@ -1,0 +1,19 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: outline-none from global;
+    color: rgb(var(--venia-brand-color-1-700));
+    font-size: var(--venia-global-fontSize-200);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    text-decoration: underline;
+    line-height: 1.25rem;
+    max-width: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.root:hover {
+    color: rgb(var(--venia-global-color-gray-900));
+}
+
+.content {
+    composes: content from '@app/components/overrides/Button/button.module.css';
+}

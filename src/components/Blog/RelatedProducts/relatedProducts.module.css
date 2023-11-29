@@ -1,0 +1,121 @@
+.root {
+    composes: root from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+    composes: max-w-[660px] from global;
+    composes: mx-auto from global;
+    composes: lg_mt-[50px] from global;
+}
+
+.carousel {
+    composes: root from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: overflow-hidden from global;
+}
+
+.carousel > div:first-of-type > div:first-of-type > div:first-of-type > div {
+    @apply visible !important;
+    @apply ltr_pr-[11px]
+        rtl_pl-[11px];
+}
+
+.carousel > div:first-of-type {
+    @apply ml-0;
+}
+
+.carousel > div:first-of-type > div:first-of-type {
+    @apply ltr_lg_mr-[-10px]
+        rtl_lg_ml-[-10px];
+}
+
+.carousel ul {
+    @apply mt-0
+        bg-white
+        p-0
+        lg_mr-[29px]
+        lg_mt-[33px];
+}
+
+.carousel ul li {
+    @apply flex
+        flex-1
+        h-auto;
+}
+
+.carousel ul > li > button {
+    filter: brightness(100%);
+    text-indent: -99999px;
+
+    @apply w-full
+        h-[2px]
+        bg-white
+        outline-none
+        rounded-xl
+        shadow-none
+        cursor-pointer
+        block
+        p-0
+        transition;
+}
+.carousel ul > li > button:hover {
+    @apply bg-green-60;
+}
+
+:global(.slick-line .slick-active button) {
+    background-color: #023527;
+}
+
+.images {
+    composes: images from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+}
+
+.images img {
+    @apply object-cover;
+}
+
+.imageContainer {
+    composes: imageContainer from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+}
+
+.imageContainer img:first-of-type {
+    @apply absolute
+        w-full
+        h-full;
+}
+
+.image {
+    composes: image from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+}
+
+.date {
+    composes: date from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+}
+
+.category {
+    composes: category from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+}
+
+.postTitle {
+    composes: postTitle from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+}
+
+.postTitle:hover {
+    @apply underline;
+}
+
+.widgetTitle {
+    composes: widgetTitle from '@amasty/blog-pro/src/components/root.css';
+}
+
+.more {
+    composes: more from '@amasty/blog-pro/src/components/PostPage/post.css';
+}
+
+.categoryPlaceHolder {
+    composes: categoryPlaceHolder from '@app/components/Blog/FeaturedPosts/featuredPosts.module.css';
+}
+
+.header {
+    composes: text-left from global;
+    composes: mb-[15px] from global;
+    composes: lg_mb-[22px] from global;
+    composes: rtl_text-right from global;
+}

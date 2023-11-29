@@ -1,0 +1,51 @@
+.root_default {
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: h-[2px] from global;
+    composes: bg-white from global;
+    composes: pointer-events-none from global;
+}
+
+.root {
+    composes: root_default;
+
+    composes: relative from global;
+}
+
+.root_absolute {
+    composes: root_default;
+
+    composes: absolute from global;
+    composes: left-0 from global;
+    composes: bottom-0 from global;
+}
+
+.indicator_off {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: opacity-0 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: -translate-x-full from global;
+    composes: origin-left from global;
+    composes: bg-green-80 from global;
+
+    composes: transition-transform from global;
+    composes: duration-300 from global;
+    composes: ease-linear from global;
+}
+
+.indicator_loading {
+    composes: indicator_off;
+
+    composes: opacity-100 from global;
+    composes: -translate-x-1/4 from global;
+}
+
+.indicator_done {
+    composes: indicator_off;
+
+    composes: opacity-100 from global;
+    composes: translate-x-0 from global;
+}

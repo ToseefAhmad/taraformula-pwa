@@ -1,0 +1,119 @@
+.list {
+    composes: list from './index.module.css';
+    width: 810px;
+}
+
+.colorBadge {
+    width: 154px;
+    height: 56px;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: rounded-sm from global;
+}
+
+.colorText {
+    composes: text-sm from global;
+    composes: font-bold from global;
+    composes: text-white from global;
+}
+
+.red {
+    composes: bg-red from global;
+}
+
+.red80 {
+    composes: bg-red-80 from global;
+}
+
+.red60 {
+    composes: bg-red-60 from global;
+}
+
+.red40 {
+    composes: bg-red-40 from global;
+}
+
+.red20 {
+    composes: bg-red-20 from global;
+}
+
+.green {
+    composes: bg-green from global;
+}
+
+.green80 {
+    composes: bg-green-80 from global;
+}
+
+.green60 {
+    composes: bg-green-60 from global;
+}
+
+.green40 {
+    composes: bg-green-40 from global;
+}
+
+.green20 {
+    composes: bg-green-20 from global;
+}
+
+.gray {
+    composes: bg-gray from global;
+}
+
+.gray80 {
+    composes: bg-gray-80 from global;
+}
+
+.gray60 {
+    composes: bg-gray-60 from global;
+}
+
+.gray40 {
+    composes: bg-gray-40 from global;
+}
+
+.gray20 {
+    composes: bg-gray-20 from global;
+}
+
+.brown {
+    composes: bg-brown from global;
+}
+
+.brown80 {
+    composes: bg-brown-80 from global;
+}
+
+.brown60 {
+    composes: bg-brown-60 from global;
+}
+
+.brown40 {
+    composes: bg-brown-40 from global;
+}
+
+.brown20 {
+    composes: bg-brown-20 from global;
+}
+
+.purple {
+    composes: bg-purple from global;
+}
+
+.purple80 {
+    composes: bg-purple-80 from global;
+}
+
+.purple60 {
+    composes: bg-purple-60 from global;
+}
+
+.purple40 {
+    composes: bg-purple-40 from global;
+}
+
+.purple20 {
+    composes: bg-purple-20 from global;
+}

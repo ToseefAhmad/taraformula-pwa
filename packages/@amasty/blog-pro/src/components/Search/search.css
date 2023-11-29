@@ -1,0 +1,16 @@
+.root {
+  composes: widgetRoot from '../root.css';
+}
+
+.title {
+  composes: widgetTitle from '../root.css';
+}
+
+.inputRoot {
+  margin: 0 0 1.25rem 0;
+  width: 100%;
+}
+
+.btnRoot {
+  margin: 0;
+}

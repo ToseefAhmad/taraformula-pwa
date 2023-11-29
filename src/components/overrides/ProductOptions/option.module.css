@@ -1,0 +1,11 @@
+.defaultLabel {
+    composes: defaultLabel from '@app/components/GeoIpPopUp/geoIpPopUp.module.css';
+
+    @apply pb-[25px]
+        rtl_pb-[25px]
+        rtl_pt-0;
+}
+
+.defaultLabel span {
+    @apply rtl_pt-[25px] rtl_block;
+}

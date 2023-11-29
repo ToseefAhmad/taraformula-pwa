@@ -1,0 +1,40 @@
+.root {
+    display: grid;
+    gap: 1.125rem;
+    padding: 2rem;
+}
+
+.headingContainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+}
+
+.heading {
+    font-weight: 600;
+}
+
+.editButton {
+    color: rgb(var(--venia-brand-color-1-700));
+    padding: 1rem;
+    margin: -1rem;
+}
+
+.editIcon {
+    stroke: rgb(var(--venia-brand-color-1-700));
+}
+
+.afterpayDetailsContainer {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.redirectMessage {
+    font-size: 80%;
+}
+
+@media (max-width: 960px) {
+    .editText {
+        display: none;
+    }
+}

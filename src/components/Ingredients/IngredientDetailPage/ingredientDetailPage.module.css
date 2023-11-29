@@ -1,0 +1,247 @@
+@import '../IngredientsCmsBlocks/aboutUs.css';
+
+.bottomCmsBlock :global(.container) {
+    @apply
+        translate-x-0;
+}
+
+:global([class*='row-fullBleed']) {
+    @apply
+        rtl_ml-0
+        rtl_mr-[50%]
+        rtl_translate-x-1/2;
+}
+
+.bottomCmsBlock :global(.about-us-bottom) {
+    @apply
+        pb-[4.4rem]
+        lg_pb-[5.4rem];
+}
+
+.bottomCmsBlock :global(.about-us-bottom) h1 {
+    @apply
+        mb-[1.9rem]
+        lg_mb-[3.7rem]
+        lg_w-[65%];
+}
+
+:global(.about-us-ingredient .big-image) img {
+    @apply
+        h-[415px]
+        md_h-[496px]
+        lg_h-auto
+        xl_h-[617px];
+}
+
+.blockShimmer {
+    composes: bg-gray-40 from global;
+    composes: pb-[70px] from global;
+}
+
+.imageContainerShimmer {
+    composes: lg_flex from global;
+    composes: mb-4 from global;
+    composes: lg_mb-5 from global;
+
+    @apply 2xl_max-w-[1440px] 2xl_px-desktop 2xl_mx-auto;
+}
+
+.shimmerImageBig {
+    composes: w-full from global;
+    composes: h-[419px] from global;
+
+    composes: lg_w-[56%] from global;
+    composes: lg_h-[617px] from global;
+}
+
+.shimmerContainer {
+    composes: px-[17px] from global;
+    composes: lg_container from global;
+}
+
+.smallImageContainerShimmer {
+    composes: lg_flex from global;
+    composes: items-end from global;
+    composes: lg_w-[44%] from global;
+}
+
+.shimmerText {
+    composes: h-[25px] from global;
+    composes: lg_h-[40px] from global;
+    composes: lg_w-[56%] from global;
+    composes: mb-4 from global;
+    composes: lg_mb-5 from global;
+}
+
+.shimmerButton {
+    composes: mt-[39px] from global;
+    composes: lg_mt-[47px] from global;
+    composes: h-[19px] from global;
+    composes: lg_h-[23px] from global;
+    composes: w-[65px] from global;
+}
+
+.shimmerImageSmall {
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: lg_w-[326px] from global;
+    composes: lg_h-[389px] from global;
+    composes: lg_mx-auto from global;
+}
+
+.suggestionBlock {
+    composes: pt-[10px] from global;
+    composes: mt-[20px] from global;
+    composes: pb-[32px] from global;
+    composes: border-t from global;
+    composes: border-gray4 from global;
+    composes: lg_pt-[12px] from global;
+    composes: lg_pb-[8rem] from global;
+    composes: lg_flex from global;
+    composes: lg_justify-between from global;
+}
+
+.relatedProducts {
+    composes: lg_w-[39%] from global;
+}
+
+.discoverProducts {
+    composes: lg_w-[49.5%] from global;
+    composes: pt-[8px] from global;
+    composes: lg_pt-0 from global;
+    composes: mt-[15px] from global;
+    composes: lg_mt-0 from global;
+}
+
+.discoverProducts :global([class*='slick-slider']) button {
+    @apply
+        hover_no-underline
+        z-2
+        lg_hover_underline;
+}
+
+.ingredientContentWrapper {
+    composes: bg-gray-10 from global;
+}
+
+.ingredientContent {
+    composes: lg_max-w-[1204px] from global;
+    composes: container from global;
+}
+
+.relatedProductsTitle {
+    composes: text-base from global;
+    composes: font-bold from global;
+    composes: mb-[11px] from global;
+    composes: lg_mb-[12px] from global;
+}
+
+.ingredientDescription :global(.hidden-desktop) {
+    @apply md_hidden;
+}
+
+.ingredientDescription :global(.hidden-mobile) {
+    @apply
+        hidden
+        md_block;
+}
+
+.ingredientDescription :global(.small-mobile-text) p {
+    @apply
+        text-sm
+        lg_text-base;
+}
+
+.ingredientDescription :global(.flex-row-mobile) {
+    @apply
+        mb-2
+        lg_mb-0
+        flex-row
+        md_flex-col;
+}
+
+.ingredientDescription :global(.flex-row-mobile) p:first-child {
+    @apply
+        min-w-[34%]
+        md_mb-0;
+}
+
+.ingredientDescription {
+    composes: pt-[25px] from global;
+    composes: pb-[10px] from global;
+    composes: lg_pt-[39px] from global;
+    composes: lg_pb-[2.5rem] from global;
+}
+
+.ingredientDescription img {
+    @apply
+        w-full
+        my-0;
+}
+
+.ingredientDescription h3 {
+    @apply
+        mt-[1.8rem]
+        lg_mt-8;
+}
+
+.ingredientDescription p {
+    @apply lg_leading-6;
+}
+
+.ingredientDescription :global(.reference-block) {
+    @apply mt-12;
+}
+
+.ingredientDescription :global(.left-top-column) {
+    @apply lg_max-w-[40%];
+}
+
+.ingredientDescription :global(.reference-block .small-mobile-text) {
+    @apply leading-[15px];
+}
+
+.ingredientDescription :global(.reference-block) [class*='linkButton'] {
+    @apply
+        lg_hover_underline
+        no-underline
+        break-all;
+}
+
+.ingredientDescription :global(.desktop-image-column) {
+    @apply md_w-[49.5%] !important;
+    @apply md_mt-[20px];
+}
+
+.ingredientDescription [class*='columnGroup-root'] {
+    @apply md_justify-between;
+}
+
+.ingredientDescription h1 {
+    @apply mb-6;
+}
+
+.ingredientDescription :global(.left-top-column) figure,
+.ingredientDescription :global(.desktop-image-column) figure {
+    @apply relative pb-[70%];
+}
+
+.ingredientDescription :global(.left-top-column) img,
+.ingredientDescription :global(.desktop-image-column) img {
+    @apply
+        h-full
+        absolute
+        object-cover;
+}
+
+.ingredientDescription [class*='image-shimmer-shimmer'] {
+    @apply relative pb-[70%];
+}
+
+.ingredientDescription :global(.reference-block .small-mobile-text) p {
+    @apply md_text-sm;
+}
+
+.ingredientDescription :global(.reference-block) [class*='linkButton'] {
+    @apply md_text-sm;
+}

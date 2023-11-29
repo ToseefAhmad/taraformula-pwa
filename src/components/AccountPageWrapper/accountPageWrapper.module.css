@@ -1,0 +1,116 @@
+.root {
+    composes: min-h-screen-mobile from global;
+    composes: lg_min-h-screen-desktop from global;
+    composes: container-fluid from global;
+    composes: max-w-desktop from global;
+    composes: mx-auto from global;
+    composes: pb-12.5 from global;
+    composes: lg_pb-25 from global;
+    composes: pt-[8px] from global;
+    composes: lg_pt-8 from global;
+
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: gap-x-[30px] from global;
+    composes: auto-rows-min from global;
+
+    composes: sm_gap-y-6 from global;
+    composes: sm_gap-x-mobile from global;
+    composes: sm_grid-cols-2-mobile from global;
+
+    composes: lg_gap-x-desktop from global;
+    composes: lg_grid-cols-2-desktop from global;
+}
+
+.title {
+    composes: col-span-1 from global;
+    composes: sm_col-span-2 from global;
+    composes: font-serif from global;
+    composes: text-green from global;
+    composes: break-words from global;
+    composes: text-xl from global;
+    composes: lg_text-6xl from global;
+    composes: leading-8 from global;
+    composes: lg_leading-[65px] from global;
+}
+
+.menuClosed {
+    composes: border-b from global;
+    composes: border-default from global;
+}
+
+.menuTitleWrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: w-full from global;
+    composes: items-center from global;
+    composes: h-10 from global;
+    composes: mb-2 from global;
+}
+
+.menuTitle {
+    composes: pt-1 from global;
+    composes: uppercase from global;
+    composes: text-sm from global;
+    composes: font-bold from global;
+}
+
+.icon {
+    composes: mr-[-8px] from global;
+}
+
+.menu {
+    composes: w-100 from global;
+    composes: lg_pr-0 from global;
+    composes: mt-0 from global;
+    composes: lg_mt-4 from global;
+}
+
+.menu ul {
+    @apply border-t
+        border-b
+        border-default;
+}
+
+.menu li:not(:last-child) {
+    @apply border-b
+        border-default;
+}
+
+.menuItem {
+    composes: inline-block from global;
+    composes: py-[15px] from global;
+    composes: w-full from global;
+    composes: text-sm from global;
+    composes: lg_text-lg from global;
+    composes: leading-1 from global;
+    composes: ltr_tracking-[0.6px] from global;
+    composes: hover_font-bold from global;
+    composes: hover_tracking-normal from global;
+}
+
+.menuItemActive {
+    composes: inline-block from global;
+    composes: py-[15px] from global;
+    composes: w-full from global;
+    composes: text-sm from global;
+    composes: lg_text-lg from global;
+    composes: leading-1 from global;
+    composes: font-bold from global;
+    composes: tracking-normal from global;
+}
+
+.test {
+    display: block !important;
+}
+
+.signOut {
+    composes: menuItem;
+    composes: text-left from global;
+    composes: rtl_text-right from global;
+}
+
+.content {
+    composes: mt-[1.8rem] from global;
+    composes: sm_mt-0 from global;
+}

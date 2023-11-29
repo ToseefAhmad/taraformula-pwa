@@ -1,0 +1,10 @@
+.loadingIndicator {
+    composes: grid from global;
+    composes: content-center from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: justify-items-center from global;
+    composes: gap-12 from global;
+    composes: h-44.5 from global;
+    composes: w-full from global;
+}

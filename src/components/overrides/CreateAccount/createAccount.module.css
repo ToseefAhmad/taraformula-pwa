@@ -1,0 +1,95 @@
+.root {
+    composes: grid from global;
+    composes: bg-inherit from global;
+    composes: gap-2.5 from global;
+    composes: pb-2.5 from global;
+}
+
+.title {
+    composes: mb-1.5 from global;
+    composes: lg_mb-2.5 from global;
+}
+
+.nameSection {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: lg_grid-cols-2 from global;
+    composes: lg_gap-x-2 from global;
+    composes: lg_gap-y-0 from global;
+}
+
+.dobSection {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: lg_grid-cols-3 from global;
+    composes: lg_gap-x-2 from global;
+    composes: lg_gap-y-0 from global;
+}
+
+.actions {
+    composes: text-center from global;
+}
+
+.fieldRoot {
+    composes: relative from global;
+    composes: grid from global;
+    composes: content-start from global;
+}
+
+.input {
+    composes: input from '@magento/venia-ui/lib/components/TextInput/textInput.module.css';
+    composes: h-12 from global;
+    composes: px-3.5 from global;
+    composes: py-0 from global;
+    composes: font-normal from global;
+}
+
+.inputLabel {
+    composes: hidden from global;
+}
+
+.inputError {
+    composes: input;
+    composes: bg-red-5 from global;
+}
+
+.description {
+    composes: text-[11px] from global;
+    composes: text-left from global;
+    composes: mb-[25px] from global;
+    composes: lg_mb-5 from global;
+    composes: text-green-60 from global;
+    composes: leading-[13px] from global;
+}
+
+.descriptionLink {
+    composes: font-bold from global;
+    composes: lg_hover_underline from global;
+}
+
+.divider {
+    composes: pt-[23px] from global;
+    composes: pb-4 from global;
+    composes: lg_pt-[25px] from global;
+    composes: lg_pb-[15px] from global;
+}
+
+.returnButton {
+    composes: root from '@app/components/overrides/LinkButton/linkButton.module.css';
+    composes: block from global;
+    composes: no-underline from global;
+    composes: mt-[19px] from global;
+    composes: border-none from global;
+    composes: lg_text-left from global;
+    composes: tracking-normal from global;
+}
+
+.return {
+    composes: text-green from global;
+    composes: font-normal from global;
+    composes: text-sm from global;
+    composes: lg_hover_underline from global;
+}
+.return > span {
+    @apply font-bold;
+}

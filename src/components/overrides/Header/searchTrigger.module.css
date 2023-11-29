@@ -1,0 +1,21 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: block from global;
+    composes: text-green from global;
+    composes: stroke-1 from global;
+    composes: translate-y-[2px] from global;
+    composes: mr-[-3px] from global;
+
+    /* Desktop screen */
+    composes: inline-flex from global;
+    composes: xl_mr-o from global;
+    composes: xl_text-[#806958] from global;
+    composes: xl_translate-y-0 from global;
+    composes: lg_hover_stroke-2 from global;
+}
+
+.open {
+    composes: root;
+    composes: stroke-2 from global;
+}

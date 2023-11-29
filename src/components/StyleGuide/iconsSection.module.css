@@ -1,0 +1,3 @@
+.list {
+    composes: list from './index.module.css';
+}

@@ -1,0 +1,86 @@
+.entryForm,
+.entryFormError {
+    composes: flex gap-[5px] from global;
+}
+
+.entryForm [class*='textInput-label'],
+.entryFormError [class*='textInput-label'] {
+    @apply hidden;
+}
+
+.entryForm button,
+.entryFormError button {
+    @apply lg_h-7.5
+        h-10
+        min-h-[30px]
+        w-[89px]
+        p-0
+        disabled_bg-transparent
+        text-sm;
+}
+
+.entryForm input,
+.entryFormError input {
+    @apply lg_h-7.5
+        h-10
+        w-[232px]
+        min-h-[30px]
+        py-0;
+}
+.entryForm input:placeholder-shown,
+.entryFormError input:placeholder-shown {
+    @apply py-0;
+}
+
+.entryForm input::placeholder {
+    color: transparent;
+}
+
+.input:placeholder-shown ~ .label {
+    @apply hidden;
+}
+.entryFormError input {
+    @apply border-red;
+}
+
+.entryFormError input:focus {
+    @apply border-gray;
+}
+
+/* Styles for "removal" view. */
+.removeButton {
+    composes: root from '../../../LinkButton/linkButton.module.css';
+    composes: ml-4 rtl_mr-4 from global;
+
+    @apply text-green no-underline hover_underline !important;
+}
+
+.removeContainer {
+    composes: flex from global;
+    composes: items-center from global;
+}
+
+.removeLoader {
+    composes: inline-flex from global;
+    composes: ml-4 rtl_mr-4 from global;
+}
+
+.loaderIcon {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: w-9 from global;
+    composes: lg_w-7 from global;
+    composes: lg_pt-px from global;
+}
+
+.loaderIcon span {
+    @apply
+        lg_h-7
+        lg_w-7
+        h-9
+        w-9;
+}
+
+.loaderIcon svg {
+    @apply lg_stroke-[1.2px];
+}

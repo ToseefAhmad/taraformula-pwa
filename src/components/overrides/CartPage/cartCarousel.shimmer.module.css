@@ -1,0 +1,64 @@
+.shimmerRoot {
+    composes: block from global;
+}
+
+.carouselLoading {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: overflow-hidden from global;
+    composes: xl_max-w-[1440px] from global;
+    composes: mx-[-5px] from global;
+}
+
+.item {
+    composes: w-full from global;
+    composes: min-w-[216px] from global;
+    composes: max-w-[63vw] from global;
+    composes: px-[5px] from global;
+
+    composes: sm-w-[33%] from global;
+    composes: sm_max-w-[33%] from global;
+
+    composes: lg_min-w-[214px] from global;
+    composes: lg_w-[25%] from global;
+    composes: max-w-[25%] from global;
+}
+
+.halfItem {
+    composes: w-auto from global;
+    composes: flex-grow from global;
+    composes: px-[5px] from global;
+
+    composes: sm-w-[33%] from global;
+    composes: sm_max-w-[33%] from global;
+    composes: sm_min-w-[216px] from global;
+
+    composes: lg_min-w-[214px] from global;
+    composes: lg_w-[25%] from global;
+    composes: max-w-[25%] from global;
+}
+
+.dotsShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: w-full from global;
+    composes: h-[2px] from global;
+    composes: min-h-[inherit] from global;
+    composes: mb-[52px] from global;
+}
+
+.imageContainer {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-[199px] from global;
+    composes: overflow-hidden from global;
+    composes: mb-[13px] from global;
+
+    composes: sm_h-[186px] from global;
+}
+
+.productCategory {
+    composes: block from global;
+    composes: w-[30%] from global;
+    composes: min-w-[100px] from global;
+    composes: mb-[2px] from global;
+}

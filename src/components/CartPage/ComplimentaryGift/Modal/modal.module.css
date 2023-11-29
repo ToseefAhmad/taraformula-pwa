@@ -1,0 +1,97 @@
+.modal,
+.modalOverlay {
+    composes: w-[100vw] from global;
+    composes: h-[100vh] from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: bottom-0 from global;
+    composes: fixed from global;
+    composes: z-[100] from global;
+}
+
+.modalOverlay {
+    composes: bg-opacity-80 from global;
+    composes: bg-[#494949] from global;
+}
+
+.header {
+    composes: font-semibold from global;
+    composes: items-center from global;
+    composes: px-4 from global;
+    composes: pt-12 from global;
+    composes: pb-2 from global;
+    composes: grid from global;
+    composes: gap-2 from global;
+    composes: grid-flow-col from global;
+
+    composes: lg_pl-8 from global;
+
+    grid-template-columns: 1fr min-content;
+}
+
+.headerTitle {
+    composes: whitespace-nowrap from global;
+    composes: text-center from global;
+
+    text-overflow: ellipsis;
+}
+
+.subHeaderTitle {
+    composes: pb-8 from global;
+}
+
+.closeButton {
+    composes: fixed from global;
+    composes: right-4 from global;
+    composes: top-4 from global;
+}
+
+.body {
+    composes: mt-1/2 from global;
+    composes: lg_mt-0 from global;
+
+    composes: lg_px-16 from global;
+    composes: pb-5 from global;
+}
+
+.modalContent {
+    composes: h-full from global;
+    composes: bg-white from global;
+    composes: margin-[auto] from global;
+    composes: lg_h-[min-content] from global;
+    composes: lg_absolute from global;
+    composes: lg_top-1/2 from global;
+    composes: lg_left-1/2 from global;
+    composes: lg_-translate-y-1/2 from global;
+    composes: lg_-translate-x-1/2 from global;
+    composes: overflow-y-hidden from global;
+    composes: lg_w-[65vw] from global;
+}
+
+.subHeaderTitle {
+    composes: flex from global;
+    composes: justify-center from global;
+}
+
+.rejectButtonWrapper {
+    composes: w-full from global;
+    composes: px-4 from global;
+    composes: md_px-0 from global;
+    composes: md_w-1/4 from global;
+    composes: mx-[auto] from global;
+    composes: pb-12 from global;
+    composes: pt-8 from global;
+}
+
+:global([class*='modal-open']) {
+    @apply overflow-y-hidden fixed;
+}
+
+@media only screen and (max-width: 600px) {
+    .subHeaderTitle {
+        margin-left: 31px;
+        margin-right: 31px;
+        text-align: center;
+    }
+}

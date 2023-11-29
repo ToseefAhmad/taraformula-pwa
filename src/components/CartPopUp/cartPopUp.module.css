@@ -1,0 +1,229 @@
+.cartPopUpWrapper {
+    composes: absolute from global;
+    composes: left-[10px] from global;
+    composes: right-[10px] from global;
+    composes: z-20 from global;
+}
+
+.cartPopUpContainer {
+    composes: bg-gray3 from global;
+    composes: pt-[5px] from global;
+    composes: pb-[19px] from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+    composes: border from global;
+    composes: relative from global;
+    composes: w-full from global;
+    composes: max-w-[340px] from global;
+    composes: ml-auto from global;
+    composes: lg_pb-[27px] from global;
+    composes: lg_pt-[10px] from global;
+    composes: lg_max-w-[388px] from global;
+    composes: rtl_mr-auto from global;
+    composes: rtl_ml-0 from global;
+}
+
+.cartPopUpContainer::after,
+.cartPopUpContainer::before {
+    @apply
+        absolute
+        h-[14px]
+        w-[14px]
+        rotate-[-135deg]
+        right-[6px]
+        bottom-[calc(100%-6px)]
+        bg-gray3
+        lg_right-[41px]
+        xl_right-[2.75rem]
+        xl_h-[18px]
+        xl_w-[18px]
+        xl_bottom-[calc(100%-8px)]
+        rtl_left-[0.8rem]
+        rtl_lg_left-[3rem]
+        rtl_xl_left-[2.45rem]
+        rtl_right-[unset];
+
+    content: '';
+    border-bottom: inherit;
+    border-right: inherit;
+}
+
+.cartPopUpHeader {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: pl-[19px] from global;
+    composes: pr-[3px] from global;
+    composes: mb-[3px] from global;
+    composes: lg_mb-[11px] from global;
+    composes: lg_pl-[28px] from global;
+    composes: lg_pr-[10px] from global;
+
+    composes: rtl_pl-[3px] from global;
+    composes: rtl_pr-[19px] from global;
+    composes: rtl_lg_pl-[10px] from global;
+    composes: rtl_lg_pr-[28px] from global;
+}
+
+.cartPopUpTitle {
+    composes: mt-[5px] from global;
+}
+
+.cartPopUpContent {
+    composes: flex from global;
+    composes: space-x-[10.5px] from global;
+    composes: px-[19px] from global;
+    composes: mb-[11px] from global;
+    composes: lg_mb-[14px] from global;
+    composes: lg_space-x-[9px] from global;
+    composes: lg_px-[28px] from global;
+    composes: rtl_space-x-reverse from global;
+    composes: rtl_lg_space-x-reverse from global;
+}
+
+.cartPopUpImages,
+.productInfo {
+    composes: w-1/2 from global;
+}
+
+.productInfo {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.cartPopUpImages {
+    grid-template-areas: 'main';
+    composes: grid from global;
+    composes: w-full from global;
+}
+
+.buttonContainer {
+    composes: px-[19px] from global;
+    composes: lg_px-[28px] from global;
+}
+
+.itemInfluenceTitle,
+.orderPrice {
+    composes: font-bold from global;
+}
+
+.orderPrice {
+    composes: flex from global;
+}
+
+.itemQty {
+    composes: font-bold from global;
+    composes: ml-[8px] from global;
+
+    composes: rtl_mr-[8px] from global;
+    composes: rtl_ml-0 from global;
+}
+
+.iconSpan {
+    composes: text-brown-50 from global;
+    composes: cursor-pointer from global;
+}
+
+.closeIcon {
+    composes: w-[27px] from global;
+    composes: h-[27px] from global;
+    composes: stroke-1 from global;
+}
+
+.orderQty {
+    composes: flex from global;
+}
+
+.productInfo p,
+.orderInfo span {
+    @apply
+        leading-[0.94rem]
+        text-sm
+        lg_text-base
+        lg_leading-[1.3rem];
+}
+
+.orderInfo span {
+    @apply lg_text-sm;
+}
+
+.buttonContainer button {
+    @apply
+        py-[9px]
+        min-h-[auto]
+        lg_pt-4
+        lg_pb-[1.1rem];
+}
+
+.orderInfo {
+    composes: mt-[15px] from global;
+    composes: lg_mt-[3px] from global;
+    composes: lg_flex from global;
+    composes: lg_flex-wrap from global;
+    composes: lg_items-center from global;
+    composes: lg_justify-between from global;
+}
+
+.imageLoaded {
+    composes: loaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-0 from global;
+}
+
+.productImage,
+.hoverImage {
+    composes: image from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.hoverImage {
+    composes: hoverImage from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.productImage[loading='eager'] {
+    background: linear-gradient(270deg, #fff, #f4f5f5) 0 0/400% 400%;
+
+    @apply
+        animate-content-loader
+        max-h-[129px]
+        lg_max-h-[141px];
+}
+
+.productImageContainer {
+    composes: imageContainer from '@app/components/overrides/Gallery/item.module.css';
+    composes: max-h-[129px] from global;
+    composes: lg_max-h-[141px] from global;
+}
+
+.influenceTypeShimmer {
+    composes: h-[15px] from global;
+    composes: lg_h-[22px] from global;
+}
+
+.imageWithHover {
+    composes: imageWithHover from '@app/components/overrides/Gallery/item.module.css';
+}
+
+.productImageContainer:hover .imageWithHover {
+    @apply lg_hidden;
+}
+
+.productImageContainer:hover .productImage {
+    @apply
+        lg_scale-110
+        lg_opacity-100;
+}
+
+.productImageContainer:hover .hoverImage {
+    @apply lg_opacity-100;
+}
+
+.freeShipping {
+    composes: px-[19px] from global;
+    composes: lg_px-[28px] from global;
+    composes: mb-[11px] from global;
+    composes: lg_mb-[14px] from global;
+}

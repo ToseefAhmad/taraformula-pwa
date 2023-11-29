@@ -1,0 +1,12 @@
+.heading {
+    composes: font-sans from global;
+    composes: font-bold from global;
+    composes: text-green from global;
+    composes: text-sm from global;
+    composes: tracking-normal from global;
+    composes: leading-[17px] from global;
+    composes: mb-4 from global;
+
+    composes: lg_text-lg from global;
+    composes: lg_mb-[15px] from global;
+}

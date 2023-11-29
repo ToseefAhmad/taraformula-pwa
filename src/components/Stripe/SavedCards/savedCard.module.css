@@ -1,0 +1,31 @@
+.root {
+    composes: sm_border from global;
+    composes: border-solid from global;
+    composes: border-green from global;
+    composes: grid from global;
+    composes: gap-8 from global;
+    composes: sm_gap-10 from global;
+    composes: sm_p-6 from global;
+    composes: sm_pb-[27px] from global;
+    composes: relative from global;
+}
+
+.content dd {
+    @apply leading-dd;
+}
+
+.brand {
+    composes: capitalize from global;
+}
+
+.confirmDeleteContainer {
+    composes: confirmDeleteContainer from '@app/components/overrides/AddressBookPage/addressCard.module.css';
+}
+
+.confirmDeleteButton {
+    composes: confirmDeleteButton from '@app/components/overrides/AddressBookPage/addressCard.module.css';
+}
+
+.cancelDeleteButton {
+    composes: cancelDeleteButton from '@app/components/overrides/AddressBookPage/addressCard.module.css';
+}

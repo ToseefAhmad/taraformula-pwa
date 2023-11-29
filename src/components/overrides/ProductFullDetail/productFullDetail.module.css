@@ -1,0 +1,556 @@
+.root {
+    composes: lg_pt-[42px] from global;
+}
+
+.pagePadding {
+    composes: lg_pr-[56px] from global;
+    composes: lg_pl-[50px] from global;
+}
+
+.productContainer {
+    composes: lg_grid from global;
+    composes: lg_grid-flow-row from global;
+    composes: pagePadding;
+    composes: lg_container from global;
+}
+
+.wrapper {
+    composes: items-start from global;
+    composes: productContainer;
+    composes: lg_pb-20 from global;
+    grid-template: repeat(5, min-content) 1fr [fold] / 1.4fr 1fr;
+    grid-template-areas:
+        'images title'
+        'images errors'
+        'images options'
+        'images quantity'
+        'images cart'
+        'images .';
+}
+
+.section {
+    composes: px-4 from global;
+}
+
+.imageCarousel {
+    composes: lg_mr-[4px] from global;
+    composes: w-full from global;
+}
+
+.rightSide {
+    composes: section;
+
+    composes: lg_pl-[20px] from global;
+    composes: xl_pl-[46px] from global;
+    composes: xl_pr-0 from global;
+
+    composes: lg_rtl_pl-0 from global;
+    composes: lg_rtl_pr-[46px] from global;
+
+    composes: relative from global;
+}
+
+.productName {
+    composes: rtl_font-arabicText from global;
+    composes: text-[34px] from global;
+    composes: leading-[32px] from global;
+
+    composes: lg_leading-[34px] from global;
+    composes: lg_text-[36px] from global;
+
+    composes: lg_rtl_text-[48px] from global;
+    composes: lg_rtl_leading-10 from global;
+    composes: rtl_text-[25px] from global;
+    composes: rtl_leading-5 from global;
+}
+
+.type {
+    composes: rtl_font-sans from global;
+    composes: text-[28px] from global;
+    composes: leading-[32px] from global;
+
+    composes: lg_leading-[34px] from global;
+    composes: lg_text-[48px] from global;
+    composes: lg_pt-1.5 from global;
+
+    composes: rtl_leading-[32px] from global;
+    composes: rtl_font-light from global;
+    composes: rtl_text-[28px] from global;
+
+    composes: lg_rtl_p-0 from global;
+    composes: lg_rtl_text-[34px] from global;
+    composes: lg_rtl_leading-normal from global;
+    composes: block from global;
+}
+
+.afterTitle {
+    composes: flex from global;
+    composes: w-full from global;
+    composes: justify-between from global;
+    composes: mt-4 from global;
+    composes: mb-3.5 from global;
+
+    composes: xl_my-0 from global;
+    composes: xl_pt-9 from global;
+    composes: xl_pb-8 from global;
+
+    composes: rtl_mt-3 from global;
+    composes: rtl_mb-1 from global;
+    composes: rtl_pb-0 from global;
+    composes: rtl_text-sm from global;
+
+    composes: lg_rtl_m-0 from global;
+    composes: lg_rtl_text-base from global;
+    composes: lg_rtl_pt-2.5 from global;
+    composes: lg_rtl_pb-6 from global;
+}
+
+.afterTitleSale {
+    composes: afterTitle;
+
+    composes: flex-wrap from global;
+}
+
+.priceWrapper {
+    composes: flex from global;
+}
+
+.price {
+    composes: font-bold from global;
+}
+
+.size {
+    composes: relative from global;
+    composes: mr-3 from global;
+    composes: pr-4 from global;
+
+    composes: rtl_mr-0 from global;
+    composes: rtl_pr-0 from global;
+    composes: rtl_ml-0 from global;
+    composes: rtl_pl-1 from global;
+}
+
+.size::after {
+    content: '';
+
+    @apply border-r
+        border-solid
+        border-green
+        absolute
+        top-[2px]
+        right-0
+        h-[19px];
+    @apply rtl_border-r-0;
+}
+
+.shortDescription {
+    composes: leading-5 from global;
+    composes: mb-5 from global;
+
+    composes: xl_mb-9 from global;
+
+    composes: lg_xl_mb-3 from global;
+    composes: lg_rtl_text-[19px] from global;
+    composes: lg_rtl_leading-[23px] from global;
+}
+
+.shortDescription :local(div) > div {
+    @apply p-0 !important;
+}
+
+.actionDiv {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: pb-10 from global;
+
+    composes: lg_pb-5 from global;
+
+    composes: lg_rtl_pt-0 from global;
+    composes: lg_rtl_pb-[60px] from global;
+}
+
+.actionContainer {
+    composes: actionDiv;
+
+    composes: lg_pt-6 from global;
+}
+
+.configurableActionContainer {
+    composes: actionDiv;
+
+    composes: lg_pt-0 from global;
+}
+
+.actions {
+    composes: flex-1 from global;
+}
+
+.freeGiftMessage {
+    composes: font-sans from global;
+    composes: w-full from global;
+    composes: mt-3 from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+
+    @apply bg-gray10;
+    @apply min-h-[33px];
+    @apply text-[15px];
+    @apply leading-[20px];
+    @apply tracking-normal;
+    @apply text-green;
+}
+
+.actions :local(button) {
+    @apply p-0
+        h-10
+        min-h-0
+        lg_h-[60px];
+}
+
+.options {
+    grid-area: options;
+}
+
+.formErrors {
+    grid-area: errors;
+}
+
+.quantity {
+    grid-area: quantity;
+    composes: pr-1 from global;
+    composes: mr-1.5 from global;
+
+    composes: rtl_pr-0 from global;
+    composes: rtl_mr-0 from global;
+    composes: rtl_pl-1 from global;
+    composes: rtl_ml-1.5 from global;
+}
+
+.quantityRoot {
+    composes: inline-flex from global;
+    composes: items-center from global;
+    composes: border from global;
+    composes: border-green from global;
+    composes: w-[103px] from global;
+    composes: h-10 from global;
+    composes: justify-start from global;
+
+    composes: lg_h-[60px] from global;
+    composes: lg_w-[107px] from global;
+
+    composes: rlt_flex-row from global;
+    composes: lg_rtl_flex-row from global;
+}
+
+.button {
+    composes: block from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: h-full from global;
+    composes: w-[33px] from global;
+    composes: disabled_bg-transparent from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.buttonDecrement {
+    composes: button;
+}
+
+.buttonIncrement {
+    composes: button;
+}
+
+.quantityTitle {
+    composes: title from '@magento/venia-ui/lib/components/ProductOptions/option.module.css';
+}
+
+.howToApply {
+    composes: pt-14 from global;
+    composes: lg_pt-3 from global;
+    composes: lg_pb-12.5 from global;
+}
+
+.applyWrapper {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: grid-cols-none from global;
+
+    composes: productContainer;
+}
+
+.attributeHeader {
+    composes: section;
+    composes: w-full from global;
+    composes: block from global;
+    composes: mb-2.5 from global;
+    composes: lg_mb-4 from global;
+    composes: lg_px-0 from global;
+}
+
+.videoWrapper {
+    composes: block from global;
+    composes: w-full from global;
+    composes: bg-gray-30 from global;
+
+    composes: pb-[56.25%] from global;
+    composes: relative from global;
+}
+
+.videoContainer {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.videoThumbnail {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: cursor-pointer from global;
+    composes: relative from global;
+}
+
+.videoIcon {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: z-10 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+}
+
+.howToApplyContainer {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: overflow-hidden from global;
+}
+
+.howToApplyImage {
+    composes: transform from global;
+    composes: top-1/2 from global;
+    composes: w-full from global;
+    transform: translate(0, -50%);
+}
+
+/* Feel Good Ingredients block */
+.feelGoodIngredients {
+    composes: bg-gray-20 from global;
+    composes: mt-9 from global;
+}
+
+.feelGoodIngredientsBlock {
+    composes: section;
+    composes: pagePadding;
+    composes: pt-5 from global;
+    composes: pb-5 from global;
+
+    composes: lg_max-w-[1379px] from global;
+    composes: lg_mx-auto from global;
+    composes: lg_px-2 from global;
+    composes: lg_pb-11 from global;
+
+    composes: rtl_pt-7 from global;
+    composes: rtl_pb-10 from global;
+    composes: rtl_pl-0 from global;
+    composes: rtl_pr-[11px] from global;
+    composes: lg_rtl_pt-9 from global;
+    composes: lg_rtl_pl-[50px] from global;
+    composes: lg_rtl_pr-[27px] from global;
+    composes: lg_rtl_pb-9 from global;
+}
+
+.influence {
+    composes: font-bold from global;
+    composes: pr-[5px] from global;
+}
+
+.feelGoodIngredientsBlock :local(h2) {
+    @apply text-[28px]
+        text-left
+        rtl_text-right
+        normal-case
+        leading-[26px]
+        w-3/5
+        mb-3.5;
+
+    /* Desktop */
+    @apply lg_text-[48px]
+        lg_leading-[40px]
+        lg_pt-6;
+
+    /* RTL */
+    @apply rtl_text-[43px]
+        rtl_leading-[42px]
+        rtl_mb-0
+        rtl_pr-[6px]
+        lg_rtl_pr-0
+        lg_rtl_pt-[30px]
+        lg_rtl_text-[74px]
+        lg_rtl_w-[80%]
+        lg_rtl_leading-[58px]
+        lg_rtl_pt-[30px]
+        lg_rtl_mb-0;
+}
+
+.feelGoodIngredientsBlock :global .ingredients-block {
+    @apply py-0 w-full
+        lg_mt-0
+        rtl_w-full
+        lg_rtl_pr-[14px];
+}
+
+.feelGoodIngredientsBlock :local(h6) {
+    @apply rtl_mt-[10px]
+        lg_rtl_mt-[4px];
+}
+
+.feelGoodIngredientsBlock :global(.ingredients-list) {
+    @apply mt-5
+        lg_mt-6
+        lg_mx-0
+        lg_rtl_w-[87%] !important;
+    @apply rtl_m-0 !important;
+}
+
+.feelGoodIngredientsBlock :global(.ingredients-list .pagebuilder-column) {
+    @apply min-w-[45%]
+        lg_min-w-0
+        lg_rtl_items-center;
+    @apply rtl_pt-[4px] !important;
+    @apply rtl_min-w-[42%] lg_rtl_min-w-0;
+}
+
+.feelGoodIngredientsBlock :global(.ingredients-list [class*='columnGroup-root']) {
+    @apply lg_rtl_pl-[41px]
+        lg_rtl_pr-[30px]
+        lg_rtl_pt-[54px]
+        lg_rtl_justify-around;
+}
+
+.feelGoodIngredientsBlock :global(.ingredients-list .pagebuilder-column):nth-child(2) {
+    @apply lg_pl-[20px] !important;
+    @apply lg_rtl_pl-[14px] !important;
+}
+
+.feelGoodIngredientsBlock :global(.ingredients-list .pagebuilder-column):nth-child(3) {
+    @apply lg_pl-[33px] !important;
+    @apply lg_rtl_pl-[44px] !important;
+}
+
+.feelGoodIngredientsBlock :global(.ingredients-list p) {
+    @apply lg_rtl_text-center
+        lg_rtl_max-w-[50%]
+        lg_rtl_m-auto;
+}
+
+.feelGoodIngredientsBlock :global(.discover-button) {
+    @apply md_flex !important;
+}
+
+.feelGoodIngredientsBlock :global(.discover-button button) {
+    @apply p-0
+        bg-transparent
+        text-green
+        border-0
+        mt-3.5;
+    @apply lg_rtl_m-0
+        lg_rtl_items-baseline;
+}
+
+.related {
+    border-bottom-width: 0;
+    grid-column: 1 / span 2;
+}
+
+.unavailableContainer {
+    align-items: center;
+    background-color: rgb(var(--venia-global-color-gray));
+    color: rgb(var(--venia-global-color-gray-700));
+    column-gap: 0.5rem;
+    display: grid;
+    font-style: italic;
+    grid-auto-flow: column;
+    justify-content: start;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.yotpo {
+    composes: mt-[50px] from global;
+    composes: lg_mb-[14px] from global;
+}
+
+.yotpo :global h5 {
+    @apply pr-[18px]
+        pl-[18px];
+    @apply rtl_text-right;
+}
+
+[dir='rtl'] .yotpo :global h5 {
+    direction: ltr;
+}
+
+.reviewWrapper {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: text-[15px] from global;
+    composes: text-green from global;
+    composes: tracking-[-0.3px] from global;
+    composes: cursor-pointer from global;
+
+    composes: md_flex-wrap from global;
+    composes: md_ml-[5px] from global;
+    composes: xl_flex-nowrap from global;
+    composes: xl_mr-0 from global;
+    composes: rtl_lg_text-[19px] from global;
+}
+
+.reviewLink {
+    composes: border-b-2 from global;
+    composes: border-transparent from global;
+    composes: border-solid from global;
+    composes: lg_hover_border-green from global;
+}
+
+.reviewWrapper :global .bottomLine {
+    @apply md_block
+        md_w-full
+        md_self-start
+        xl_self-center
+        xl_w-auto
+        xl_inline-block;
+}
+
+.tabby {
+    composes: pb-5 from global;
+    composes: w-full from global;
+}
+
+.modalCarouselRoot {
+    composes: relative from global;
+    composes: overflow-hidden from global;
+    composes: lg_overflow-visible from global;
+}
+
+.modalCarouselThumbnailList {
+    composes: thumbnailList from '@app/components/overrides/ProductImageCarousel/carousel.module.css';
+
+    @apply max-w-[414px] xl_max-w-[662px] lg_max-w-[541px] w-full ltr_mr-0 rtl_ml-0;
+}
+
+.zooming {
+    composes: block from global;
+}
+
+.notZooming {
+    composes: hidden from global;
+}

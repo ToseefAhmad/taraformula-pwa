@@ -1,0 +1,29 @@
+.root {
+    composes: border-b from global;
+    composes: border-solid from global;
+    composes: border-green from global;
+}
+
+.title {
+    composes: font-bold from global;
+}
+
+.sku {
+    composes: block from global;
+}
+
+.qty,
+.cell {
+    composes: p-2 from global;
+}
+
+.price {
+    composes: p-2 from global;
+    composes: text-right from global;
+    composes: rtl_text-left from global;
+}
+
+.influenceType {
+    composes: ltr_pr-[10px] from global;
+    composes: rtl_pl-[10px] from global;
+}

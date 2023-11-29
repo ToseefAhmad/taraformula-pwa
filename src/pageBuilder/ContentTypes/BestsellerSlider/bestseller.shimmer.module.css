@@ -1,0 +1,54 @@
+.shimmerRoot {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.carouselLoading {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: overflow-hidden from global;
+    composes: xl_max-w-[1440px] from global;
+
+    /* Desktop */
+    composes: md_mt-[13px] from global;
+
+    @apply ltr_lg_ml-[50%]
+        ltr_lg_mr-0
+        ltr_lg_translate-x-[-50%];
+    @apply rtl_lg_ml-0
+        rtl_lg_mr-[50%]
+        rtl_lg_translate-x-[50%];
+}
+
+div.carouselLoading {
+    @apply lg_w-[calc(100vw-var(--scrollBarWidth))];
+}
+
+.mobileFullWidth {
+    composes: root from '@app/pageBuilder/ContentTypes/BestsellerSlider/item.shimmer.module.css';
+    composes: w-[213px] from global;
+    composes: ltr_mr-[10px] from global;
+    composes: rtl_ml-[10px] from global;
+
+    /* Desktop */
+    composes: md_w-auto from global;
+}
+
+.desktopFullWidth {
+    composes: root from '@app/pageBuilder/ContentTypes/BestsellerSlider/item.shimmer.module.css';
+    composes: ltr_md_mr-[10px] from global;
+    composes: md_w-[100%] from global;
+    composes: md_max-w-[448px] from global;
+    composes: rtl_md_ml-[10px] from global;
+}
+
+.dotsShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: w-full from global;
+    composes: h-[2px] from global;
+    composes: min-h-[inherit] from global;
+    composes: mb-[52px] from global;
+}

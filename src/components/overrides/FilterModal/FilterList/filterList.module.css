@@ -1,0 +1,16 @@
+.items {
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: gap-4 from global;
+    composes: pb-6 from global;
+}
+
+.showMoreLessItem {
+    composes: pl-[3px] from global;
+}
+
+.showMoreLessButton {
+    composes: text-sm from global;
+    composes: underline from global;
+    composes: hover_no-underline from global;
+}

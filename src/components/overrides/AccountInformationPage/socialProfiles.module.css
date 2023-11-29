@@ -1,0 +1,60 @@
+.sectionTitle {
+    composes: sectionTitle from 'accountInformationPage.module.css';
+}
+
+.socialProfile {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: border from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+    composes: h-[60px] from global;
+    composes: pr-8 from global;
+    composes: lg_pr-5 from global;
+    composes: lg_pl-[7px] from global;
+    composes: rtl_pl-5 from global;
+    composes: rtl_pr-[7px] from global;
+    composes: mb-4 from global;
+}
+
+.socialProfile:last-of-type {
+    @apply mb-0;
+}
+
+.socialContent {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: rtl_flex-row-reverse from global;
+}
+
+.socialTitle {
+    composes: text-green from global;
+    composes: text-md from global;
+    composes: leading-6 from global;
+}
+
+.socialLink {
+    composes: text-green from global;
+    composes: text-md from global;
+    composes: leading-6 from global;
+    composes: font-bold from global;
+    composes: border-b-2 from global;
+    composes: border-transparent from global;
+    composes: border-solid from global;
+    composes: hover_border-green from global;
+    composes: cursor-pointer from global;
+    composes: relative from global;
+    composes: top-[2px] from global;
+    composes: lg_right-[2px] from global;
+    composes: rtl_lg_left-[2px] from global;
+    composes: uppercase from global;
+}
+
+.icon {
+    composes: relative from global;
+    composes: right-[2px] from global;
+    composes: rtl_left-[2px] from global;
+    composes: bottom-[2px] from global;
+    composes: h-8 from global;
+}

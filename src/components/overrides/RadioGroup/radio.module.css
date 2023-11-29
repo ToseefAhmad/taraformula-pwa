@@ -1,0 +1,75 @@
+.root {
+    grid-template-areas: 'input image label';
+    grid-template-columns: min-content;
+
+    composes: items-center from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-start from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+    composes: rounded-sm from global;
+    composes: px-6 from global;
+}
+
+.input {
+    grid-area: input;
+
+    composes: bg-clip-content from global;
+    composes: border-4 from global;
+    composes: border-transparent from global;
+    composes: rounded-full from global;
+    composes: h-4 from global;
+    composes: w-4 from global;
+    composes: appearance-none from global;
+    composes: cursor-pointer from global;
+    composes: z-10 from global;
+
+    composes: disabled_cursor-default from global;
+}
+
+.icon {
+    grid-area: input;
+
+    composes: h-4 from global;
+    composes: w-4 from global;
+    composes: cursor-pointer from global;
+    composes: z-1 from global;
+}
+
+.image {
+    grid-area: image;
+    composes: max-w-[65px] from global;
+}
+
+.shimmer {
+    composes: h-[30px] from global;
+    composes: w-[50px] from global;
+    composes: animate-content-loader from global;
+
+    background: linear-gradient(270deg, #fff, #f4f5f5) 0 0/400% 400%;
+}
+
+.icon svg {
+    @apply stroke-current
+        text-gray-80;
+}
+
+.label {
+    grid-area: label;
+
+    composes: justify-self-start from global;
+    composes: text-sm from global;
+    composes: text-green from global;
+    composes: cursor-pointer from global;
+    composes: pl-2.5 from global;
+
+    composes: rtl_pl-0 from global;
+    composes: rtl_pr-2.5 from global;
+}
+
+.input:checked {
+    @apply bg-green;
+}

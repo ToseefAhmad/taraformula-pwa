@@ -1,0 +1,18 @@
+.bestsellers {
+    @apply lg_mt-[45px]
+        lg_mb-[27px]
+        ltr_pl-mobile
+        rtl_pr-mobile
+        ltr_sm_pl-0
+        rtl_sm_pr-0
+        rtl_mt-[22px]
+        rtl_lg_mt-[43px];
+}
+
+.bestsellers h5 {
+    @apply lg_mb-0
+        sm_px-mobile
+        lg_px-desktop
+        rtl_text-[16px]
+        rtl_lg_text-[23px];
+}

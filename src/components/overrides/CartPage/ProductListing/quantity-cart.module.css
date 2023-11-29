@@ -1,0 +1,45 @@
+.root {
+    composes: inline-flex from global;
+    composes: items-center from global;
+    composes: h-[19px] from global;
+    composes: w-[83px] from global;
+    composes: lg_w-[98px] from global;
+}
+
+.button {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: h-full from global;
+    composes: w-[15px] from global;
+    composes: outline-none from global;
+
+    composes: disabled_bg-transparent from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.icon svg {
+    @apply text-green;
+}
+
+.button_decrement {
+    composes: button;
+}
+
+.button_increment {
+    composes: button;
+}
+
+.input {
+    composes: h-[19px] from global;
+    composes: w-full from global;
+    composes: text-center from global;
+    composes: bg-transparent from global;
+    composes: font-bold from global;
+    composes: text-green from global;
+    composes: text-base from global;
+    composes: outline-none from global;
+}

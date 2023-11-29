@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders no checkboxes 1`] = `
+Array [
+  <Checkbox
+    field="amgdpr_agreement[test]"
+    id="test0"
+    label={
+      <Label
+        id={0}
+      />
+    }
+    validate={[Function]}
+  />,
+  <FormError
+    errors={
+      Array [
+        "error",
+      ]
+    }
+    scrollOnError={false}
+  />,
+  <SuccessMessage />,
+  <PrivacyModal
+    location="test"
+  />,
+]
+`;
+
+exports[`renders with success message 1`] = `
+Array [
+  <Checkbox
+    field="amgdpr_agreement[test]"
+    id="test0"
+    label={
+      <Label
+        id={0}
+      />
+    }
+    validate={[Function]}
+  />,
+  <FormError
+    scrollOnError={false}
+  />,
+  <SuccessMessage
+    message="test"
+  />,
+  <PrivacyModal
+    location="test"
+  />,
+]
+`;

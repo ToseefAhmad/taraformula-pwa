@@ -1,0 +1,22 @@
+.root {
+    composes: flex from global;
+    composes: px-[17px] from global;
+    composes: flex-col from global;
+    composes: items-center from global;
+    composes: lg_mt-[88px] from global;
+    composes: mt-5 from global;
+    composes: mb-10 from global;
+    composes: lg_mb-[73px] from global;
+    composes: py-0 from global;
+}
+
+.button {
+    composes: rtl_max-w-[320px] from global;
+    composes: ltr_max-w-[320px] from global;
+    composes: mt-[33px] from global;
+    composes: root_primary_transparent from '@app/components/overrides/Button/button.module.css';
+}
+
+.header {
+    composes: text-center from global;
+}

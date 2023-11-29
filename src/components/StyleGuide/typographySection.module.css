@@ -1,0 +1,73 @@
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.section {
+    composes: section from './index.module.css';
+}
+
+.columns {
+    composes: columns from './index.module.css';
+
+    composes: pb-7 from global;
+}
+
+.column {
+    composes: column from './index.module.css';
+}
+
+.headingWrapper {
+    composes: pb-7 from global;
+    composes: last_pb-0 from global;
+}
+
+.headingMobile1 {
+    composes: lg_text-4xl from global;
+}
+
+.headingMobile2 {
+    composes: lg_text-2xl from global;
+}
+
+.headingMobile3 {
+    composes: lg_text-xl from global;
+}
+
+.headingMobile4 {
+    composes: lg_text-lg from global;
+}
+
+.headingMobile5 {
+    composes: lg_text-sm from global;
+}
+
+.categoryTag {
+    composes: uppercase from global;
+    composes: text-xs from global;
+    composes: font-bold from global;
+}
+
+.captionWrapper {
+    composes: flex from global;
+    composes: gap-2.5 from global;
+    composes: pb-2.5 from global;
+    composes: last_pb-0 from global;
+}
+
+.caption {
+    composes: text-base from global;
+}
+
+.captionBold {
+    composes: text-base from global;
+    composes: font-bold from global;
+}
+
+.caption2 {
+    composes: text-sm from global;
+}
+
+.caption2Bold {
+    composes: text-sm from global;
+    composes: font-bold from global;
+}

@@ -1,0 +1,26 @@
+.root {
+    composes: font-sans from global;
+    composes: flex from global;
+    composes: w-full from global;
+    composes: py-1 0.5 from global;
+    composes: px-3 from global;
+    composes: gap-3 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+
+    @apply bg-gray10;
+    @apply min-h-[33px];
+    @apply text-[15px];
+    @apply leading-[20px];
+    @apply tracking-normal;
+    @apply text-green;
+}
+
+.iconWrapper {
+    composes: w-[20px] from global;
+}
+
+.textWrapper {
+    composes: block from global;
+    composes: flex-1 from global;
+}

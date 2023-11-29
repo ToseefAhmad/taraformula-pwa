@@ -1,0 +1,27 @@
+.root {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.radioContainer {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+}
+
+.radioLabel {
+    composes: label from './radio.module.css';
+}
+
+.message {
+    composes: text-sm from global;
+    composes: mt-4 from global;
+}
+
+.message:empty {
+    @apply hidden;
+}

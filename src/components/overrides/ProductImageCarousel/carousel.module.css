@@ -1,0 +1,263 @@
+.root {
+    composes: flex from global;
+    composes: relative from global;
+    composes: overflow-hidden from global;
+    composes: lg_overflow-visible from global;
+}
+
+.carouselContainer {
+    composes: w-full from global;
+    composes: order-2 from global;
+
+    composes: lg_max-w-[541px] from global;
+    composes: xl_max-w-[662px] from global;
+}
+
+.carouselContainer .imageContainer,
+.carouselContainer .videoContent {
+    @apply h-0
+        relative
+        h-[186px]
+        pb-[86%]
+        min-w-[88.45vw]
+        ltr_mr-1
+        rtl_ml-1
+        xs_min-w-[80vw]
+        xs_pb-[88%]
+        lg_rtl_ml-0
+        lg_ltr_mr-0
+        lg_min-w-[auto]
+        xl_pb-[575px];
+}
+
+.popupCarouselContainer .imageContainer,
+.popupCarouselContainer .videoContent {
+    @apply h-0
+        relative
+        pb-[88%]
+        xl_pb-[575px]
+        h-[186px]
+        min-w-[100vw]
+        rtl_ml-0
+        lg_min-w-[auto]
+        lg_rtl_min-w-[541px]
+        xl_rtl_min-w-[662px];
+}
+
+.imageContainerPopup,
+.videoContentPopup {
+    composes: h-0 from global;
+    composes: relative from global;
+    composes: pb-[88%] from global;
+
+    composes: xl_pb-[575px] from global;
+}
+
+.videoContent :local(video) {
+    @apply object-cover object-center;
+}
+
+.videoContent :global div {
+    @apply absolute top-0 left-0;
+}
+
+/* Style arrows for carousel and thumbail list */
+.carouselContainer :global(.slick-arrow),
+.thumbnailList :global(.slick-arrow) {
+    @apply z-10 opacity-0 transition-opacity;
+}
+
+.carouselContainer:hover :global(.slick-arrow),
+.thumbnailList:hover :global(.slick-arrow) {
+    @apply opacity-100;
+}
+
+.carouselContainer :global(.slick-arrow) {
+    @apply h-[50px] w-[50px];
+}
+
+.carouselContainer :global(.slick-arrow)::before {
+    @apply text-xl;
+}
+
+/* Style arrows for carousel */
+.carouselContainer :global(.slick-prev) {
+    @apply left-1.5 rtl_left-auto rtl_right-1.5 opacity-0;
+}
+
+.carouselContainer :global(.slick-next) {
+    @apply right-1.5 rtl_right-auto rtl_left-1.5;
+}
+
+.carouselContainer:hover :global(.slick-prev),
+.carouselContainer:hover :global(.slick-next) {
+    @apply opacity-100;
+}
+
+.carouselContainer :global(.slick-dots) {
+    /* Add Important to fix dots */
+    @apply !grid grid-flow-col justify-center relative bottom-0  mt-1.25;
+}
+
+.carouselContainer :global(.slick-dots) li {
+    @apply m-0 h-4 flex-grow;
+}
+
+.carouselContainer :global(.slick-dots) li button {
+    @apply p-0 h-4 w-[14px] relative;
+}
+
+.carouselContainer :global(.slick-dots) li button::before {
+    content: '';
+
+    @apply h-2
+        w-2
+        rounded-[50%]
+        bg-green
+        transition-opacity
+        duration-500
+        absolute
+        left-[6px]
+        top-[4px];
+}
+
+.carouselContainer :global(.slick-dots) li button:hover::before,
+.carouselContainer :global(.slick-dots) li button:focus::before {
+    @apply bg-gray;
+}
+
+.carouselContainer :global(.slick-dots li.slick-active) button:focus::before,
+.carouselContainer :global(.slick-dots li.slick-active) button:hover::before {
+    @apply bg-black;
+}
+
+.carouselContainer :global(.slick-slide) img {
+    @apply h-full w-full object-cover object-center;
+}
+
+.carouselContainer :global .slick-track {
+    @apply relative
+        left-0
+        top-0
+        flex
+        ml-auto
+        mr-auto
+        rtl_ml-[10.5%]
+        rtl_xs_ml-0;
+}
+
+.popupCarouselContainer :global .slick-track {
+    @apply rtl_ml-0;
+}
+
+.thumbnailList {
+    composes: order-1 from global;
+    composes: hidden from global;
+    composes: content-start from global;
+    composes: justify-center from global;
+    composes: lg_z-[1] from global;
+
+    composes: lg_min-w-[102px] from global;
+    composes: lg_max-w-[102px] from global;
+    composes: lg_block from global;
+    composes: lg_mr-2.5 from global;
+    composes: lg_mt-0 from global;
+    composes: lg_max-h-[575px] from global;
+    composes: overflow-hidden from global;
+
+    composes: lg_rtl_mr-0 from global;
+    composes: lg_rtl_ml-2.5 from global;
+}
+
+.thumbnailList :global(.slick-slider) {
+    @apply h-full;
+}
+
+.thumbnailList :global(.slick-slide.slick-current div) {
+    @apply border-green;
+}
+
+.thumbnailList :global(.slick-slide:hover div) {
+    @apply border-green;
+}
+
+.thumbnailList :global(.slick-slide:hover) {
+    @apply visible;
+}
+
+/* Style arrows for thumbnail list */
+.thumbnailList :global(.slick-arrow) {
+    @apply inset-x-0 w-full;
+}
+
+.thumbnailList :global(.slick-prev) {
+    bottom: inherit;
+
+    @apply top-1.5 transform rotate-90 rtl_right-0 rtl_-rotate-90;
+}
+
+.thumbnailList :global(.slick-next) {
+    top: inherit;
+
+    @apply bottom-[10px] transform rotate-90 rtl_left-0 rtl_-rotate-90;
+}
+
+.popupThumbnailList :global(.slick-track) {
+    @apply lg_rtl_ml-[432.8px]
+        xl_rtl_ml-[551.6667px];
+}
+
+.popupThumbnailList :global [class*='thumbnail-imageRoot'] {
+    @apply rtl_lg_w-[108.2px]
+        rtl_xl_w-[110.333px];
+}
+
+.currentImage_placeholder {
+    composes: bg-gray-10 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.sliderVideoThumbnail {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: cursor-pointer from global;
+    composes: relative from global;
+}
+
+.sliderVideoIcon {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: z-10 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+}
+
+.howToApplyContainer {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: overflow-hidden from global;
+}
+
+.sliderHowToApplyImage {
+    composes: transform from global;
+    composes: top-1/2 from global;
+    composes: w-full from global;
+    transform: translate(0, -50%);
+}
+
+.sliderVideoThumbnailContainer {
+    composes: w-full from global;
+    composes: lg_max-h-[476px] from global;
+    composes: xl_max-h-[575px] from global;
+    composes: overflow-hidden from global;
+}
+
+.imageLabelContainer {
+    composes: relative from global;
+}

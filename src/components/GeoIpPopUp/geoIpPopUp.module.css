@@ -1,0 +1,196 @@
+.root {
+    composes: block from global;
+    composes: h-full from global;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.popUp {
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: flex from global;
+    composes: z-99999 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: lg_bg-black-60 from global;
+}
+
+.contentWrapper {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: bg-gray6 from global;
+    composes: px-[17px] from global;
+    composes: relative from global;
+    composes: pt-[105px] from global;
+    composes: pb-2 from global;
+
+    composes: lg_pt-[48px] from global;
+    composes: lg_h-auto from global;
+    composes: lg_min-h-[438px] from global;
+    composes: lg_max-w-[520px] from global;
+    composes: lg_px-[39px] from global;
+}
+
+.contentWrapper div {
+    @apply shadow-none
+        outline-none;
+}
+
+.header {
+    composes: text-center from global;
+    composes: text-[48px] from global;
+    composes: leading-[59px] from global;
+}
+
+.description {
+    composes: text-center from global;
+    composes: leading-[20px] from global;
+    composes: px-[20px] from global;
+    composes: mb-[38px] from global;
+
+    composes: lg_px-[25px] from global;
+    composes: lg_mb-[31px] from global;
+}
+
+.iconDiv {
+    composes: cursor-pointer from global;
+    composes: absolute from global;
+    composes: right-[15px] from global;
+    composes: top-[30px] from global;
+
+    composes: lg_right-[8px] from global;
+    composes: lg_top-[9px] from global;
+}
+
+.dropdown {
+    composes: border from global;
+    composes: border-solid from global;
+    composes: px-[13px] from global;
+    composes: mb-2.5 from global;
+
+    composes: lg_pr-[20px] from global;
+    composes: rtl_lg_pr-[13px] from global;
+    composes: rtl_lg_pl-[20px] from global;
+}
+
+.dropdown :global button {
+    @apply font-bold
+        text-[15px]
+        leading-[19px]
+        pt-[5px]
+        pb-[10px]
+        text-green
+        border-0
+        bg-transparent
+        h-auto
+        pl-0
+        block
+        w-full
+        text-left
+        rtl_text-right;
+}
+
+.selectRoot {
+    composes: hidden from global;
+}
+
+.label {
+    composes: text-[15px] from global;
+    composes: leading-[10px] from global;
+    composes: text-green-80 from global;
+    composes: block from global;
+    composes: cursor-pointer from global;
+    composes: relative from global;
+    composes: outline-none from global;
+    composes: focus_outline-none from global;
+
+    /* remove blue highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.dropdownIcon {
+    composes: cursor-pointer from global;
+    composes: absolute from global;
+    composes: rtl_rotate-180 from global;
+
+    composes: top-[12px] from global;
+    composes: right-[-5px] from global;
+    composes: rtl_right-auto from global;
+    composes: rtl_left-[-5px] from global;
+    composes: rtl_top-[18px] from global;
+}
+
+.dropdownDown {
+    composes: cursor-pointer from global;
+    composes: absolute from global;
+    composes: rtl_rotate-180 from global;
+
+    composes: top-[10px] from global;
+    composes: right-[-14px] from global;
+    composes: rtl_right-auto from global;
+    composes: rtl_left-[-13px] from global;
+    composes: rtl_top-[22px] from global;
+}
+
+.defaultLabel {
+    composes: label;
+    composes: pt-[25px] from global;
+    composes: pb-[23px] from global;
+}
+
+.disabledLabel {
+    composes: defaultLabel;
+    composes: cursor-not-allowed from global;
+}
+
+.activeLabel {
+    composes: label;
+    composes: pt-[18px] from global;
+    composes: pb-[11px] from global;
+    composes: text-[13px] from global;
+}
+
+.dropdownWrapper {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-baseline from global;
+    composes: max-h-[142px] from global;
+    composes: overflow-y-auto from global;
+    composes: mb-2.5 from global;
+
+    composes: rtl_ml-[15px] from global;
+}
+
+.dropdownWrapper::-webkit-scrollbar {
+    @apply w-[3px];
+}
+
+.dropdownWrapper::-webkit-scrollbar-track {
+    @apply bg-zircon;
+    @apply rounded-[3px];
+}
+
+.dropdownWrapper::-webkit-scrollbar-thumb {
+    @apply bg-green;
+    @apply rounded-[3px];
+}
+
+.selectedValue {
+    composes: block from global;
+    composes: w-full from global;
+    composes: font-bold from global;
+    composes: text-[15px] from global;
+    composes: leading-[19px] from global;
+}
+
+.continueButton {
+    composes: lg_pt-[15px] from global;
+    composes: lg_mx-auto from global;
+    composes: lg_my-0 from global;
+    composes: lg_max-w-[57%] from global;
+}

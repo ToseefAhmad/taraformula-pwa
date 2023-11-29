@@ -1,0 +1,130 @@
+.reviews {
+    @apply mb-[40px]
+        lg_mt-[70px]
+        lg_mb-[22px] !important;
+}
+
+.reviews > div {
+    @apply rtl_mb-[20px] !important;
+    @apply rtl_lg_mb-[46px] !important;
+}
+
+.reviews-slider img {
+    @apply mt-[10px]
+        mr-auto
+        mb-[13px]
+        ml-auto;
+    @apply rtl_mt-[14px]
+        rtl_mb-[0];
+    @apply lg_mt-[33px];
+    @apply rtl_lg_mt-[10px]
+        rtl_lg_mb-[13px];
+}
+
+.reviews-slider h2 {
+    @apply mb-[39px]
+        leading-[26px];
+    @apply rtl_text-[34px]
+        rtl_leading-[35px];
+    @apply lg_mb-[64px]
+        lg_leading-[46px];
+    @apply rtl_lg_mb-[50px]
+        rtl_lg_text-[50px]
+        rtl_lg_leading-[60px];
+}
+
+.reviews h5 {
+    @apply ltr_mb-[26px];
+    @apply rtl_mb-[14px]
+        rtl_text-[16px];
+    @apply ltr_lg_mb-0;
+    @apply rtl_lg_mb-[0]
+        rtl_lg_text-lg;
+}
+
+[dir='ltr'] .reviews-slider img[alt*='Verified'] {
+    object-position: -79px;
+
+    @apply max-w-[70px]
+        object-none;
+    @apply lg_max-w-[inherit];
+}
+
+.reviews-slider img[alt*='stars'] {
+    @apply w-[62px]
+        h-[11px] !important;
+    @apply lg_w-[97px]
+        lg_h-[14px] !important;
+}
+
+.reviews p {
+    @apply rtl_font-arabicText;
+}
+
+.reviews-slider .slick-line {
+    @apply m-0
+        pt-0
+        pr-[18px]
+        pb-0
+        pl-[18px]
+        flex
+        w-full;
+    @apply rtl_mt-0;
+    @apply lg_pr-[53px]
+        lg_pl-[53px]
+        lg_mt-[46px];
+    @apply rtl_lg_mt-[4px];
+}
+
+.reviews-slider ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+.reviews-slider ul > li > button {
+    @apply p-0
+        block
+        w-full
+        h-[2px]
+        text-[0px]
+        rounded-[2px]
+        bg-green/[0.12]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300;
+    @apply lg_hover_bg-green-60;
+}
+
+.reviews-slider .slick-line .slick-active button {
+    @apply bg-green;
+}
+
+.reviews-slider .slick-slide {
+    @apply visible
+        opacity-100 !important;
+}
+
+.reviews-slider .slide div {
+    @apply pt-0 !important;
+}
+
+.reviews-slider .slide > div {
+    @apply lg_pt-[40px] !important;
+}
+
+.reviews-slider [class*='slider-bannerPoster'] {
+    @apply pt-0
+        pb-0 !important;
+    @apply lg_pt-[40px]
+        lg_pb-[40px] !important;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    [dir='ltr'] .reviews-slider img[alt*='Verified'] {
+        object-position: inherit;
+    }
+}

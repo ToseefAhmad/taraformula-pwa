@@ -1,0 +1,122 @@
+.position {
+    composes: fixed from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: flex from global;
+}
+
+.container {
+    composes: w-full from global;
+}
+
+.shimmer {
+    composes: position;
+    composes: w-full from global;
+    composes: h-16 from global;
+
+    composes: lg_h-[72px] from global;
+}
+
+.root {
+    composes: position;
+    composes: bg-whiteSmoke from global;
+
+    display: none;
+}
+
+.root_open {
+    composes: root;
+
+    display: grid;
+}
+
+.search {
+    composes: pt-0.5 from global;
+    composes: pb-px from global;
+    composes: flex from global;
+
+    composes: lg_pt-1 from global;
+    composes: lg_pb-2 from global;
+    composes: container from global;
+}
+
+.searchButton {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: cursor-pointer from global;
+}
+
+.searchIcon {
+    composes: rtl_rotate-180 from global;
+}
+
+.goButton {
+    composes: searchButton;
+    composes: pt-1 from global;
+    composes: mr-[-3px] from global;
+    composes: hover_stroke-[1.5px] from global;
+    composes: lg_mr-px from global;
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-[-3px] from global;
+    composes: rtl_lg_mr-0 from global;
+    composes: rtl_lg_ml-px from global;
+    composes: disabled_cursor-default from global;
+    composes: disabled_text-gray from global;
+    composes: disabled_hover_cursor-default from global;
+    composes: disabled_hover_text-gray from global;
+    composes: disabled_focus_cursor-default from global;
+    composes: disabled_focus_text-gray from global;
+}
+
+.closeButton {
+    composes: searchButton;
+    composes: mr-[-10px] from global;
+    composes: stroke-[0.9px] from global;
+    composes: hover_stroke-[1.2px] from global;
+
+    composes: lg_stroke-[0.5px] from global;
+    composes: lg_pt-1 from global;
+    composes: lg_mr-[-7px] from global;
+
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-[-10px] from global;
+
+    composes: rtl_lg_mr-0 from global;
+    composes: rtl_lg_ml-[-7px] from global;
+}
+
+.loaderIcon {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: w-5.5 from global;
+
+    composes: lg_w-7 from global;
+    composes: lg_pt-px from global;
+}
+
+.loaderIcon_hidden {
+    composes: loaderIcon;
+
+    visibility: hidden;
+}
+
+.loaderIcon span {
+    @apply h-5.5
+        w-5.5;
+    @apply lg_h-7
+        lg_w-7;
+}
+
+.loaderIcon svg {
+    @apply lg_stroke-[1.2px];
+}
+
+.form {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: h-full from global;
+}
+
+.autocomplete {
+    composes: overflow-y-auto from global;
+}

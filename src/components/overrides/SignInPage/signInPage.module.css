@@ -1,0 +1,19 @@
+.root {
+    composes: grid from global;
+    composes: place-items-center from global;
+    composes: lg_min-h-screen-desktop from global;
+}
+
+.contentContainer {
+    composes: w-full from global;
+    composes: max-w-[442px] from global;
+    composes: my-5 from global;
+    composes: lg_w-[442px] from global;
+    composes: px-[18px] from global;
+    composes: pt-3 from global;
+    composes: pb-5 from global;
+    composes: lg_border from global;
+    composes: border-solid from global;
+    composes: border-gray from global;
+    composes: bg-white from global;
+}

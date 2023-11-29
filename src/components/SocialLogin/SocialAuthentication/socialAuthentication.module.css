@@ -1,0 +1,35 @@
+.divider {
+    composes: relative from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: bg-inherit from global;
+    composes: z-10 from global;
+}
+
+.divider::before {
+    content: '';
+
+    @apply block
+        absolute
+        w-full
+        h-[1px]
+        bg-[#CEC9C9];
+}
+
+.dividerContent {
+    composes: px-4 from global;
+    composes: z-10 from global;
+    composes: bg-inherit from global;
+    composes: text-sm from global;
+    composes: pt-3.5 from global;
+    composes: pb-[11px] from global;
+    composes: lg_pt-2.5 from global;
+}
+
+.title {
+    composes: pt-[23px] from global;
+    composes: pb-4 from global;
+    composes: lg_pt-[25px] from global;
+    composes: lg_pb-[15px] from global;
+}

@@ -1,0 +1,267 @@
+.root {
+    composes: container from global;
+    composes: pt-4 from global;
+    composes: pb-12 from global;
+    composes: lg_py-8 from global;
+    composes: lg_min-h-screen-desktop from global;
+    composes: grid from global;
+}
+
+.checkoutContent {
+    composes: grid from global;
+    composes: md_gap-x-10 from global;
+    composes: gap-x-10 from global;
+    composes: md_grid-cols-checkout-template-cols from global;
+}
+
+.checkoutContent_hidden {
+    composes: checkoutContent;
+    composes: hidden from global;
+}
+
+.heading_container {
+    composes: grid from global;
+    composes: gap-y-4 from global;
+    composes: col-span-1 from global;
+}
+
+.heading {
+    composes: lg_text-6xl from global;
+    composes: lg_leading-[65px] from global;
+    composes: my-8 from global;
+    composes: md_mt-0 from global;
+    composes: md_mb-12 from global;
+}
+
+.cartLink {
+    composes: root from '@magento/venia-ui/lib/components/LinkButton/linkButton.module.css';
+}
+
+.stepper_heading {
+    composes: py-6 from global;
+    composes: lg_text-2xl from global;
+}
+
+.shipping_method_heading {
+    composes: stepper_heading;
+}
+
+.shipping_method_heading::after {
+    @apply
+        z-1
+        absolute
+        bottom-0
+        h-px
+        border-t
+        border-solid
+        border-gray4
+        left-[-17px]
+        right-[-17px]
+        md_left-0
+        md_right-0;
+
+    content: '';
+}
+
+.payment_information_heading {
+    composes: stepper_heading;
+}
+
+.signInContainer {
+    composes: grid from global;
+    composes: items-center from global;
+    composes: gap-4 from global;
+    composes: grid-flow-col from global;
+    composes: md_mb-5.5 from global;
+}
+
+.empty_cart_container {
+    composes: mb-6 from global;
+}
+
+.shipping_information_container {
+    composes: relative from global;
+    grid-column: 1 / span 1;
+}
+
+.shipping_method_container {
+    composes: relative from global;
+    grid-column: 1 / span 1;
+}
+
+.payment_information_container {
+    composes: relative from global;
+    grid-column: 1 / span 1;
+}
+
+.checkoutContent [class*='indicator-root'] [class*='indicator-message'] {
+    @apply text-center;
+}
+
+.checkoutContent [class*='priceWrapper'] {
+    @apply justify-end;
+}
+
+.price_adjustments_container {
+    composes: py-[25px] from global;
+    composes: relative from global;
+    grid-column: 1 / span 1;
+}
+
+.price_adjustments_container::after {
+    @apply
+        z-1
+        absolute
+        bottom-0
+        h-px
+        border-t
+        border-solid
+        border-gray4
+        left-[-17px]
+        right-[-17px]
+        md_left-0
+        content-['']
+        md_right-0;
+}
+
+.items_review_container {
+    grid-column: 1 / span 1;
+}
+
+.summaryContainer {
+    composes: md_sticky from global;
+    composes: md_top-4 from global;
+}
+
+.orderSummaryAside {
+    composes: mt-8 from global;
+    composes: md_mt-0 from global;
+    composes: ltr_md_pl-[1.2rem] from global;
+    composes: rtl_md_pr-[1.2rem] from global;
+    grid-column: 1 / span 1;
+}
+
+.formErrors {
+    composes: grid from global;
+    composes: border-solid from global;
+    composes: border-l-5 from global;
+    composes: border-red from global;
+    composes: py-4 from global;
+    composes: pl-4 from global;
+    grid-column: 1 / span 1;
+}
+
+@media (min-width: 768px) {
+    .summaryContainer {
+        composes: h-[min-content] from global;
+    }
+
+    .orderSummaryAside {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 6;
+    }
+}
+
+.review_order_button {
+    composes: root_highPriority from '@magento/venia-ui/lib/components/Button/button.module.css';
+    composes: mx-auto from global;
+    composes: mt-6 from global;
+    composes: md_mt-6.5 from global;
+    grid-column: 1 / span 1;
+}
+
+.place_order_button {
+    composes: root_highPriority from '@magento/venia-ui/lib/components/Button/button.module.css';
+    composes: mx-auto from global;
+    composes: mt-6 from global;
+    composes: md_mt-6.5 from global;
+    grid-column: 1 / span 1;
+}
+
+.giftcardSectionSubtitle {
+    composes: hidden from global;
+}
+
+.giftcardSectionTitleWrapper {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: justify-between from global;
+}
+
+.giftcardSectionTitle {
+    composes: text-lg from global;
+    composes: lg_text-[27px] from global;
+}
+
+.giftcardIcon {
+    composes: h-[33px] from global;
+    composes: stroke-current from global;
+    composes: text-green from global;
+    composes: ltr_mr-[-10px] from global;
+    composes: rtl_ml-[-10px] from global;
+    composes: ltr_md_mr-[25px] from global;
+    composes: rtl_md_ml-[25px] from global;
+}
+
+.giftcardAccordionRoot {
+    composes: border-transparent from global;
+}
+
+.giftcardSectionTitleContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: w-full from global;
+    composes: cursor-pointer from global;
+}
+
+.giftcardAccordionRoot [class*='textInput-input'] {
+    @apply
+        h-[60px]
+        w-full;
+}
+
+.giftcardAccordionRoot [class*='fieldIcons-root'] {
+    @apply grid-cols-none;
+    grid-template-areas: none;
+}
+
+.giftcardAccordionRoot [class*='fieldIcons-input'] {
+    @apply col-auto row-auto;
+}
+
+.giftcardAccordionRoot [class*='field-root'] {
+    @apply content-center;
+}
+
+.giftcardAccordionRoot [class*='field-root']:first-child {
+    @apply w-full;
+}
+
+.giftcardAccordionRoot [class*='field-root']:last-child {
+    @apply
+        justify-center
+        min-w-[89px]
+        lg_min-w-[10rem]
+        lg_w-40;
+}
+
+.giftcardAccordionRoot [class*='field-root'] button {
+    @apply
+        h-[60px]
+        lg_min-w-[10rem];
+}
+
+.giftcardAccordionRoot [class*='couponCode-entryForm'] {
+    @apply
+        gap-[10px]
+        w-full
+        justify-between;
+}
+
+.giftcardAccordionRoot [class*='couponCode-entryForm'] input::placeholder {
+    @apply text-[#023527CC];
+}
+
+.giftcardSectionContentsContainer {
+    composes: py-4 from global;
+}

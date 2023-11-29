@@ -1,0 +1,5 @@
+.root {
+    composes: inline-flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+}

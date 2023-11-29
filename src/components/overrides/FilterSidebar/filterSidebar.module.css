@@ -1,0 +1,42 @@
+.root {
+    composes: bg-white from global;
+    composes: hidden from global;
+    composes: bottom-0 from global;
+    composes: max-w-[325px] from global;
+    composes: z-0 from global;
+    composes: lg_grid from global;
+    composes: ltr_mr-2.5 from global;
+    composes: rtl_ml-2.5 from global;
+    composes: w-full from global;
+    composes: mt-9 from global;
+    composes: lg_min-w-[325px] from global;
+}
+
+.body {
+    composes: overflow-auto from global;
+}
+
+.headerTitle {
+    composes: mb-2.5 from global;
+    composes: rtl_mt-2.5 from global;
+}
+
+.action {
+    composes: mt-2.5 from global;
+    composes: mb-[15px] from global;
+}
+
+.action span {
+    @apply text-[15px]
+        text-green
+        font-normal
+        underline
+        leading-[19px];
+}
+
+.fillerDataShimmer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: border-t from global;
+    composes: border-gray from global;
+}

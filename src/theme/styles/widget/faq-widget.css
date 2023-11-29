@@ -1,0 +1,41 @@
+.faq-widget {
+    @apply lg_max-w-[774px]
+        border-t
+        border-default;
+}
+
+.faq-section {
+    @apply border-b
+        border-default;
+}
+
+.faq-section-wrapper {
+    @apply w-full
+        py-[17px]
+        ltr_pr-[17px];
+}
+
+.faq-title-wrapper {
+    @apply flex
+        justify-between
+        items-center;
+}
+
+.faq-title {
+    @apply font-bold
+        text-green
+        text-left
+        rtl_text-right;
+}
+
+.faq-icon {
+    @apply text-xs
+        text-green;
+}
+
+.faq-answer {
+    @apply pb-5
+        max-w-[83%]
+        lg_max-w-[500px]
+        text-green;
+}

@@ -1,0 +1,149 @@
+.root h1,
+.root h2,
+.root h3,
+.root h4,
+.root h5,
+.root h6,
+.root p {
+    @apply font-serif
+        text-green
+        break-words
+        mb-[0.5em];
+}
+
+.root h1 {
+    @apply font-serif
+        text-4xl
+        lg_text-7xl;
+}
+.root h2 {
+    @apply font-serif
+        text-2xl
+        lg_text-5xl;
+}
+.root h3 {
+    @apply font-serif
+        text-xl
+        lg_text-3xl;
+}
+.root h4 {
+    @apply font-sans
+        text-lg
+        lg_text-2xl;
+}
+.root h5 {
+    @apply font-sans
+        text-sm
+        lg_text-lg
+        font-bold;
+}
+.root h6 {
+    @apply font-sans
+        text-base;
+}
+.root p {
+    @apply font-sans
+        text-base
+        leading-[20px];
+}
+
+.root img {
+    @apply max-w-full
+        my-4
+        mx-0;
+}
+
+/* @TODO Refactor list default styles to tailwind */
+
+.root ol,
+.root ul {
+    margin-block-start: 1.2em;
+    margin-block-end: 1.2em;
+    padding-left: 2em;
+}
+.root p + ol,
+.root p + ul {
+    margin-block-start: 0.2em;
+}
+
+.root ol {
+    @apply list-decimal;
+}
+
+.root ul {
+    @apply list-disc;
+}
+
+.root ol li,
+.root ul li {
+    @apply leading-[1.65em]
+        py-px
+        px-2;
+}
+
+.root a {
+    @apply font-sans
+        text-base
+        underline;
+}
+
+.root a:hover {
+    @apply lg_text-red;
+}
+
+.root blockquote {
+    @apply text-lg
+        my-4
+        font-light
+        italic;
+}
+
+/* @TODO Refactor all table default styles to tailwind */
+
+.root table {
+    width: 100%;
+    margin: 1rem 0;
+    border-spacing: 0;
+    border-left: 1px solid rgb(var(--venia-global-color-border));
+    border-top: 1px solid rgb(var(--venia-global-color-border));
+}
+
+.root table td,
+.root table th {
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.125em;
+    border-right: 1px solid rgb(var(--venia-global-color-border));
+    border-bottom: 1px solid rgb(var(--venia-global-color-border));
+}
+
+.root table th {
+    background-color: rgb(var(--venia-global-color-gray));
+}
+
+/* @TODO Refactor important cms content default styles to tailwind */
+
+.root :global .cms-content-important {
+    background: rgb(var(--venia-global-color-gray));
+    padding: 1.2rem 1rem;
+    font-size: 1.125rem;
+    border: 1px solid rgb(var(--venia-global-color-border));
+}
+
+/* @TODO Refactor <pre> default styles to tailwind */
+
+.root pre {
+    background: rgb(var(--venia-global-color-gray));
+    padding: 1rem;
+    border: 1px solid rgb(var(--venia-global-color-border));
+}
+
+.root :global(.pagebuilder-mobile-only) {
+    @apply lg_hidden;
+}
+
+.root :global(.pagebuilder-mobile-hidden) {
+    @apply hidden
+        lg_block;
+}

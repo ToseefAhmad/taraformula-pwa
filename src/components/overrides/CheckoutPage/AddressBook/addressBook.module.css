@@ -1,0 +1,73 @@
+.root {
+    composes: hidden from global;
+}
+
+.root_active {
+    composes: gap-y-4 from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: grid from global;
+    composes: auto-rows-min from global;
+    grid-template-areas:
+        'header buttons'
+        'content content';
+    grid-template-columns: auto auto;
+}
+
+.headerText {
+    composes: lg_text-6xl from global;
+    grid-area: header;
+}
+
+.buttonContainer {
+    composes: grid-cols-2 from global;
+    composes: lg_grid-cols-none from global;
+    composes: gap-x-4 from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-center from global;
+    composes: lg_justify-end from global;
+    grid-area: buttons;
+}
+
+.content {
+    composes: grid from global;
+    composes: md_pt-8 from global;
+    composes: grid-cols-1 from global;
+    composes: auto-rows-fr from global;
+    composes: gap-4 from global;
+    composes: sm_grid-cols-2 from global;
+    composes: md_border-t from global;
+    composes: md_border-solid from global;
+    composes: md_border-gray4 from global;
+    composes: lg_grid-cols-3 from global;
+    grid-area: content;
+}
+
+.addButton {
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-green from global;
+    composes: bg-almostWhite from global;
+    composes: font-bold from global;
+    transition: border-color 384ms var(--venia-global-anim-standard);
+}
+
+.addButton [class*='linkButton'] {
+    @apply grid-flow-row;
+}
+
+.addButton :focus,
+.addButton:hover {
+    @apply border-2 bg-white;
+}
+
+@media (max-width: 640px) {
+    .root_active {
+        grid-template-areas:
+            'header'
+            'content'
+            'buttons';
+        grid-template-columns: 1fr;
+    }
+}

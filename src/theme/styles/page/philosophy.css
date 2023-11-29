@@ -1,0 +1,341 @@
+/* Generic philosophy page style */
+
+.philosophy[class*='cms-page_wrapper'] {
+    @apply grid-cols-1
+        lg_flex-wrap
+        max-w-full
+        p-0;
+}
+
+.philosophy [class*='cms-sidebar'] {
+    @apply hidden;
+}
+
+.philosophy [class*='fullBleed'] {
+    @apply rtl_ml-0
+        rtl_mr-[50%]
+        rtl_translate-x-[50%];
+}
+
+.philosophy [class*='cms-content'] {
+    @apply m-0
+        p-0
+        w-full;
+}
+
+.philosophy img {
+    @apply m-0
+        w-full;
+}
+
+.philosophy .video-block,
+.philosophy .philosophy-ingredients-block,
+.philosophy .discover-more-block {
+    @apply bg-gray7-40;
+}
+
+.philosophy .main-banner-block [class*='columnGroup-root'],
+.philosophy .philosophy-ingredients-block [class*='columnGroup-root'],
+.philosophy .video-block [class*='columnGroup-root'],
+.philosophy .discover-more-block [class*='columnGroup-root'] {
+    @apply lg_max-w-desktop
+        mx-auto
+        w-full;
+}
+
+.philosophy h4 span {
+    @apply text-lg
+        lg_text-2xl !important;
+}
+
+.philosophy .link button {
+    @apply no-underline
+        uppercase
+        text-sm
+        lg_text-base
+        font-bold
+        border-b-2
+        border-solid
+        border-transparent
+        pb-1;
+}
+
+.philosophy .link button:hover {
+    @apply border-green;
+}
+
+/* Main banner block */
+
+.philosophy .main-banner-block {
+    @apply bg-gray-20
+        pb-[5px]
+        md_pb-[8.7%];
+}
+
+.philosophy .main-banner-block [class*='columnGroup-root']:first-child {
+    @apply justify-between !important;
+}
+
+.philosophy .main-banner-block .left-column {
+    @apply w-[57.25%] !important;
+}
+
+.philosophy .main-banner-block .left-column,
+.philosophy .main-banner-block .left-column [class*='shimmerRoot'] {
+    @apply min-h-[110vw]
+        md_min-h-[43vw]
+        2xl_min-h-[617px];
+}
+
+.philosophy .main-banner-block .right-column [class*='shimmerRoot'] {
+    @apply md_min-h-[27vw]
+        2xl_min-h-[390px]
+        w-full;
+}
+
+.philosophy .main-banner-block .right-column {
+    @apply hidden
+        md+1_flex
+        self-end
+        w-[23%]
+        ltr_mr-[11.5%]
+        rtl_ml-[11.5%]
+        items-center !important;
+}
+
+.philosophy .main-banner-block .right-column img {
+    @apply w-min
+        mx-auto;
+}
+
+.philosophy .main-banner-block .text {
+    @apply px-[17px]
+        pt-4
+        lg_px-12
+        lg_pt-13
+        max-w-[89%]
+        lg_max-w-[69%];
+}
+
+.philosophy .main-banner-block .text h1 {
+    @apply mb-[5px]
+        lg_mb-[15px]
+        lg_tracking-normal;
+}
+
+.philosophy .main-banner-block .text h2 {
+    @apply leading-6.5
+        lg_leading-none;
+}
+
+.philosophy .video-block {
+    @apply pb-1;
+}
+
+/* Ingredients block */
+
+.philosophy .philosophy-ingredients-block {
+    @apply space-y-2.5;
+}
+
+.philosophy .philosophy-ingredients-block [class*='columnGroup-root'] {
+    @apply space-y-2.5
+        space-y-0
+        md_space-x-2.5
+        md_rtl_space-x-reverse;
+}
+
+.philosophy .philosophy-ingredients-block [class*='columnGroup-root']:last-child {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    @apply justify-between;
+}
+
+.philosophy .philosophy-ingredients-block [class*='columnGroup-root']:last-child::-webkit-scrollbar {
+    @apply hidden;
+}
+
+.philosophy .philosophy-ingredients-block .top-left {
+    @apply pt-8
+        ltr_pl-[17px]
+        rtl_pr-[17px]
+        pb-6.5
+        lg_py-[7.6%]
+        lg_ltr_pl-12
+        lg_rtl_pr-12
+        order-2
+        md_order-1;
+}
+
+.philosophy .philosophy-ingredients-block .top-left .text {
+    @apply mb-6
+        lg_mb-8
+        w-[80%]
+        lg_w-[68%];
+}
+
+.philosophy .philosophy-ingredients-block .top-right {
+    @apply order-1
+        md_order-2
+        xs_min-h-[660px]
+        md_min-h-0;
+}
+
+.philosophy .philosophy-ingredients-block .top-right,
+.philosophy .philosophy-ingredients-block .bottom-left {
+    background: linear-gradient(270deg, #fff, #e2e1e6) 0 0/400% 400%;
+
+    @apply animate-content-loader;
+}
+
+.philosophy .philosophy-ingredients-block .top-right div [class*='richContent-root'],
+.philosophy .philosophy-ingredients-block .bottom-left div [class*='richContent-root'] {
+    @apply h-full !important;
+}
+
+.philosophy .philosophy-ingredients-block .top-right > div,
+.philosophy .philosophy-ingredients-block .bottom-left > div,
+.philosophy .philosophy-ingredients-top-right,
+.philosophy .philosophy-ingredients-bottom-left {
+    @apply h-full;
+}
+
+.philosophy .philosophy-ingredients-top-right > div,
+.philosophy .philosophy-ingredients-bottom-left > div {
+    @apply min-h-full;
+}
+
+.philosophy .philosophy-ingredients-block .top-right figure {
+    @apply xs_hidden !important;
+}
+
+.philosophy .philosophy-ingredients-block .bottom-left {
+    @apply basis-9/19
+        md_basis-1/2;
+}
+
+.philosophy .philosophy-ingredients-block .bottom-left figure {
+    @apply md_hidden !important;
+}
+
+.philosophy .philosophy-ingredients-block .mobile-image-column {
+    @apply basis-1/2;
+    @apply flex
+        md_hidden !important;
+}
+
+.philosophy .philosophy-ingredients-block .bottom-right {
+    @apply justify-between
+        basis-full
+        md_basis-1/2 !important;
+}
+
+.philosophy .philosophy-ingredients-block .bottom-right .text {
+    @apply ltr_pl-[17px]
+        rtl_pr-[17px]
+        rtl_pb-9.5
+        pt-[15px]
+        lg_pt-[9.5%]
+        rtl_lg_pt-[14%]
+        lg_ltr_pl-[58px]
+        lg_rtl_pr-[58px]
+        w-[80%]
+        md_w-[69%];
+}
+
+.philosophy .philosophy-ingredients-block .bottom-right .text p {
+    @apply lg_leading-tight
+        mb-5;
+}
+
+.philosophy .philosophy-ingredients-block .bottom-right .text p:last-child {
+    @apply mb-0;
+}
+
+.philosophy .philosophy-ingredients-block .desktop-image {
+    @apply hidden
+        md_block;
+}
+
+.philosophy .philosophy-ingredients-block .link {
+    @apply mt-0
+        md_mt-[19px];
+}
+
+.philosophy .ingredients-list {
+    @apply m-0
+        ltr_-ml-1.5
+        rtl_-mr-1.5;
+}
+
+.philosophy .ingredients-list [class*='columnGroup-root'] {
+    @apply
+        flex-nowrap
+        overflow-x-auto;
+}
+
+.philosophy .ingredients-list .pagebuilder-column {
+    @apply min-w-[48%]
+        md_min-w-[33%]
+        lg_min-w-[unset]
+        lg_max-w-[33%];
+    @apply px-[6px] !important;
+}
+
+.philosophy .ingredients-list .pagebuilder-column figure {
+    background: transparent;
+
+    @apply
+        flex
+        items-center
+        w-auto
+        animate-none
+        h-[43px];
+}
+
+.philosophy .ingredients-list .pagebuilder-column picture {
+    background: transparent;
+}
+
+.philosophy .ingredients-list img {
+    @apply m-0;
+}
+
+.philosophy .ingredients-list h6 {
+    @apply font-bold
+        text-sm
+        mt-4
+        mb-0;
+}
+
+.philosophy .ingredients-list p {
+    @apply lg_w-[90%]
+        text-sm;
+}
+
+.philosophy .ingredients-list p,
+.philosophy .ingredients-list span {
+    @apply
+        leading-4
+        lg_text-base
+        lg_leading-[1.3rem];
+}
+
+/* Discover more block */
+
+.philosophy .discover-more-block {
+    @apply ltr_pl-mobile
+        rtl_pr-mobile
+        ltr_sm_pl-0
+        rtl_sm_pr-0
+        pt-11.5
+        lg_pt-20
+        lg_pb-2;
+}
+
+.philosophy .discover-more-block h5 {
+    @apply sm_mx-mobile
+        lg_mx-12
+        mb-0.5;
+}

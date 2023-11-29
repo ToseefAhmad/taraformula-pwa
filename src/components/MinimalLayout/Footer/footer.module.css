@@ -1,0 +1,22 @@
+/* Footer */
+
+.root {
+    composes: bg-gray-30 from global;
+    composes: pt-6 from global;
+    composes: pb-12 from global;
+    composes: text-green from global;
+
+    composes: lg_pt-[35.5px] from global;
+    composes: lg_pb-[95.5px] from global;
+}
+
+/* Copyright */
+
+.copyright {
+    composes: container from global;
+    composes: text-sm from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: font-bold from global;
+    composes: text-center from global;
+}

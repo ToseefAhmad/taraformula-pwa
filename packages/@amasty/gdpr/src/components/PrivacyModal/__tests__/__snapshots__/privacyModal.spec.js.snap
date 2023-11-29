@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders no content privacyModal 1`] = `null`;
+
+exports[`renders versionChanged false 1`] = `
+<Modal
+  classes={
+    Object {
+      "cancelButton": undefined,
+    }
+  }
+  confirmText="I have read and accept"
+  confirmTranslationId="privacySetting.accept"
+  shouldShowButton={true}
+  shouldUnmountOnHide={true}
+  title="Privacy Policy"
+>
+  <RichContent
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    html="<div>test</div>"
+  />
+</Modal>
+`;
+
+exports[`renders versionChanged true 1`] = `
+<Modal
+  classes={
+    Object {
+      "cancelButton": undefined,
+    }
+  }
+  confirmText="I have read and accept"
+  confirmTranslationId="privacySetting.accept"
+  shouldShowButton={true}
+  shouldUnmountOnHide={true}
+  title="Privacy Policy"
+>
+  <p>
+    <div
+      componentName="Formatted Message Component"
+      defaultMessage="We would like to inform you that our Privacy Policy has been amended. Please, read and accept the new terms."
+      id="privacy.versionChanged"
+    />
+  </p>
+  <RichContent
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    html="<div>test</div>"
+  />
+</Modal>
+`;

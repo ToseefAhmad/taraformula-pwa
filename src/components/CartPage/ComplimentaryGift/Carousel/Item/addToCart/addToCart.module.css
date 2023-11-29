@@ -1,0 +1,15 @@
+.root {
+    composes: uppercase from global;
+    composes: font-bold from global;
+}
+
+.inStock {
+    composes: pb-1 from global;
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+    composes: border-bottom from global;
+    composes: border-solid from global;
+    composes: border-white from global;
+    composes: border-b-2 from global;
+}

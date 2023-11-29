@@ -1,0 +1,59 @@
+.categoryTopBannerShimmer {
+    composes: flex from global;
+    composes: flex-wrap from global;
+
+    composes: lg_h-screen from global;
+    composes: lg_max-h-[414px] from global;
+}
+
+.shimmerLeftImage {
+    composes: h-72 from global;
+    composes: max-h-[277px] from global;
+    composes: w-2/4 from global;
+    composes: pr-0.5 from global;
+
+    composes: lg_h-full from global;
+    composes: lg_max-h-full from global;
+    composes: lg_w-1/4 from global;
+    composes: lg_pr-2.5 from global;
+
+    composes: rtl_pr-0 from global;
+    composes: rtl_pl-0.5 from global;
+
+    composes: lg_rtl_pl-2.5 from global;
+}
+
+.shimmerRightImage {
+    composes: h-72 from global;
+    composes: max-h-[277px] from global;
+    composes: w-2/4 from global;
+    composes: pl-0.5 from global;
+
+    composes: lg_h-full from global;
+    composes: lg_max-h-full from global;
+    composes: lg_pr-6 from global;
+    composes: lg_pl-0 from global;
+
+    composes: rtl_pr-0 from global;
+    composes: rtl_pl-0 from global;
+    composes: lg_rtl_pl-6 from global;
+}
+
+.shimmerTextContent {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: flex-wrap from global;
+
+    composes: lg_items-center from global;
+    composes: lg_w-1/4 from global;
+}
+
+.shimmerTextWrapper {
+    composes: w-full from global;
+    composes: lg_h-[60%] from global;
+    composes: px-4 from global;
+    composes: pt-3.5 from global;
+
+    composes: lg_px-0 from global;
+    composes: lg_pt-0 from global;
+}

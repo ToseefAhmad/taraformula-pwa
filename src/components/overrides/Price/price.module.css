@@ -1,0 +1,26 @@
+.priceWrapper {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: w-full from global;
+}
+
+.oldPrice {
+    @apply relative
+        block
+        mr-[8px]
+        font-light
+        rtl_float-right;
+}
+
+.oldPrice::before {
+    content: '';
+
+    @apply border-t
+        border-solid
+        border-red
+        absolute
+        top-[50%]
+        left-0
+        right-0
+        rotate-[-10deg];
+}

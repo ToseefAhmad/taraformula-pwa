@@ -1,0 +1,238 @@
+.ingredients {
+    composes: lg_container from global;
+    composes: block from global;
+    composes: pt-8 from global;
+    composes: px-[17px] from global;
+}
+
+.topContent {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: w-full from global;
+    composes: pb-4 from global;
+
+    composes: lg_px-0 from global;
+    composes: lg_justify-between from global;
+
+    composes: rtl_pb-[9px] from global;
+}
+
+.blockHeader {
+    composes: text-[34px] from global;
+    composes: leading-[32px] from global;
+    composes: pb-4 from global;
+    composes: w-full from global;
+
+    composes: lg_w-auto from global;
+    composes: lg_text-[72px] from global;
+    composes: lg_leading-[65px] from global;
+    composes: lg_max-w-[662px] from global;
+
+    composes: rtl_text-[60px] from global;
+    composes: rtl_leading-[39px] from global;
+    composes: rtl_pb-[10px] from global;
+}
+
+.link {
+    composes: link from '@app/components/StyleGuide/elementsSection.module.css';
+    composes: bg-transparent from global;
+
+    composes: lg_flex from global;
+    composes: lg_items-end from global;
+    composes: lg_mb-[19px] from global;
+    composes: lg_hover_cursor-pointer from global;
+
+    composes: xl_hover_border-green from global;
+}
+
+/* Fix blue border issue */
+.link:focus :global div,
+.link:hover :global div {
+    @apply outline-none !important;
+
+    outline: 0 -webkit-focus-ring-color !important;
+}
+
+.list {
+    composes: w-full from global;
+    composes: lg_w-auto from global;
+    composes: lg_pt-[15px] from global;
+    composes: lg_mx-[-5px] from global;
+}
+
+.item {
+    composes: block from global;
+    composes: rtl_text-right from global;
+}
+
+.item img {
+    @apply lg_hover_scale-y-110
+        lg_hover_transition-transform
+        lg_hover_ease-in-out
+        lg_hover_scale-x-110;
+}
+
+.ingImage {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: object-cover from global;
+}
+
+.imageContainer {
+    composes: max-h-[247px] from global;
+    composes: overflow-hidden from global;
+
+    composes: lg_max-h-[413px] from global;
+}
+
+.name {
+    composes: font-bold from global;
+    composes: pt-[10px] from global;
+
+    composes: lg_pt-[15px] from global;
+
+    composes: rtl_pt-[5px] from global;
+}
+
+.description {
+    composes: lg_leading-[20px] from global;
+}
+
+.list :global .slick-slide {
+    @apply pb-2
+        pr-[10px]
+        w-[63vw]
+        opacity-100
+        max-w-[444px]
+        lg_px-[5px]
+        lg_w-1/4
+        lg_max-w-[338px]
+        rtl_pr-0
+        rtl_pl-[10px]
+        md_rtl_max-w-full
+        lg_rtl_max-w-[300px];
+    @apply visible !important;
+}
+
+.list :global div.slick-track {
+    @apply min-w-full;
+}
+
+.list :global(.slick-dots) {
+    /* Add Important to fix dots */
+    display: flex !important;
+
+    @apply relative
+        bottom-0
+        mt-4;
+}
+
+.list :global(.slick-dots) li {
+    @apply m-0 flex-grow;
+}
+
+.list :global(.slick-dots) li button {
+    @apply p-0;
+}
+
+.list :global(.slick-dots) li button::before {
+    content: '';
+
+    @apply h-[2px] w-full bg-black transition-opacity duration-500;
+}
+
+.list :global(.slick-dots) li button:hover::before,
+.list :global(.slick-dots) li button:focus::before {
+    @apply bg-gray;
+}
+
+.list :global(.slick-dots li.slick-active) button:focus::before,
+.list :global(.slick-dots li.slick-active) button:hover::before {
+    @apply bg-black;
+}
+
+.list :global .slick-slider .slick-arrow {
+    @apply w-[33px]
+        h-[33px]
+        top-[calc(50%-5rem)]
+        lg_opacity-0
+        lg_transition-opacity
+        z-[9]
+        bg-white
+        rounded-full
+        lg_top-[calc(50%-7.8rem)];
+}
+
+.list :global .slick-slider:hover .slick-arrow {
+    @apply lg_opacity-100;
+}
+
+.list :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+.list :global .slick-slider .slick-next {
+    @apply right-[1.6rem]
+        rtl_left-auto;
+}
+
+.list :global .slick-slider .slick-prev {
+    @apply left-[1.6rem];
+}
+
+.popUpWrapper {
+    composes: root from '@app/components/GeoIpPopUp/geoIpPopUp.module.css';
+}
+
+.hidden {
+    composes: hidden from '@app/components/GeoIpPopUp/geoIpPopUp.module.css';
+}
+
+.popUp {
+    composes: popUp from '@app/components/GeoIpPopUp/geoIpPopUp.module.css';
+}
+
+.contentWrapper {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: bg-gray6 from global;
+    composes: px-[19px] from global;
+    composes: relative from global;
+    composes: pt-[19px] from global;
+    composes: pb-[40px] from global;
+
+    composes: lg_pt-[48px] from global;
+    composes: lg_h-auto from global;
+    composes: lg_max-w-[988px] from global;
+    composes: lg_px-[39px] from global;
+}
+
+.popUpHeader {
+    composes: relative from global;
+}
+
+.header {
+    composes: font-bold from global;
+}
+
+.iconDiv {
+    composes: iconDiv from '@app/components/GeoIpPopUp/geoIpPopUp.module.css';
+    composes: top-[-7px] from global;
+    composes: right-0 from global;
+
+    composes: lg_top-[-7px] from global;
+
+    composes: rtl_right-auto from global;
+    composes: rtl_left-0 from global;
+}
+
+.ingredientsList {
+    composes: pt-[19px] from global;
+    composes: lg_py-[43px] from global;
+}
+
+/* Fix all products unneeded paddings and margins added in page builder */
+.ingredientsList > :local(div) > div {
+    @apply p-0 !important;
+    @apply m-0 !important;
+}

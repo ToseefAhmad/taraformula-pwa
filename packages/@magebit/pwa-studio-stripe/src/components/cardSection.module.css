@@ -1,0 +1,22 @@
+.root {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cardErrorText {
+    font-size: 13px;
+    color: #545454;
+}
+
+.inputError {
+    background-color: rgba(253, 60, 29, 0.05);
+}
+
+.stripeInput {
+    border: 1px solid #023527;
+    composes: py-5 from global;
+    composes: pr-14 from global;
+    composes: pl-3.5 from global;
+    composes: rtl_pr-3.5 from global;
+    composes: rtl_pl-14 from global;
+}

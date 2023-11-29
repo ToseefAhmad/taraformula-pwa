@@ -1,0 +1,7 @@
+.root {
+    composes: root from '@app/components/overrides/SignInPage/signInPage.module.css';
+}
+
+.contentContainer {
+    composes: contentContainer from '@app/components/overrides/SignInPage/signInPage.module.css';
+}

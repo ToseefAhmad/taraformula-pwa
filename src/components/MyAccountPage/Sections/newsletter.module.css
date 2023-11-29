@@ -1,0 +1,26 @@
+.content {
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: gap-[17px] from global;
+}
+
+.shimmerContainer {
+    composes: flex from global;
+    composes: items-center from global;
+}
+
+.shimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: border from global;
+    composes: border-gray-80 from global;
+}
+
+.shimmerLabel {
+    composes: text-base from global;
+    composes: pl-2.5 from global;
+}
+
+.checkboxLabel {
+    composes: label from '@app/components/overrides/Checkbox/checkbox.module.css';
+    composes: text-base from global;
+}

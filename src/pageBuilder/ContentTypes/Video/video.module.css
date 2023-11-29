@@ -1,0 +1,63 @@
+.root {
+    composes: p-0 from global;
+}
+
+.inner {
+    composes: inline-block from global;
+    composes: w-full from global;
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: pointer-events-auto from global;
+}
+
+.wrapper {
+    composes: overflow-hidden from global;
+    transform: translateZ(0);
+}
+
+.container {
+    composes: overflow-hidden from global;
+    composes: pt-[56.25%] from global;
+    composes: relative from global;
+}
+
+.video {
+    composes: h-full from global;
+    composes: w-full from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+}
+
+.videoWrapper {
+    composes: w-full from global;
+    composes: bg-gray-30 from global;
+    composes: pt-[56.25%] from global;
+}
+
+.videoIcon {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: z-10 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+}
+
+.videoThumbnailContainer {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: overflow-hidden from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+}
+
+.videoThumbnail {
+    composes: object-cover from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}

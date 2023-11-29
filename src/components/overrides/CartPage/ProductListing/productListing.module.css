@@ -1,0 +1,19 @@
+.root {
+    composes: grid from global;
+    composes: gap-[8px] from global;
+    composes: lg_gap-[10px] from global;
+}
+
+.shimmerRoot {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[101px] from global;
+
+    composes: lg_mb-[2px] from global;
+    composes: lg_h-[87px] from global;
+}
+
+.errorText {
+    composes: leading-normal from global;
+    composes: mb-xs from global;
+    composes: text-error from global;
+}

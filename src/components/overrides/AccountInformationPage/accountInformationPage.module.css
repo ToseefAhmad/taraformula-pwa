@@ -1,0 +1,34 @@
+.root {
+    composes: grid from global;
+    composes: grid-rows-[2] from global;
+    composes: auto-rows-max from global;
+    composes: gap-y-[45px] from global;
+    composes: lg_gap-y-[77px] from global;
+}
+
+.title {
+    composes: text-green from global;
+    composes: font-serif from global;
+    composes: justify-self-start from global;
+}
+
+.section {
+    composes: w-full from global;
+}
+
+.sectionTitle {
+    composes: text-green from global;
+    composes: text-lg from global;
+    composes: lg_text-2xl from global;
+    composes: leading-7 from global;
+    composes: lg_leading-9 from global;
+    composes: pb-5 from global;
+    composes: lg_pb-7 from global;
+    composes: lg_tracking-normal from global;
+}
+
+.contactSectionTitle {
+    composes: sectionTitle;
+    composes: hidden from global;
+    composes: lg_block from global;
+}

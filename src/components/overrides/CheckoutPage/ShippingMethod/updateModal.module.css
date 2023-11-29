@@ -1,0 +1,118 @@
+.errorContainer {
+    composes: pb-4 from global;
+}
+
+.dialogRoot {
+    composes: root from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+}
+
+.dialogRootOpen {
+    composes: root_open from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+}
+
+.dialog {
+    composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+
+    @apply rounded-none;
+}
+
+.dialogHidden {
+    composes: dialog;
+
+    @apply grid-rows-[auto];
+}
+
+.dialogHeader {
+    composes: header from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+
+    @apply
+        h-auto
+        p-4
+        border-0;
+}
+
+.dialogHeaderHidden {
+    composes: dialogHeader;
+
+    @apply hidden;
+}
+
+.dialogButtons {
+    composes: buttons from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    composes: grid-cols-2 from global;
+
+    @apply
+        p-4
+        pb-8;
+}
+
+.dialogButtonsHidden {
+    composes: dialogButtons;
+
+    @apply hidden;
+}
+
+.dialogConfirmButton {
+    composes: confirmButton from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+
+    @apply order-none;
+}
+
+.dialogHeaderText {
+    composes: headerText from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+
+    @apply
+        h-auto
+        text-green
+        lg_text-3xl
+        text-xl
+        font-serif;
+}
+
+.dialogForm {
+    composes: form from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+}
+
+.dialogMask {
+    composes: mask from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+
+    @apply bg-black opacity-50;
+}
+
+.loadingIndicatorRoot {
+    composes: root from '~@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+
+    @apply gap-0;
+}
+
+@media (max-width: 960px) {
+    .dialogRootOpen {
+        transition:
+            opacity 224ms var(--venia-global-anim-in),
+            visibility 224ms var(--venia-global-anim-in),
+            left 0s;
+    }
+
+    .dialogRoot {
+        transition:
+            opacity 192ms var(--venia-global-anim-out),
+            visibility 192ms var(--venia-global-anim-out),
+            left 0s 192ms;
+    }
+
+    .dialog {
+        @apply
+            h-min
+            max-w-[unset]
+            w-full
+            max-w-[640px]
+            m-auto;
+    }
+
+    .dialogForm {
+        @apply
+            flex
+            px-[17px]
+            justify-center;
+    }
+}

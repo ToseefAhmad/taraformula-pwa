@@ -1,0 +1,98 @@
+.root {
+    composes: grid from global;
+    composes: gap-8 from global;
+}
+
+.noOrders {
+    composes: grid from global;
+    composes: gap-[17px] from global;
+    composes: lg_gap-[35px] from global;
+    composes: sm_max-w-[510px] from global;
+}
+
+.noOrdersActions {
+    composes: grid from global;
+    composes: xs_grid-cols-2 from global;
+    composes: gap-2.5 from global;
+}
+
+.orderList {
+    composes: grid from global;
+    composes: lg_mt-4 from global;
+}
+
+.headingShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: my-px from global;
+}
+
+.orderDetailLabels {
+    composes: grid from global;
+    composes: grid-cols-orders-table from global;
+    composes: xs_grid-cols-orders-table-xs from global;
+    composes: sm_grid-cols-orders-table-sm from global;
+    composes: md_grid-cols-orders-table-md from global;
+    composes: lg_grid-cols-orders-table-lg from global;
+    composes: xl_grid-cols-orders-table-xl from global;
+
+    composes: sm_border-t from global;
+    composes: border-b from global;
+    composes: border-solid from global;
+    composes: border-green from global;
+}
+
+.orderDetailLabel {
+    composes: pt-0 from global;
+    composes: pb-[11.5px] from global;
+    composes: px-1 from global;
+    composes: sm_pt-[11.5px] from global;
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: font-bold from global;
+}
+
+.orderDetailLabel:first-child {
+    @apply ltr_pl-[15px]
+        ltr_lg_pl-6;
+    @apply rtl_pr-[15px]
+        rtl_lg_pr-6;
+}
+
+.orderShipToLabel {
+    composes: orderDetailLabel;
+    composes: hidden from global;
+    composes: xl_inline from global;
+}
+
+.orderTotalLabel {
+    composes: orderDetailLabel;
+    composes: hidden from global;
+    composes: xs_inline from global;
+    composes: sm_hidden from global;
+    composes: md_inline from global;
+}
+
+.loadMoreButton {
+    composes: flex from global;
+    composes: w-full from global;
+    composes: max-w-sm from global;
+    composes: justify-self-center from global;
+}
+
+/* My Account page Order History section styles */
+
+.sectionRoot {
+    composes: root from '@app/components/MyAccountPage/Sections/myAccountSection.module.css';
+}
+
+.heading {
+    composes: heading from '@app/components/MyAccountPage/Sections/myAccountSection.module.css';
+}
+
+.title {
+    composes: title from '@app/components/MyAccountPage/Sections/myAccountSection.module.css';
+}
+
+.link {
+    composes: link from '@app/components/MyAccountPage/Sections/myAccountSection.module.css';
+}

@@ -1,0 +1,16 @@
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.section {
+    composes: section from './index.module.css';
+}
+
+.list {
+    composes: flex from global;
+    composes: gap-2.5 from global;
+}
+
+.buttonWrapper {
+    @apply w-[250px];
+}

@@ -1,0 +1,28 @@
+.root {
+    composes: mt-[22px] from global;
+}
+
+.cell {
+    composes: p-2 from global;
+    composes: text-right from global;
+    composes: rtl_text-left from global;
+}
+
+.label {
+    composes: cell;
+}
+
+.grandTotalLabel {
+    composes: cell;
+    composes: font-bold from global;
+}
+
+.grandTotalCell {
+    composes: cell;
+    composes: font-bold from global;
+}
+
+tfoot tr:first-child td {
+    @apply pt-4
+        lg_pt-[30px];
+}

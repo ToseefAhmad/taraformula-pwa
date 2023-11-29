@@ -1,0 +1,49 @@
+.root {
+    @apply border-b border-[#D2CCCC];
+}
+
+.root:last-of-type {
+    @apply border-b-0;
+}
+
+.contents_container {
+    composes: pt-1 from global;
+    composes: pb-5 from global;
+
+    @apply max-w-[500px];
+}
+
+.contents_container:empty {
+    @apply hidden;
+}
+
+.contents_container_closed {
+    composes: contents_container;
+    composes: hidden from global;
+}
+
+.title_container {
+    composes: block from global;
+    composes: w-full from global;
+    composes: cursor-pointer from global;
+    composes: py-4 from global;
+    composes: pr-4 from global;
+
+    composes: rtl_pr-0 from global;
+    composes: rtl_pl-4 from global;
+}
+
+.title_wrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+}
+
+.title {
+    composes: font-bold from global;
+}
+
+.icon {
+    composes: stroke-current from global;
+    composes: text-green from global;
+}

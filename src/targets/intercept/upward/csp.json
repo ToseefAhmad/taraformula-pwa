@@ -1,0 +1,10 @@
+{
+    "font-src": [
+        "'self'",
+        "use.typekit.net",
+        "fonts.gstatic.com",
+        "staticw2.yotpo.com",
+        "use.typekit.net",
+        "cdn.tabby.ai"
+    ]
+}

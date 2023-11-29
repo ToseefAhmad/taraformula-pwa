@@ -1,0 +1,14 @@
+.text {
+    composes: text-[#806958] from global;
+    composes: text-[16px] from global;
+    composes: uppercase from global;
+    composes: ltr_tracking-[0.1px] from global;
+
+    /* Hover state */
+    composes: hover_font-bold from global;
+    composes: hover_tracking-[0] from global;
+}
+
+.loader {
+    composes: indicator from '@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+}

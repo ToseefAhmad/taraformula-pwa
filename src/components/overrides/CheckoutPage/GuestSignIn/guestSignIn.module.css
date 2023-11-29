@@ -1,0 +1,34 @@
+.root {
+    composes: grid from global;
+    composes: place-items-center from global;
+}
+
+.root_hidden {
+    composes: root;
+    composes: hidden from global;
+}
+
+.contentContainer {
+    composes: w-full from global;
+    composes: max-w-[442px] from global;
+    composes: relative from global;
+    composes: my-5 from global;
+    composes: lg_w-[442px] from global;
+    composes: px-[18px] from global;
+    composes: pt-3 from global;
+    composes: pb-5 from global;
+    composes: lg_border from global;
+    composes: border-solid from global;
+    composes: border-gray from global;
+    composes: bg-white from global;
+}
+
+.iconRoot {
+    composes: absolute from global;
+    composes: right-[9px] from global;
+    composes: top-[9px] from global;
+    composes: lg_top-[7px] from global;
+    composes: cursor-pointer from global;
+    composes: rtl_right-auto from global;
+    composes: rtl_left-[9px] from global;
+}

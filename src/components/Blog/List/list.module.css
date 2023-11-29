@@ -1,0 +1,108 @@
+.listRoot {
+    composes: mx-[19px] from global;
+    composes: sm_grid from global;
+    composes: sm_grid from global;
+    composes: sm_gap-x-2.5 from global;
+    composes: sm_grid-cols-2 from global;
+    composes: sm_gap-y-1.5 from global;
+}
+
+.gridRoot {
+    composes: grid from global;
+    composes: grid-cols-6 from global;
+    composes: mx-[47px] from global;
+    composes: gap-x-2.5 from global;
+    composes: gap-y-1.5 from global;
+}
+
+.gridRoot > div:nth-of-type(8n + 1) img,
+.gridRoot > div:nth-of-type(8n + 2) img,
+.gridRoot > div:nth-of-type(8n + 7) img {
+    @apply max-h-[450px];
+}
+
+.gridRoot > div:nth-of-type(8n + 6) img,
+.gridRoot > div:nth-of-type(8n) img {
+    @apply max-h-[220px];
+}
+
+.gridRoot > div:nth-of-type(8n + 6),
+.gridRoot > div:nth-of-type(8n) {
+    @apply grid
+        grid-cols-2;
+}
+
+.gridRoot > div:nth-of-type(8n + 6) a > div,
+.gridRoot > div:nth-of-type(8n) a > div {
+    @apply ltr_mt-0;
+}
+
+.gridRoot > div:nth-of-type(8n + 6) > div,
+.gridRoot > div:nth-of-type(8n) > div {
+    @apply ltr_ml-[7px]
+        rtl_mr-[7px];
+}
+
+.gridRoot > div:nth-of-type(8n + 3) img,
+.gridRoot > div:nth-of-type(8n + 4) img,
+.gridRoot > div:nth-of-type(8n + 5) img {
+    @apply max-h-[399px];
+}
+
+.gridRoot > div:nth-of-type(8n + 3),
+.gridRoot > div:nth-of-type(8n + 4),
+.gridRoot > div:nth-of-type(8n + 5) {
+    @apply mb-11;
+}
+
+.gridRoot > div:nth-of-type(8n + 1) {
+    @apply col-span-3
+        col-start-1;
+}
+
+.gridRoot > div:nth-of-type(8n + 2) {
+    @apply col-span-3
+        col-end-7;
+}
+
+.gridRoot > div:nth-of-type(8n + 3) {
+    @apply col-span-2
+        col-start-1;
+}
+
+.gridRoot > div:nth-of-type(8n + 4) {
+    @apply col-span-2;
+}
+
+.gridRoot > div:nth-of-type(8n + 5) {
+    @apply col-span-2;
+}
+
+.gridRoot > div:nth-of-type(8n + 6) {
+    @apply col-span-3
+        col-start-1
+        row-span-1
+        ltr_pr-[10px]
+        rtl_pl-[10px]
+        mb-0;
+}
+
+.gridRoot > div:nth-of-type(8n + 7) {
+    @apply col-span-3
+        col-end-7
+        row-span-5
+        min-h-[546px];
+}
+
+.gridRoot > div:nth-of-type(8n) {
+    @apply col-span-3
+        col-start-1
+        mt-[-22px]
+        ltr_pr-[10px]
+        rtl_pl-[10px]
+        row-span-4;
+}
+
+.loadingGridPlaceholder {
+    composes: pb-6 from global;
+}

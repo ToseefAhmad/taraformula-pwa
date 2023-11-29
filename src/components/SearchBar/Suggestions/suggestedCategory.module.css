@@ -1,0 +1,5 @@
+.root {
+    composes: block from global;
+    composes: bg-transparent from global;
+    composes: hover_underline from global;
+}

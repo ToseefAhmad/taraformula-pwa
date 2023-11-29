@@ -1,0 +1,116 @@
+.heading {
+    composes: heading from './myAccountSection.module.css';
+    composes: hidden from global;
+    composes: md_flex from global;
+}
+
+.title {
+    composes: title from './myAccountSection.module.css';
+    composes: lg_leading-9 from global;
+    composes: hidden from global;
+    composes: md_block from global;
+}
+
+.card {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-between from global;
+    composes: min-h-none from global;
+    composes: lg_min-h-74 from global;
+
+    composes: md_border from global;
+    composes: md_border-solid from global;
+    composes: md_border-green from global;
+
+    composes: p-0 from global;
+    composes: md_p-5 from global;
+    composes: lg_px-6 from global;
+    composes: lg_pb-[27px] from global;
+}
+
+.cardBody {
+    composes: mb-8 from global;
+    composes: lg_mb-[15px] from global;
+}
+
+.cardBody dd {
+    @apply leading-dd;
+}
+
+.cardTitle {
+    composes: mb-4.5 from global;
+    composes: lg_mb-[15px] from global;
+    composes: text-lg from global;
+    composes: md_text-base from global;
+    composes: font-normal from global;
+    composes: md_font-bold from global;
+    composes: lg_leading-7 from global;
+}
+
+.email {
+    composes: break-words from global;
+}
+
+.action {
+    composes: mt-0 from global;
+    composes: sm_mt-auto from global;
+    composes: grid from global;
+    composes: gap-2.5 from global;
+}
+
+.link {
+    composes: root_secondary_outline from '@app/components/overrides/Button/button.module.css';
+}
+
+.joinMailingCard {
+    composes: hidden from global;
+    composes: md_flex from global;
+    composes: bg-join-mailing from global;
+    composes: bg-right from global;
+    composes: bg-cover from global;
+    composes: flex-col from global;
+    composes: justify-center from global;
+    composes: space-y-7 from global;
+    composes: p-6 from global;
+    composes: pt-7 from global;
+}
+
+.subscribeButton {
+    composes: relative from global;
+    composes: flex from global;
+    composes: mx-auto from global;
+    composes: mb-0.5 from global;
+    composes: uppercase from global;
+    composes: text-base from global;
+    composes: text-white from global;
+    composes: font-bold from global;
+    composes: border-b-2 from global;
+    composes: pb-1 from global;
+
+    composes: hover_border-solid from global;
+    composes: hover_border-white from global;
+    composes: hover_mb-0 from global;
+    composes: focus-visible_outline-none from global;
+    composes: focus-visible_border-white from global;
+    composes: focus_border-white from global;
+}
+
+.checkbox {
+    composes: hidden from global;
+}
+
+:global(.join-mailing-block) {
+    @apply text-white;
+}
+
+:global(.join-mailing-block h2) {
+    @apply mb-[7px]
+        text-3xl
+        text-white
+        rtl_text-4xl;
+}
+
+:global(.join-mailing-block p) {
+    @apply text-white
+        m-0;
+}

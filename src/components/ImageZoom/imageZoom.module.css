@@ -1,0 +1,28 @@
+.zoomContainer {
+    composes: relative from global;
+}
+
+.zoomLensActive {
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: absolute from global;
+    composes: z-10 from global;
+}
+
+.zoomLensHidden {
+    composes: absolute from global;
+    composes: z-10 from global;
+}
+
+.zoomResult {
+    composes: absolute from global;
+
+    /* set the size of the result div: */
+    composes: xl_w-[575px] from global;
+    composes: xl_h-[575px] from global;
+
+    composes: lg_w-[476px] from global;
+    composes: lg_h-[476px] from global;
+    composes: z-10 from global;
+    composes: shadow-2xl from global;
+}

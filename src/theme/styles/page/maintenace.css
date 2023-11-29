@@ -1,0 +1,35 @@
+[class*='maintenance'][class*='page_wrapper'] {
+    @apply grid-cols-1 py-0;
+}
+
+[class*='maintenance'] [class*='cms-sidebar'] {
+    @apply hidden !important;
+}
+
+[class*='maintenance'] [class*='cms-content'] {
+    @apply py-0 my-0;
+}
+
+.maintenance-main {
+    @apply flex
+        justify-center
+        lg_mt-[142px]
+        mt-[41px]
+        mb-[22px]
+        lg_mb-[84px]
+        py-0;
+}
+
+.maintenance-main h1 {
+    @apply lg_mb-[39px]
+        mb-[14px]
+        text-center
+        leading-8;
+}
+.maintenance-main p {
+    @apply lg_mb-15
+        mb-[33px]
+        text-center
+        lg_text-base
+        text-sm;
+}

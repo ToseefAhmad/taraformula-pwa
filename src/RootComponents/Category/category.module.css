@@ -1,0 +1,199 @@
+.root {
+    composes: pt-0 from global;
+    composes: px-0 from global;
+    composes: mx-auto from global;
+
+    /* Desktop */
+    composes: lg_px-desktop from global;
+    composes: lg_pl-[50px] from global;
+    composes: lg_pr-[60px] from global;
+    composes: lg_max-w-desktop from global;
+}
+
+.contentWrapper {
+    composes: w-full from global;
+    composes: mt-8 from global;
+    composes: px-4 from global;
+
+    /* Desktop */
+    composes: lg_mt-12 from global;
+    composes: lg_flex from global;
+    composes: lg_px-0 from global;
+}
+
+.categoryContent {
+    composes: w-full from global;
+
+    /* Desktop */
+    composes: lg_grow from global;
+}
+
+.banner {
+    composes: text-green from global;
+}
+
+.categoryDescriptionRoot :global(.left-image) {
+    @apply mr-0.5;
+
+    /* Desktop */
+    @apply lg_mr-2.5;
+
+    /* For RTL */
+    @apply rtl_mr-0
+        rtl_ml-0.5
+        lg_rtl_mr-0
+        lg_rtl_ml-2;
+}
+
+.categoryDescriptionRoot :global(.right-image) {
+    @apply ml-0.5;
+
+    /* Desktop */
+    @apply lg_mr-6
+        lg_ml-0;
+
+    /* For RTL */
+    @apply rtl_mr-0.5
+        rtl_ml-0
+        lg_rtl_mr-0.5
+        lg_rtl_ml-6;
+}
+
+.categoryDescriptionRoot :global(.right-image),
+.categoryDescriptionRoot :global(.left-image) {
+    max-height: 277px;
+
+    @apply w-2/4
+        h-72;
+
+    /* Desktop */
+    @apply lg_h-auto
+        xl_h-screen
+        lg_max-h-[414px];
+}
+
+.categoryDescriptionRoot :global(.text-wrapper) {
+    @apply px-4 lg_px-0;
+}
+
+.categoryDescriptionRoot h1 {
+    @apply pt-3.5
+        leading-8
+        text-4xl
+        font-serif
+        font-light
+        pb-1.5
+        w-11/12;
+
+    /* Desktop */
+    @apply lg_text-7xl
+        lg_pb-5
+        lg_w-full
+        lg_pt-0
+        lg_leading-[65px];
+
+    /* For RTL */
+    @apply rtl_text-right;
+}
+
+.categoryDescriptionRoot p {
+    @apply w-11/12
+        leading-5
+        lg_w-8/12;
+
+    /* For RTL */
+    @apply rtl_text-right;
+}
+
+/* category page bottom banner style */
+.bottomBanner {
+    composes: bg-gray-40 from global;
+    composes: mt-16 from global;
+
+    /* Desktop */
+    composes: lg_mt-2 from global;
+}
+
+.bottomBanner :global(.large-image) {
+    @apply h-[415px] lg_h-[38rem] lg_max-h-[56.5%] lg_h-[38.5rem];
+}
+
+.bannerBlock {
+    composes: m-0 from global;
+}
+
+.bottomBanner :global(.small-image) {
+    @apply items-center;
+}
+
+.bottomBanner :global(.small-image) img {
+    @apply m-0
+        max-h-[270px]
+        lg_max-h-[389px]
+        hidden
+        md_block;
+}
+
+.bottomBanner :global(.text-wrapper) {
+    @apply p-3.5
+        pb-11
+        text-green;
+
+    /* Desktop */
+    @apply lg_pb-20
+        lg_px-12;
+}
+
+.bottomBanner :global(.text-wrapper) h2 {
+    @apply m-0
+        pt-2
+        text-4xl
+        ltr_pr-11
+        rtl_pl-11
+        normal-case
+        text-left;
+
+    /* Tablets */
+    @apply md_pr-0;
+
+    /* Desktop */
+    @apply xl_text-7xl
+        lg_w-3/5
+        lg_pt-7;
+
+    /* For RTL */
+    @apply rtl_text-right;
+}
+
+.bottomBanner :global(.text-wrapper) button {
+    @apply text-green
+        no-underline
+        inline-block
+        font-bold
+        mt-11
+        lg_border-solid
+        lg_hover_border-green
+        lg_border-b-2
+        lg_border-transparent;
+
+    /* Desktop */
+    @apply lg_mt-14;
+}
+
+.bottomBanner :global(.text-wrapper) [class*='buttons-shimmer'] {
+    @apply mt-11
+        lg_mt-14
+        w-1/5
+        min-h-[23px];
+}
+
+.bottomBanner :global [class*='columnGroup-root'] {
+    @apply rtl_flex-row-reverse;
+}
+
+@media only screen and (max-width: 768px) {
+    .categoryDescriptionRoot :global(.right-image),
+    .categoryDescriptionRoot :global(.left-image) {
+        flex-basis: calc(50% - 0.125rem);
+    }
+}

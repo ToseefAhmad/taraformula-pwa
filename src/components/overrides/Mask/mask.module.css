@@ -1,0 +1,24 @@
+.root {
+    composes: bg-black from global;
+    composes: pointer from global;
+    composes: block from global;
+    composes: h-full from global;
+    composes: w-full from global;
+    composes: left-0 from global;
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: z-3 from global;
+    composes: appearance-none from global;
+    composes: duartion-200 from global;
+    composes: ease-linear from global;
+
+    transition-property: opacity, visibility;
+
+    @apply opacity-0 invisible;
+}
+
+.root_active {
+    composes: root;
+
+    @apply opacity-50 visible;
+}

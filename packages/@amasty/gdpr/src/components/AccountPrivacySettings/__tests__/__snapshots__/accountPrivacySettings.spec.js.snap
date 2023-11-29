@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PolicyButton 1`] = `
+<div>
+  <PolicyButton
+    index={0}
+    item={
+      Object {
+        "action": false,
+        "content": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders default 1`] = `
+<div>
+  <AccountPrivacyForm
+    index={0}
+    item={
+      Object {
+        "action": true,
+        "content": true,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders loading 1`] = `null`;
+
+exports[`renders no settings 1`] = `null`;

@@ -1,0 +1,82 @@
+.root {
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-green from global;
+    composes: p-3.5 from global;
+    composes: lg_p-5.5 from global;
+}
+
+.root_editMode {
+    composes: p-0 from global;
+}
+
+.root_editMode::after {
+    @apply
+        z-1
+        absolute
+        bottom-0
+        h-px
+        border-t
+        border-solid
+        border-green
+        left-[-17px]
+        right-[-17px]
+        md_left-0
+        md_right-0;
+
+    content: '';
+}
+
+.root_updated {
+    composes: root;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+.cardHeader {
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: grid-flow-col from global;
+}
+
+.cardTitle {
+    composes: text-lg from global;
+    composes: lg_text-lg from global;
+    composes: font-bold from global;
+}
+
+.editButton {
+    composes: uppercase from global;
+    composes: font-bold from global;
+    composes: lg_border-b-2 from global;
+    composes: lg_border-transparent from global;
+    composes: lg_border-solid from global;
+}
+
+.editButton:hover {
+    @apply lg_border-green;
+}
+
+.editWrapper {
+    composes: grid from global;
+    composes: pt-4 from global;
+    composes: pb-[1.2rem] from global;
+    composes: gap-y-2 from global;
+    composes: lg_pb-8 from global;
+}
+
+.loading {
+    composes: root from '@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+    composes: text-center from global;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

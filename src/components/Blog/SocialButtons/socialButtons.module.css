@@ -1,0 +1,16 @@
+.root {
+    composes: block from global;
+    composes: mt-9 from global;
+    composes: mb-[1.875rem] from global;
+}
+
+.btn {
+    composes: mx-[7px] from global;
+    composes: font-bold from global;
+    composes: cursor-pointer from global;
+    composes: lg_relative from global;
+    composes: lg_border-b-2 from global;
+    composes: lg_border-transparent from global;
+    composes: lg_pb-1 from global;
+    composes: lg_hover_border-green from global;
+}

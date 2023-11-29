@@ -1,0 +1,68 @@
+.root {
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: gap-4 from global;
+}
+
+.editContainer {
+    composes: mt-4 from global;
+}
+
+.summaryBlock {
+    composes: border from global;
+    composes: border from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+}
+
+.summaryBlock [class*='edit_button'],
+.summaryBlock [class*='editButton'],
+.summaryBlock .editButton {
+    @apply
+        flex
+        items-center
+        p-0
+        m-0
+        uppercase
+        text-green
+        text-base
+        font-bold
+        lg_border-b-2
+        lg_border-transparent
+        lg_border-solid
+        lg_hover_border-green;
+}
+
+.summaryBlock [class*='icon-root'],
+.summaryBlock [class*='editIcon'] {
+    @apply hidden !important;
+}
+
+.summaryBlock [class*='summary-root'] {
+    @apply p-3.5 lg_p-5.5;
+}
+
+.summaryBlock [class*='edit_text'],
+.summaryBlock [class*='editText'] {
+    @apply block text-base;
+}
+
+.summaryBlock [class*='summary-heading'] {
+    @apply
+        font-bold
+        text-lg
+        lg_text-lg;
+}
+
+.summaryBlock h5 {
+    @apply lg_text-2xl text-lg rtl_font-arabicHeadline5;
+}
+
+.loading {
+    composes: root from '@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+    composes: text-center from global;
+}
+
+.loader {
+    composes: mt-4 from global;
+}

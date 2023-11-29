@@ -1,0 +1,30 @@
+.root {
+    composes: root from '@app/components/CartPage/EmptyCart/emptyCart.module.css';
+}
+
+.header {
+    composes: header from '@app/components/CartPage/EmptyCart/emptyCart.module.css';
+}
+
+.categories {
+    composes: mt-8 from global;
+}
+
+.list {
+    composes: mt-4 from global;
+}
+
+.listItem {
+    composes: text-center from global;
+}
+
+.listItem:not(:last-child) {
+    @apply mb-2;
+}
+
+.listItemLink {
+    composes: block from global;
+    composes: underline from global;
+
+    composes: hover_font-bold from global;
+}

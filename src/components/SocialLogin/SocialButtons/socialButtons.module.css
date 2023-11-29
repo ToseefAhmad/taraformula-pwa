@@ -1,0 +1,46 @@
+.socialButton {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: border from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+    composes: h-15 from global;
+    composes: bg-white from global;
+    composes: lg_hover_bg-green from global;
+    composes: outline-none from global;
+    composes: mb-4 from global;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.socialButton:last-of-type {
+    @apply mb-0;
+}
+
+.socialButton:hover div,
+.socialButton:hover svg {
+    @apply lg_text-white;
+}
+
+.socialButtonContent {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: relative from global;
+    composes: bottom-[2px] from global;
+}
+
+.icon {
+    composes: h-8 from global;
+    composes: relative from global;
+    composes: right-[2px] from global;
+    composes: bottom-[2px] from global;
+}
+
+.title {
+    composes: text-green from global;
+    composes: text-md from global;
+    composes: leading-6 from global;
+    composes: lg_hover_text-white from global;
+}

@@ -1,0 +1,53 @@
+.detailContainer {
+    composes: mt-4 from global;
+    composes: lg_mt-[0.8rem] from global;
+}
+
+.itemsReview {
+    composes: mb-2 from global;
+}
+
+.itemsReview [class*='item-root'] {
+    @apply lg_mb-2;
+}
+
+.itemsReview [class*='item-imageContainer'] img,
+.itemsReview [class*='item-images'] {
+    @apply
+        min-h-[80px]
+        lg_min-h-[89px];
+}
+
+.itemsReview [class*='item-itemInfo'] {
+    @apply
+        grid
+        ltr_pr-[22px]
+        ltr_lg_pr-8
+        rtl_pl-[22px]
+        rtl_pr-[15px]
+        rtl_lg_pl-8
+        py-2;
+}
+
+.itemsReview [class*='item-quantity'] {
+    @apply col-span-1;
+}
+
+.itemsReview [class*='item-itemName'] {
+    grid-column: 1 / span 2;
+}
+
+.itemsReview p,
+.itemsReview span,
+.itemsReview [class*='item-quantity'] b,
+.detailContainer [class*='priceSummary'] {
+    @apply text-sm;
+}
+
+.detailContainer [class*='priceSummary-grandTotalSummaryCheckout'] span {
+    @apply text-base;
+}
+
+.detailContainer [class*='priceSummary-doubleLabelSecond'] {
+    @apply text-xxs;
+}

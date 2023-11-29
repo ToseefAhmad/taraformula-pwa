@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default 1`] = `null`;
+
+exports[`renders with all link 1`] = `
+Array [
+  <div
+    componentName="Formatted Message Component"
+    defaultMessage="test"
+    id="privacy.prevMessage0"
+  />,
+  <LinkButton
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      componentName="Formatted Message Component"
+      defaultMessage="test"
+      id="privacy.link0"
+    />
+  </LinkButton>,
+  <div
+    componentName="Formatted Message Component"
+    defaultMessage="test"
+    id="privacy.afterMessage0"
+  />,
+]
+`;
+
+exports[`renders with only afterText 1`] = `
+<div
+  componentName="Formatted Message Component"
+  defaultMessage="test"
+  id="privacy.afterMessage0"
+/>
+`;
+
+exports[`renders with only prevText 1`] = `
+<div
+  componentName="Formatted Message Component"
+  defaultMessage="test"
+  id="privacy.prevMessage0"
+/>
+`;
+
+exports[`renders with only text 1`] = `
+<LinkButton
+  onClick={[Function]}
+  type="button"
+>
+  <div
+    componentName="Formatted Message Component"
+    defaultMessage="test"
+    id="privacy.link0"
+  />
+</LinkButton>
+`;

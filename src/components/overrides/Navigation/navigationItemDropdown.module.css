@@ -1,0 +1,174 @@
+.root {
+    composes: border-b-[1px] from global;
+    composes: border-solid from global;
+    composes: border-pastelBrown-20 from global;
+}
+
+.trigger {
+    composes: truncate from global;
+    composes: w-full from global;
+    composes: pl-4 from global;
+    composes: pr-[25px] from global;
+    composes: py-[13px] from global;
+    composes: text-[14px] from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: uppercase from global;
+    composes: text-pastelBrown from global;
+    composes: text-left from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+
+    /* RTL */
+    composes: rtl_pr-4 from global;
+    composes: rtl_pl-[25px] from global;
+}
+
+.trigger:focus {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.triggerOpen {
+    composes: trigger;
+    composes: font-bold from global;
+}
+
+.iconOpen {
+    transform: rotate(180deg);
+}
+
+.iconClosed {
+    composes: transform from global;
+    composes: rotate-[-90deg] from global;
+    composes: rtl_rotate-[90deg] from global;
+}
+
+.iconFlag {
+    composes: w-[22px] from global;
+    composes: h-[22px] from global;
+    composes: pr-[5px] from global;
+    composes: pt-[5px] from global;
+    composes: rtl_pr-0 from global;
+    composes: rtl_pl-[5px] from global;
+}
+
+.countryTextFlagContainer {
+    composes: flex from global;
+}
+
+.storeMenuRegions {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: max-w-[375px] from global;
+    composes: w-[100%] from global;
+    composes: h-[100%] from global;
+    composes: z-[1000] from global;
+    background-color: white;
+    composes: pb-[100px] from global;
+    composes: overflow-scroll from global;
+}
+
+.menu {
+    composes: max-h-[205px] from global;
+    composes: overflow-auto from global;
+    composes: relative from global;
+    composes: mt-2 from global;
+    composes: mb-[28px] from global;
+    composes: mr-[30px] from global;
+
+    /* RTL */
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-[30px] from global;
+}
+
+/* width */
+.menu::-webkit-scrollbar {
+    @apply w-[3px];
+}
+
+/* Track */
+.menu::-webkit-scrollbar-track {
+    @apply bg-zircon;
+    @apply rounded-[3px];
+}
+
+/* Handle */
+.menu::-webkit-scrollbar-thumb {
+    @apply bg-green;
+    @apply rounded-[3px];
+}
+
+.menuItem {
+    composes: text-[14px] from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: uppercase from global;
+    composes: text-pastelBrown from global;
+}
+
+.menuItem:first-child button {
+    @apply pt-0;
+}
+
+.menuItem:last-child button {
+    @apply pb-0;
+}
+
+.menuTitle {
+    composes: ml-[25px] from global;
+    composes: mr-[25px] from global;
+    composes: font-sans from global;
+    composes: text-[1.4rem] from global;
+    composes: leading-[2.8rem] from global;
+    composes: rtl_font-arabicText from global;
+}
+
+.regionTitle {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: ml-[25px] from global;
+    composes: mr-[25px] from global;
+    composes: text-[1.2rem] from global;
+    composes: leading-[1.45rem] from global;
+    composes: font-sans from global;
+    composes: rtl_font-arabicText from global;
+}
+
+.horizontalSeparator {
+    composes: ml-[25px] from global;
+    composes: mr-[25px] from global;
+    composes: mt-[25px] from global;
+    composes: mb-[25px] from global;
+    composes: border-pastelBrown from global;
+}
+
+.iconIcon {
+    composes: h-[20px] from global;
+    composes: w-[20px] from global;
+}
+
+.countriesContainer {
+    composes: pl-[25px] from global;
+    composes: rtl_pr-[25px] from global;
+    composes: overflow-hidden from global;
+    composes: max-h-0 from global;
+    transition: 0.5s;
+}
+
+.countriesContainerOpen {
+    composes: pl-[25px] from global;
+    composes: rtl_pr-[25px] from global;
+    composes: h-auto from global;
+    composes: max-h-[500px] from global;
+    transition: 0.5s;
+    composes: overflow-hidden from global;
+}
+
+.iconRoot {
+    composes: pt-[12px] from global;
+    composes: h-[20px] from global;
+    composes: w-[20px] from global;
+}

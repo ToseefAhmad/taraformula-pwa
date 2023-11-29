@@ -1,0 +1,266 @@
+.root a {
+    @apply no-underline;
+}
+
+.error {
+    composes: text-center from global;
+    composes: px-8 from global;
+    composes: py-0 from global;
+}
+
+.centerMode :global .slick-slide {
+    @apply opacity-50
+        duration-300;
+    @apply lg_max-w-[448px];
+}
+
+.centerMode :global .slick-slide:hover {
+    @apply opacity-100;
+}
+
+.centerMode :global .slick-slide.slick-current {
+    @apply opacity-100;
+}
+
+.galleryItems {
+    composes: items from '~@magento/venia-ui/lib/components/Gallery/gallery.module.css';
+    composes: grid-cols-5 from global;
+}
+
+@media (max-width: 640px) {
+    .galleryItems {
+        composes: grid-cols-2 from global;
+    }
+
+    .centerModeSmall :global .slick-slide {
+        @apply opacity-50
+            duration-300;
+    }
+
+    .centerModeSmall :global .slick-slide:hover {
+        @apply opacity-100;
+    }
+
+    .centerModeSmall :global .slick-slide.slick-current {
+        @apply opacity-100;
+    }
+}
+
+.carousel {
+    composes: root;
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+}
+
+/*
+ * Bestsellers carousel
+ */
+
+.bestsellerSlider {
+    composes: max-w-[1440px] from global;
+
+    @apply mb-[28px]
+        ltr_mt-[5px]
+        rtl_mt-[10px]
+        rtl_mb-[19px]
+        lg_overflow-hidden
+        lg_max-w-full;
+}
+
+div.bestsellerSlider :global ul {
+    @apply mt-[4px]
+        p-0
+        bg-transparent;
+}
+
+div.bestsellerSlider :global ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+div.bestsellerSlider :global ul > li > button {
+    @apply p-0
+        block
+        w-full
+        h-[3px]
+        text-[0px]
+        bg-green/[0.12]
+        rounded-[2px]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300
+        hover_bg-green-60;
+}
+
+div.bestsellerSlider :global .slick-list {
+    @apply mt-[5px];
+}
+
+div.bestsellerSlider :global div.slick-track {
+    @apply ml-[-12vw];
+    @apply rtl_ml-[15vw];
+    @apply sm_ml-0;
+    @apply rtl_sm_ml-0;
+}
+
+div.bestsellerSlider :global .slick-arrow {
+    @apply lg_opacity-0
+        lg_transition-opacity;
+}
+
+div.bestsellerSlider:hover :global .slick-arrow {
+    @apply lg_opacity-100;
+}
+
+div.bestsellerSlider :global .slick-prev:hover,
+div.bestsellerSlider :global .slick-next:hover {
+    background: #fff;
+}
+
+div.bestsellerSlider :global .slick-slide {
+    @apply pr-[5px]
+        pl-[5px]
+        w-[63vw]
+        opacity-100;
+    @apply visible !important;
+}
+
+div.bestsellerSlider :global .slick-line {
+    @apply flex;
+    @apply ltr_mt-[12px];
+    @apply rtl_mt-0;
+    @apply sm_px-mobile;
+    @apply lg_px-desktop;
+    @apply ltr_lg_mt-[14px];
+    @apply rtl_lg_mt-[14px];
+}
+
+div.bestsellerSlider :global .slick-line .slick-active button {
+    @apply bg-green;
+}
+
+div.bestsellerSlider :global .slick-slider .slick-arrow {
+    @apply w-[33px]
+        h-[33px]
+        top-[calc(50%-5rem)]
+        z-[9]
+        xs_top-[32%]
+        sm_top-[33%]
+        md_top-[35%]
+        xl_top-[calc(50%-5rem)];
+}
+
+div.bestsellerSlider :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+div.bestsellerSlider :global .slick-slider .slick-next {
+    @apply right-[10%];
+    @apply rtl_left-[inherit];
+}
+
+div.bestsellerSlider :global .slick-slider .slick-prev {
+    @apply left-[10%];
+    @apply rtl_left-[10%];
+}
+
+div.bestsellerSlider :global [class*='item-root'] {
+    @apply rtl_text-right;
+}
+
+div.bestsellerSlider :global [class*='item-actionWrapper'] {
+    @apply rtl_text-right
+        rtl_font-arabicText;
+}
+
+div.bestsellerSlider :global [class*='item-actionsContainer'] {
+    @apply mt-[10px]
+        leading-none;
+    @apply lg_mt-[16px];
+    @apply rtl_lg_mt-[7px];
+}
+
+div.bestsellerSlider :global [class*='item-imageContainer'] {
+    background: linear-gradient(270deg, white, #e2e1e6) 0 0/400% 400%;
+    animation: element-loader 2s ease infinite;
+}
+
+div.bestsellerSlider :global [class*='item-imageContainer'] img {
+    @apply z-1;
+}
+
+div.bestsellerSlider :global [class*='item-images'] {
+    padding-bottom: unset;
+
+    @apply rtl_lg_pb-[24px];
+}
+
+div.bestsellerSlider :global img {
+    @apply m-0;
+}
+
+div.bestsellerSlider :global [class*='item-nameWrapper'] {
+    @apply leading-none;
+    @apply rtl_text-right
+        rtl_font-arabicText;
+}
+
+div.bestsellerSlider :global a[class*='item-name'] {
+    @apply pb-1
+        inline-block
+        w-full
+        text-[15px]
+        text-green
+        leading-none
+        no-underline;
+    @apply lg_w-auto
+        lg_text-[18px]
+        lg_hover_text-green;
+    @apply rtl_font-arabicText;
+    @apply rtl_lg_pb-[1px];
+}
+
+div.bestsellerSlider :global [class*='item-name'] span {
+    @apply lg_text-[18px];
+}
+
+div.bestsellerSlider :global [class*='item-type'] {
+    @apply rtl_pb-[1px]
+        rtl_text-right;
+    @apply rtl_lg_mb-[4px]
+        rtl_lg_pb-0;
+}
+
+div.bestsellerSlider :global [class*='item-price'] {
+    @apply leading-[19px];
+    @apply lg_mt-0
+        lg_mr-0
+        lg_mb-0
+        lg_ml-0
+        lg_text-[18px];
+}
+
+div.bestsellerSlider :global [class*='addToCartButton'] {
+    @apply text-[15px]
+        leading-none;
+    @apply ltr_text-left;
+    @apply rtl_text-right
+        rtl_font-arabicText;
+    @apply lg_text-[18px];
+}
+
+div.bestsellerSlider :global a[class*='item-category'] {
+    @apply mb-[2px]
+        text-xs
+        text-green;
+    @apply rtl_font-arabicText
+        rtl_text-right
+        rtl_w-auto;
+    @apply lg_no-underline;
+}
+
+div.bestsellerSlider :global div[class*='item-contentWrapper'] {
+    @apply rtl_flex rtl_flex-col rtl_items-end;
+}

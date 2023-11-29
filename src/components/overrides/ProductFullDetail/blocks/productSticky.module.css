@@ -1,0 +1,104 @@
+.stickyContent {
+    composes: fixed from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: w-full from global;
+    composes: z-2 from global;
+}
+
+.stickyContainer {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: lg_pr-0 from global;
+    composes: md_container from global;
+    background-color: #f7f6f6;
+
+    composes: rtl_pl-0 from global;
+
+    @apply pr-0 !important;
+    @apply lg_rtl_pr-[52px] !important;
+}
+
+.stickyWrapper {
+    composes: w-full from global;
+    composes: lg_flex from global;
+
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.stickyRight {
+    composes: hidden from global;
+    composes: w-2/3 from global;
+    composes: items-center from global;
+
+    composes: lg_w-[56.3%] from global;
+    composes: lg_flex from global;
+}
+
+.stickyLeft {
+    composes: flex from global;
+    composes: w-full from global;
+
+    composes: lg_w-[43.7%] from global;
+}
+
+.stickyName {
+    composes: pr-[43px] from global;
+    composes: rtl_pr-0 from global;
+    composes: rtl_order-1 from global;
+}
+
+.stickyPrice {
+    composes: rtl_order-4 from global;
+}
+
+.stickyActions {
+    composes: flex-1 from global;
+}
+
+.stickyActions :global(button) {
+    @apply p-0
+        h-[48px]
+        min-h-0
+        lg_h-[42px];
+}
+
+.stickyQuantity > div {
+    @apply w-[147px]
+        h-[48px]
+        border-none
+        lg_h-[42px]
+        lg_border-l
+        border-0
+        lg_border-solid
+        lg_border-green
+        lg_w-[201px];
+}
+
+.stickyQuantity :global button {
+    @apply disabled_bg-transparent
+        min-w-[62px]
+        lg_w-[146px]
+        lg_hover_bg-transparent;
+}
+
+.influence {
+    composes: influence from '@app/components/overrides/ProductFullDetail/productFullDetail.module.css';
+    composes: rtl_order-2 from global;
+    composes: rtl_pl-[40px] from global;
+}
+
+.quantityRoot {
+    composes: quantityRoot from '@app/components/overrides/ProductFullDetail/productFullDetail.module.css';
+}
+
+.productOption {
+    composes: ml-3 from global;
+    composes: pl-3 from global;
+    composes: lg_border-l from global;
+    composes: border-0 from global;
+    composes: lg_border-solid from global;
+    composes: lg_border-green from global;
+    composes: max-h-[19p] from global;
+    composes: leading-[19px] from global;
+}

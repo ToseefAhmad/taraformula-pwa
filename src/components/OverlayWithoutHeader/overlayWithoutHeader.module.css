@@ -1,0 +1,30 @@
+.root {
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: bg-black from global;
+    composes: cursor-pointer from global;
+    composes: block from global;
+    composes: h-full from global;
+    composes: opacity-0 from global;
+    composes: duration-200 from global;
+    composes: transition-opacity from global;
+    composes: transition-[visibility] from global;
+    composes: ease-linear from global;
+    composes: w-full from global;
+    composes: z-2 from global;
+    composes: appearance-none from global;
+
+    visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* state: active */
+
+.root_active {
+    composes: root;
+    composes: opacity-50 from global;
+    composes: visible from global;
+}

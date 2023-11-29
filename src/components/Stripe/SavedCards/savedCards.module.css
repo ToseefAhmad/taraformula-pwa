@@ -1,0 +1,79 @@
+.root {
+    composes: grid from global;
+    composes: gap-5 from global;
+}
+
+.cardShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[157px] from global;
+    composes: sm_h-[219px] from global;
+}
+
+.heading {
+    composes: hidden from global;
+    composes: sm_flex from global;
+    composes: justify-between from global;
+    composes: items-end from global;
+}
+
+.title {
+    composes: mb-[7px] from global;
+}
+
+.titleShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: mb-[7px] from global;
+}
+
+.addCardLink {
+    composes: uppercase from global;
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: font-bold from global;
+    composes: pb-1 from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+    composes: h-fit from global;
+    composes: mb-0.5 from global;
+
+    composes: focus-visible_outline-none from global;
+    composes: hover_border-b-2 from global;
+    composes: hover_mb-0 from global;
+}
+
+.addCardLinkShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: mb-1.5 from global;
+}
+
+.content {
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: md_grid-cols-2 from global;
+    composes: gap-12.5 from global;
+    composes: sm_gap-7 from global;
+}
+
+.addButton {
+    composes: addButton from '@app/components/overrides/AddressBookPage/addressBookPage.module.css';
+}
+
+.addButton span:only-child {
+    @apply grid-flow-row;
+}
+
+.addButtonShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: mt-[-40px] from global;
+    composes: sm_mt-0 from global;
+    composes: h-15 from global;
+    composes: sm_h-[219px] from global;
+}
+
+.addButtonIcon {
+    composes: addButtonIcon from '@app/components/overrides/AddressBookPage/addressBookPage.module.css';
+}
+
+.addButtonContent {
+    composes: addButtonContent from '@app/components/overrides/AddressBookPage/addressBookPage.module.css';
+}

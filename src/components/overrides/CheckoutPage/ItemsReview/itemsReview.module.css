@@ -1,0 +1,19 @@
+.itemsReviewContainer {
+    @apply min-h-[2rem];
+
+    /* Desktop */
+    @apply lg_ml-[3px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mr-[4px]
+        rtl_lg_ml-0
+        rtl_lg_max-w-[660px];
+}
+
+.itemsContainer {
+    @apply grid;
+}
+
+.showAllButton {
+    @apply text-green;
+}

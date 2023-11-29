@@ -1,0 +1,176 @@
+.ingredientTile {
+    composes: block from global;
+    composes: py-[15px] from global;
+
+    /* Desktop */
+    composes: lg_contents from global;
+}
+
+.ingredientTile h4 {
+    @apply
+        relative
+        w-[fit-content]
+        mb-[14px]
+        mt-[6px];
+
+    /* Desktop */
+    @apply
+        lg_row-start-2
+        lg_mt-[5px];
+}
+
+.ingredientTile h4:hover::after {
+    content: '';
+
+    @apply
+        w-full
+        absolute
+        bg-green
+        left-0
+        bottom-px
+        lg_bottom-[-5px]
+        border-b-[2px]
+        border-solid;
+}
+
+.ingredientSource {
+    composes: lg_row-start-3 from global;
+}
+
+.ingredientImageWrapper {
+    composes: relative from global;
+    composes: pb-[70%] from global;
+
+    /* Desktop */
+    composes: lg_row-start-1 from global;
+    composes: lg_overflow-hidden from global;
+}
+
+.ingredientImageWrapper img {
+    @apply lg_transition-transform;
+}
+
+.ingredientImageWrapper:hover img {
+    @apply lg_scale-110;
+}
+
+.ingredientImage {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: absolute from global;
+    composes: object-cover from global;
+    composes: top-0 from global;
+    composes: bottom-0 from global;
+}
+
+.ingredientImage[loading='eager'] {
+    background: linear-gradient(270deg, #fff, #f4f5f5) 0 0/400% 400%;
+
+    @apply animate-content-loader;
+}
+
+.ingredientData {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: mt-[4px] from global;
+
+    /* Desktop */
+    composes: lg_mt-[13px] from global;
+    composes: lg_justify-start from global;
+    composes: lg_row-start-4 from global;
+}
+
+.ingredientDataItem:first-child {
+    @apply
+        pr-8
+        break-words
+        w-[65%];
+
+    /* Desktop */
+    @apply
+        lg_w-[51%];
+
+    /* RTL */
+    @apply
+        rtl_pl-8
+        rtl_pr-[0px];
+}
+
+.ingredientDataItem:last-child {
+    @apply
+        break-words
+        w-[35%];
+
+    /* Desktop */
+    @apply
+        lg_w-[49%];
+}
+
+.itemDescription {
+    composes: text-ss from global;
+    composes: font-bold from global;
+
+    /* Desktop */
+    composes: lg_text-sm from global;
+    composes: lg_mb-[2px] from global;
+}
+
+.itemDescriptionMb {
+    composes: text-ss from global;
+    composes: font-bold from global;
+    composes: mb-[2px] from global;
+
+    /* Desktop */
+    composes: lg_text-sm from global;
+    composes: lg_mb-[4px] from global;
+}
+
+.itemValue {
+    composes: leading-[20px] from global;
+}
+
+.productList {
+    composes: mt-[12px] from global;
+
+    /* Desktop */
+    composes: lg_mt-[20px] from global;
+    composes: lg_row-start-5 from global;
+}
+
+.productList .itemDescription {
+    @apply
+        pb-[6px]
+        border-b
+        border-[#D2CCCC];
+}
+
+.productItem {
+    composes: border-b from global;
+    composes: border-[#D2CCCC] from global;
+    composes: py-[7px] from global;
+
+    /* Desktop */
+    composes: lg_py-[6px] from global;
+}
+
+.productItem span {
+    @apply lg_border-b-2 lg_border-transparent;
+}
+
+.productItem:hover span {
+    @apply lg_border-green;
+}
+
+.influenceType {
+    composes: ltr_pr-[10px] from global;
+    composes: rtl_pl-[10px] from global;
+    composes: font-bold from global;
+}
+
+.shimmerImage {
+    composes: top-0 from global;
+    composes: bottom-0 from global;
+    composes: absolute from global;
+    composes: object-cover from global;
+    composes: w-full from global;
+}

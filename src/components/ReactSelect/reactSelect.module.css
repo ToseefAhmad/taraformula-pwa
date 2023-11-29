@@ -1,0 +1,108 @@
+.select :global(.element__control) {
+    @apply inline-flex
+        border
+        border-green
+        border-solid
+        rounded-none
+        w-full
+        h-15
+        appearance-none
+        outline-none
+        py-5
+        pl-3.5
+        pr-4
+        bg-white
+        rtl_pl-4
+        rtl_pr-3.5
+        font-normal
+        text-sm
+        shadow-none
+        cursor-text;
+}
+
+.select :global(.element__control:hover) {
+    @apply
+        border-green
+        border-solid
+        rounded-none;
+}
+
+.select :global(.element__control--is-focused) {
+    box-shadow: inset 0 0 0 1px #000;
+}
+
+.select :global(.element__control--is-disabled) {
+    @apply opacity-50
+        cursor-not-allowed;
+}
+
+.select :global(.element__value-container),
+.select :global(.element__input-container),
+.select :global(.element__indicator),
+.select :global(.element__placeholder),
+.select :global(.element__single-value) {
+    @apply p-0
+        m-0;
+}
+
+.select :global(.element__indicator-separator) {
+    @apply hidden;
+}
+
+.select.invalid :global(.element__control) {
+    @apply bg-[#fef7f5];
+}
+
+.select :global(.element__indicator),
+.select :global(.element__indicator:hover),
+.select :global(.element__placeholder) {
+    @apply transition-none
+        text-green;
+}
+
+.select :global(.element__menu) {
+    @apply m-0
+        mt-[-1px]
+        shadow-none
+        border
+        border-green
+        border-solid
+        rounded-none
+        bg-white;
+}
+
+.select :global(.element__menu-list) {
+    @apply p-0;
+}
+
+.select :global(.element__option) {
+    @apply bg-white
+        text-green
+        cursor-pointer;
+}
+
+.select :global(.element__option:hover),
+.select :global(.element__option:active) {
+    @apply bg-green
+        text-white;
+}
+
+.input,
+.input_error,
+.label {
+    @apply hidden;
+}
+
+.select :global([class*='icon-root']) {
+    @apply absolute
+        top-2/4
+        right-0
+        rtl_right-auto
+        rtl_left-0
+        mt-[-15px]
+        mr-[15px]
+        rtl_mt-[-20px]
+        rtl_mr-0
+        rtl_ml-[15px]
+        rtl_rotate-180;
+}

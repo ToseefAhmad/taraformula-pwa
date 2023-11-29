@@ -1,0 +1,256 @@
+/* Footer */
+
+.root {
+    composes: bg-gray-30 from global;
+    composes: pt-[49px] from global;
+    composes: pb-9 from global;
+    composes: text-green from global;
+
+    composes: lg_pb-6 from global;
+}
+
+.footerContainer {
+    composes: container from global;
+    composes: mb-[31px] from global;
+
+    composes: lg_flex from global;
+    composes: lg_mb-10 from global;
+}
+
+.footerColumnLeft {
+    composes: lg_w-1/2 from global;
+}
+
+.footerColumnRight {
+    composes: lg_w-1/2 from global;
+    composes: lg_pl-3 from global;
+
+    /* RTL */
+    composes: lg_pl-0 from global;
+    composes: lg_pr-3 from global;
+}
+
+/* About Us */
+
+.aboutUs {
+    composes: mb-6 from global;
+
+    /* Desktop */
+    composes: lg_mb-[23px] from global;
+}
+
+.aboutUs h5 {
+    @apply font-sans
+        font-bold
+        text-sm
+        tracking-normal
+        mb-[1px];
+
+    /* Desktop */
+    @apply lg_mb-[18px];
+}
+
+.aboutUs p {
+    @apply font-sans
+        text-sm
+        tracking-normal
+        pr-8
+        leading-[17px];
+
+    /* RTL */
+    @apply rtl_pr-0
+        rtl_pl-8;
+
+    /* Desktop */
+    @apply lg_text-[16px]
+        lg_leading-[20px]
+        lg_max-w-[496px]
+        lg_pr-0
+        lg_mb-[5px];
+
+    /* RTL Desktop */
+    @apply lg_rtl_pl-0;
+}
+
+/* Links */
+
+.linksContainer {
+    composes: flex from global;
+    composes: flex-wrap from global;
+
+    /* Desktop */
+    composes: lg_justify-between from global;
+    composes: lg_pr-[33%] from global;
+    composes: lg_flex-nowrap from global;
+
+    /* RTL Desktop */
+    composes: lg_rtl_pr-0 from global;
+    composes: lg_rtl_pl-[33%] from global;
+}
+
+.linksContainer a {
+    @apply shadow-none
+        outline-none;
+}
+
+.linksColumn {
+    composes: mb-[27px] from global;
+    composes: w-1/2 from global;
+    composes: max-w-[163px] from global;
+    composes: inline-block from global;
+    composes: odd_pr-[5px] from global;
+    composes: even_pl-[5px] from global;
+
+    /* Desktop */
+    composes: lg_max-w-none from global;
+    composes: lg_pr-[5px] from global;
+    composes: lg_even_pl-0 from global;
+    composes: lg_w-auto from global;
+}
+
+.linksColumn:nth-child(2) {
+    @apply lg_order-1
+        lg_pr-0;
+}
+
+.linksColumn .linksColumnContent h5 {
+    @apply text-[14px]
+        leading-[20px]
+        tracking-normal
+        mb-[11px];
+
+    /* Desktop */
+    @apply lg_text-[15px]
+        lg_mb-[27px];
+}
+
+.linksColumn .linksColumnContent ul {
+    @apply m-0
+        p-0
+        pl-0
+        list-none;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.linksColumn .linksColumnContent ul li {
+    @apply font-sans
+        m-0
+        mb-[2px]
+        p-0
+        text-sm
+        tracking-normal;
+
+    /* Desktop */
+    @apply lg_text-[17px]
+        lg_leading-[22px]
+        lg_mb-[6px];
+}
+
+.linksColumn .linksColumnContent ul li a {
+    @apply font-sans
+        text-sm
+        tracking-normal
+        normal-case
+        font-normal
+        no-underline
+        border-b-2
+        border-transparent
+        rtl_font-arabicText
+        pb-1;
+
+    /* Desktop */
+    @apply lg_text-[17px]
+        lg_leading-[22px]
+        lg_mb-[6px];
+}
+
+.linksColumn .linksColumnContent ul li a:hover {
+    @apply lg_border-green;
+}
+
+.socialIcons {
+    composes: linksColumn;
+}
+
+.socialIcons .linksColumnContent ul li a {
+    @apply flex items-center;
+}
+
+.socialIcons .linksColumnContent ul li a img {
+    @apply mt-0
+        mb-0
+        mr-[6px]
+        rtl_mr-0
+        rtl_ml-[6px];
+}
+
+@media only screen and (min-width: 767px) {
+    .socialIcons .linksColumnContent ul li a:hover img {
+        filter: invert(38%) sepia(100%) saturate(5701%) hue-rotate(350deg) brightness(100%) contrast(99%);
+    }
+}
+
+/* Newsletter */
+
+.newsletterWrapperMobile {
+    composes: mb-[58px] from global;
+
+    composes: lg_hidden from global;
+}
+
+.newsletterWrapperDesktop {
+    composes: hidden from global;
+
+    composes: lg_block from global;
+}
+
+/* Copyright */
+
+.copyright {
+    composes: container from global;
+    composes: text-[14px] from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: font-bold from global;
+
+    composes: lg_text-[15px] from global;
+    composes: lg_leading-[15px] from global;
+}
+
+.yotpo {
+    composes: mb-[50px] from global;
+
+    composes: lg_mb-[60px] from global;
+}
+
+.yotpo :global p {
+    @apply mb-[47px]
+        pr-[29px]
+        pl-[30px]
+        text-[15px];
+    @apply lg_mb-[52px]
+        lg_pt-[15px]
+        lg_pr-[19px]
+        lg_pl-[37px]
+        lg_text-[20px];
+    @apply rtl_pt-0
+        rtl_text-[18px]
+        rtl_leading-[20px]
+        rtl_tracking-[0.32px];
+    @apply rtl_lg_mb-[58px]
+        rtl_lg_pt-[9px]
+        rtl_lg_pl-[30px]
+        rtl_lg_text-[20px];
+}
+
+.yotpo :global b,
+.yotpo :global strong {
+    @apply rtl_font-arabicText
+        rtl_font-normal;
+}
+
+[dir='rtl'] .yotpo :global p {
+    direction: ltr;
+}

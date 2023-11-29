@@ -1,0 +1,335 @@
+.root {
+    composes: container from global;
+    composes: pt-3.5 from global;
+    composes: lg_mt-5 from global;
+    composes: lg_pt-4 from global;
+}
+
+.heading_container {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-end from global;
+    composes: w-full from global;
+}
+
+.heading {
+    composes: font-sans from global;
+    composes: text-[24px] from global;
+    composes: tracking-[-0.24px] from global;
+    composes: lg_text-lg from global;
+    composes: lg_tracking-[0] from global;
+    composes: lg_leading-[32px] from global;
+}
+
+.itemsInCart {
+    composes: text-sm from global;
+    composes: leading-[15px] from global;
+}
+
+@media (min-width: 1024px) {
+    .body {
+        grid-template-columns: 1fr 326px;
+    }
+}
+.body {
+    composes: grid from global;
+    composes: lg_gap-x-[66px] from global;
+}
+
+.summaryTitle {
+    composes: rtl_lg_text-right from global;
+    composes: text-lg from global;
+    composes: font-normal from global;
+    composes: mb-[18px] from global;
+    composes: text-center from global;
+
+    composes: lg_text-left from global;
+    composes: lg_mb-[14px] from global;
+}
+.itemsWrapper {
+    composes: w-full from global;
+}
+.items_container {
+    composes: mt-[26px] from global;
+    composes: ml-[2px] from global;
+    composes: mb-[35px] from global;
+
+    composes: lg_mt-2.5 from global;
+    composes: lg_ml-0 from global;
+}
+
+.summary_container {
+    composes: lg_w-[326px] from global;
+    composes: lg_sticky from global;
+    composes: lg_top-[110px] from global;
+    composes: lg_mb-25 from global;
+}
+
+.modalOpen {
+    @apply lg_relative !important;
+}
+
+.crosssell_container {
+    composes: mb-[35px] from global;
+    composes: w-full from global;
+}
+
+.crossellerTitle {
+    composes: text-sm font-bold from global;
+    composes: mb-[10px] from global;
+    composes: mt-[17px] from global;
+
+    composes: lg_mb-[11px] from global;
+}
+
+.root a {
+    @apply no-underline;
+}
+
+.error {
+    composes: text-center from global;
+    composes: px-8 from global;
+    composes: py-0 from global;
+}
+
+.galleryItems {
+    composes: items from '~@magento/venia-ui/lib/components/Gallery/gallery.module.css';
+}
+
+.carousel {
+    /* composes: root; */
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+}
+
+/*
+ * Crossellers carousel
+ */
+
+.crossellerSlider {
+    @apply mt-[21px]
+        mb-[28px]
+        pr-[7px]
+        lg_pl-[7px]
+        w-full
+        overflow-hidden
+        mr-0
+        rtl_text-right
+        rtl_lg_mr-0
+        rtl_lg_pl-0;
+
+    /* Desktop */
+    @apply lg_pr-0
+        lg_w-[calc(100vw-var(--scrollBarWidth))]
+        lg_mt-0;
+
+    /* RTL */
+    @apply rtl_pr-[0];
+    @apply ltr_lg_pl-0 !important;
+}
+
+.crossellerSlider :global ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+.crossellerSlider :global ul > li > button {
+    @apply p-0
+        block
+        w-full
+        h-[3px]
+        text-[0px]
+        bg-green/[0.12]
+        rounded-[2px]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300
+        hover_bg-green-60;
+}
+
+.crossellerSlider :global .slick-list {
+    @apply mt-[5px]
+        mr-[-5px]
+        ml-[-5px];
+}
+
+.crossellerSlider :global .slick-track {
+    @apply
+        ml-0
+        rtl_ml-[12vw]
+        rtl_xs_ml-[8vw]
+        rtl_sm_ml-[19vw]
+        rtl_md_ml-[1vw]
+        rtl_lg_ml-0
+        ltr_lg_ml-0;
+}
+
+.crossellerSlider :global .slick-slide {
+    @apply pr-[5px]
+        pl-[5px]
+        opacity-100
+        rtl_lg_max-w-[25%]
+        rtl_sm_max-w-[33vw]
+        ltr_lg_max-w-[25%]
+        ltr_sm_max-w-[33vw]
+        ltr_max-w-[63vw];
+
+    /* slide always visible */
+    @apply visible !important;
+}
+
+.crossellerSlider :global .slick-line {
+    @apply flex
+        ml-[3px]
+        mt-2
+        lg_mt-[-1px]
+        mb-3
+        ml-0
+        lg_px-1;
+}
+
+.crossellerSlider :global .slick-line .slick-active button {
+    @apply bg-green
+        border-none;
+}
+
+.crossellerSlider :global .slick-slider .slick-arrow {
+    @apply lg_top-[calc(50%-4rem)]
+        lg_opacity-0
+        lg_duration-300
+        lg_transition-opacity;
+}
+
+.crossellerSlider:hover :global .slick-slider .slick-arrow {
+    @apply lg_opacity-100;
+}
+
+.crossellerSlider :global .slick-arrow:hover {
+    @apply bg-white;
+}
+
+.crossellerSlider :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+.crossellerSlider :global .slick-slider .slick-next {
+    @apply lg_right-[1.6rem]
+        lg_left-auto;
+}
+
+.crossellerSlider :global .slick-slider .slick-prev {
+    @apply lg_left-[1.6rem]
+        lg_right-auto;
+}
+
+.crossellerSlider :global [class*='item-actionsContainer'] {
+    @apply mt-[10px]
+        leading-none;
+
+    /* Desktop */
+    @apply lg_mt-[10px];
+}
+
+.crossellerSlider :global [class*='item-imageContainer'] {
+    background: linear-gradient(270deg, white, #e2e1e6) 0 0/400% 400%;
+    animation: element-loader 2s ease infinite;
+
+    @apply h-[186px]
+        min-w-[214px];
+}
+
+.crossellerSlider :global [class*='item-imageContainer'] img {
+    @apply z-1;
+}
+
+.crossellerSlider :global [class*='item-images'] {
+    @apply pb-[13px];
+    @apply lg_mt-[2px];
+}
+
+.crossellerSlider :global img {
+    @apply m-0;
+}
+
+.crossellerSlider :global [class*='item-nameWrapper'] {
+    @apply leading-none mb-[-10px] lg_mt-[-3px];
+}
+
+.crossellerSlider :global a[class*='item-name'] {
+    @apply pb-1
+        mt-0
+        lg_mt-[-3px]
+        lg_mb-[1px]
+        block
+        w-full
+        text-sm
+        text-green
+        leading-none
+        no-underline;
+
+    /* Desktop */
+    @apply lg_w-auto
+        lg_text-sm;
+}
+
+.crossellerSlider :global [class*='item-name'] span {
+    /* Desktop */
+    @apply lg_text-sm mt-0;
+}
+
+.crossellerSlider :global [class*='item-price'] {
+    @apply leading-[19px] mt-1;
+
+    /* Desktop */
+    @apply lg_mt-[-1px]
+        lg_mr-0
+        lg_mb-0
+        lg_ml-0
+        lg_text-sm;
+}
+
+.crossellerSlider :global [class*='addToCartButton'] {
+    @apply text-sm
+        leading-none
+        ltr_text-left;
+
+    /* Desktop */
+    @apply lg_text-sm;
+}
+
+.crossellerSlider :global a[class*='item-category'] {
+    @apply mb-[2px]
+        text-xs
+        text-green;
+}
+
+.crosselShimmerTop {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[204px] from global;
+    composes: mb-1 from global;
+    composes: mt-2.5 from global;
+    composes: mb-2.5 from global;
+}
+.crosselShimmerMiddle {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[84px] from global;
+    composes: mb-[5px] from global;
+}
+.crosselShimmerBottom {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[25px] from global;
+    composes: mb-2.5 from global;
+}
+
+.stockStatusError {
+    composes: border-l-4 from global;
+    composes: border-solid from global;
+    composes: px-4 from global;
+    composes: rlt_border-l-0 from global;
+    composes: rlt_border-r-4 from global;
+    composes: mt-4 from global;
+
+    color: rgb(var(--venia-global-color-error));
+}

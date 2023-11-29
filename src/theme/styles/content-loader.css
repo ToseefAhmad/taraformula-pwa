@@ -1,0 +1,24 @@
+/* Image preload animation */
+picture {
+    background:
+        linear-gradient(
+            270deg,
+            #fff,
+            #e2e1e6
+        ) 0 0/400% 400%;
+    animation: element-loader 2s ease infinite;
+}
+
+@keyframes element-loader {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}

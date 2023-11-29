@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default amCheckbox 1`] = `
+<div
+  className=" "
+>
+  <CheckboxWithModal
+    index={0}
+    isAccountSettingsPage={true}
+    item={
+      Object {
+        "hide_the_consent_after_user_left_the_consent": true,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders no checkboxes 1`] = `null`;

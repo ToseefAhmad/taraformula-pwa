@@ -1,0 +1,21 @@
+.prev {
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: bottom-0 from global;
+    composes: absolute from global;
+    composes: z-10 from global;
+    composes: left-[5px] from global;
+    composes: lg_left-[7px] from global;
+    composes: hover_underline from global;
+}
+
+.next {
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: absolute from global;
+    composes: right-[5px] from global;
+    composes: lg_right-[7px] from global;
+    composes: bottom-0 from global;
+    composes: z-10 from global;
+    composes: hover_underline from global;
+}

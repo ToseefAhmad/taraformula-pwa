@@ -1,0 +1,9 @@
+.root {
+    composes: relative from global;
+    composes: grid from global;
+    composes: content-end from global;
+}
+
+.optional {
+    composes: pl-1 from global;
+}

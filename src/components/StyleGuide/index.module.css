@@ -1,0 +1,28 @@
+.subtitle {
+    composes: block from global;
+    composes: text-red from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: text-sm from global;
+    composes: pb-2 from global;
+}
+
+.section {
+    composes: pb-7 from global;
+    composes: last_pb-0 from global;
+}
+
+.columns {
+    composes: flex from global;
+    composes: gap-12 from global;
+}
+
+.column {
+    composes: w-6/12 from global;
+}
+
+.list {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: gap-2.5 from global;
+}

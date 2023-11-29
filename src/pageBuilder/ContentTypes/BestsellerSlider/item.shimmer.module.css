@@ -1,0 +1,94 @@
+.root {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: flex-grow from global;
+    composes: h-full from global;
+    composes: content-between from global;
+    composes: content-start from global;
+
+    /* Desktop */
+    composes: md_w-auto from global;
+}
+
+.actionsContainer {
+    composes: mt-[10px] from global;
+    composes: mb-[27px] from global;
+
+    /* Desktop */
+    composes: md_mb-[59px] from global;
+}
+
+.actionWrapper {
+    composes: w-full from global;
+
+    /* Desktop */
+    composes: md_mt_0 from global;
+}
+
+.imageContainer {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-[186px] from global;
+    composes: overflow-hidden from global;
+
+    composes: md_min-h-[260px] from global;
+    composes: lg_h-[300px] from global;
+    composes: xl_h-[376px] from global;
+}
+
+.imageContainer :global [class*='shimmer-root'] {
+    @apply lg_min-h-[300px]
+        xl_min-h-[376px];
+}
+
+.nameWrapper {
+    composes: mt-[10px] from global;
+    composes: mb-[3px] from global;
+    composes: block from global;
+    composes: w-[50%] from global;
+    composes: h-[15px] from global;
+}
+
+.type {
+    composes: lg_pr-1 from global;
+    composes: rtl_block from global;
+    composes: rtl_pr-0 from global;
+}
+
+.category {
+    composes: link from '@app/components/StyleGuide/elementsSection.module.css';
+    composes: text-xs from global;
+    composes: uppercase from global;
+    composes: font-bold from global;
+    composes: border-b-1 from global;
+    composes: border-transparent from global;
+    composes: pb-0 from global;
+
+    @apply mb-[2px]
+        text-xs
+        text-green !important;
+    @apply rtl_font-arabicText
+        rtl_text-right;
+}
+
+.price {
+    composes: lg_mt-1.5 from global;
+}
+
+.image {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.imageRoot {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.productCategory {
+    composes: block from global;
+    composes: w-[30%] from global;
+    composes: min-w-[100px] from global;
+}

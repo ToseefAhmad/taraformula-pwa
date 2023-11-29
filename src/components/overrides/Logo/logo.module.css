@@ -1,0 +1,5 @@
+.logo {
+    composes: h-5 from global;
+
+    composes: lg_h-6 from global;
+}

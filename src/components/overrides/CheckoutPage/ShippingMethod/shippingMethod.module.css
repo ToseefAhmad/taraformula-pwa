@@ -1,0 +1,49 @@
+.root {
+    composes: grid from global;
+    composes: gap-y-6 from global;
+    composes: lg_gap-y-4 from global;
+    composes: py-8 from global;
+    composes: lg_pb-14 from global;
+}
+
+.root::after {
+    @apply
+        absolute
+        bottom-0
+        h-px
+        border-t
+        border-solid
+        border-green
+        left-[-17px]
+        right-[-17px]
+        md_left-0
+        md_right-0;
+
+    content: '';
+}
+
+.done {
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-green from global;
+    composes: p-3.5 from global;
+    composes: lg_p-5.5 from global;
+    composes: my-2 from global;
+    composes: md_my-4 from global;
+}
+
+.form {
+    composes: grid from global;
+    composes: gap-y-6 from global;
+    composes: z-1 from global;
+    grid-template-rows: 1fr auto;
+}
+
+.formButtons {
+    composes: flex from global;
+    composes: justify-center from global;
+}
+
+.shippingShimmer {
+    composes: h-[11rem] from global;
+}

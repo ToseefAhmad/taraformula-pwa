@@ -1,0 +1,20 @@
+.options {
+    grid-area: options;
+    composes: text-[13px] from global;
+    composes: leading-[1.5] from global;
+    composes: mt-1 from global;
+    composes: max-h-[54px] from global;
+    composes: overflow-y-auto from global;
+}
+
+.optionLabel {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: auto-cols-max from global;
+}
+
+.optionValue {
+    composes: ml-1 from global;
+    composes: rtl_ml-0 from global;
+    composes: rtl-mr-1 from global;
+}

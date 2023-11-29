@@ -1,0 +1,26 @@
+.root {
+    composes: grid from global;
+    composes: border-t-[1px] from global;
+    composes: border-gray from global;
+    composes: border-solid from global;
+}
+
+.header {
+    composes: grid from global;
+    composes: items-center from global;
+    composes: grid-flow-col from global;
+    composes: grid-cols-1 from global;
+    composes: mt-5 from global;
+    composes: mb-3 from global;
+}
+
+.name {
+    composes: h-6 from global;
+    composes: leading-6 from global;
+    composes: ltr_text-left from global;
+    composes: rtl_text-right from global;
+}
+
+.list:empty {
+    @apply hidden;
+}

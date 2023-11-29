@@ -1,0 +1,318 @@
+.root {
+    /* Only one column in mobile view. */
+    grid-row-gap: 50px;
+
+    @apply pt-[20px]
+        pl-[17px]
+        pr-[17px]
+        grid
+        gap-[1rem]
+        grid-cols-[1fr];
+
+    /* RTL */
+    @apply rtl_pt-[42px]
+        rtl_pr-[15px]
+        rtl_pl-[17px]
+        rtl_font-arabicText;
+
+    /* Desktop */
+    @apply lg_m-auto
+        lg_pt-[2.5rem]
+        lg_pr-[3rem]
+        lg_pb-[72px]
+        lg_pl-[10.1rem]
+        lg_gap-x-24
+        lg_grid-cols-[3.2fr,2.2fr];
+
+    /* RTL Desktop */
+    @apply rtl_lg_pt-[46px]
+        rtl_lg_pr-[63px]
+        rtl_lg_pb-[94px]
+        rtl_lg_pl-[56px]
+        rtl_lg_gap-x-[10rem]
+        rtl_lg_grid-cols-[3.2fr,2fr];
+}
+
+.mainContainer {
+    grid-column: 1;
+
+    @apply grid
+        gap-y-4;
+}
+
+.sidebarContainer {
+    height: auto;
+
+    @apply h-auto;
+
+    /* Desktop */
+    @apply lg_max-w-[456px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mr-[-3px]
+        rtl_lg_pl-[3px];
+}
+
+.header {
+    font-weight: 600;
+}
+
+.text {
+    @apply leading-6;
+}
+
+.orderNumber {
+    composes: header;
+
+    /* RTL */
+    @apply rtl_mr-[-2px]
+        rtl_font-arabicHeadline5
+        rtl_text-[19px]
+        rtl_leading-[34px]
+        rtl_font-normal
+        rtl_tracking-[0.28px];
+
+    /* Desktop RTL */
+    @apply rtl_lg_mr-0
+        rtl_lg_leading-[24px];
+}
+
+.orderDetailsItem {
+    composes: header;
+
+    @apply mb-[4px]
+        text-[15px]
+        leading-[15px];
+
+    /* RTL */
+    @apply rtl_font-arabicHeadline5
+        rtl_text-[16px]
+        rtl_leading-[10px]
+        rtl_font-normal;
+}
+
+.shippingInfo {
+    composes: text;
+
+    @apply grid;
+}
+
+.shippingAddress {
+    @apply grid;
+}
+
+.shippingMethodHeading {
+    composes: header;
+}
+
+.shippingMethod {
+    composes: text;
+}
+
+.additionalText {
+    composes: text;
+}
+
+.orderDetails {
+    @apply mt-[30px]
+        mb-[8px]
+        pt-[38px]
+        text-[24px]
+        border-t
+        border-solid
+        border-gray4;
+
+    /* RTL */
+    @apply rtl_mt-[22px]
+        rtl_mr-[3px]
+        rtl_mb-[18px];
+
+    /* Desktop */
+    @apply lg_mt-[33px]
+        lg_mb-[5px]
+        lg_pt-[22px]
+        lg_text-[28px]
+        lg_tracking-[0.4px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mt-[28px]
+        rtl_lg_mb-[12px];
+}
+
+.orderDetailsBlock {
+    @apply grid;
+
+    /* RTL */
+    @apply rtl_mr-[9px];
+
+    /* Desktop */
+    @apply lg_pl-0
+        lg_gap-x-5
+        lg_grid-cols-[271px,1fr];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mt-0
+        rtl_lg_mr-[6px]
+        rtl_lg_mb-0
+        rtl_lg_ml-0
+        rtl_lg_grid-cols-[191px,1fr];
+}
+
+.returnButton {
+    font-weight: 100;
+
+    @apply mt-[22px]
+        w-full;
+
+    /* RTL */
+    @apply rtl_mt-[20px]
+        rtl_mr-[4px]
+        rtl_pl-[2px];
+
+    /* Desktop */
+    @apply lg_mt-[28px]
+        lg_w-[250px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mt-[28px]
+        rtl_lg_mr-[2px]
+        rtl_lg_pl-0;
+}
+
+.returnButton :global button {
+    font-weight: 100;
+
+    @apply rtl_pt-[22px]
+        rtl_pb-[13px]
+        rtl_text-[19px]
+        rtl_leading-[24px]
+        rtl_tracking-[0.28px];
+}
+
+.orderSummary {
+    @apply mt-[-3px]
+        pt-[37px]
+        pr-0
+        pb-[24px]
+        pl-0
+        py-8
+        text-[24px]
+        border-t
+        border-solid
+        border-gray4;
+
+    /* RTL */
+    @apply rtl_pb-[17px];
+
+    /* Desktop */
+    @apply lg_mt-0
+        lg_ml-0
+        lg_pt-[26px]
+        lg_pb-[32px]
+        lg_text-[28px]
+        lg_border-none
+        lg_tracking-[0.4px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_pt-[18px]
+        rtl_lg_pr-[5px]
+        rtl_lg_pb-[13px]
+        rtl_lg_font-arabicText
+        rtl_lg_text-[29px]
+        rtl_lg_tracking-[0.4px];
+}
+
+.priceSummary {
+    @apply mt-[3px]
+        text-[15px];
+
+    /* RTL */
+    @apply rtl_mt-[21px]
+        rtl_mr-[3px];
+
+    /* Desktop */
+    @apply lg_mt-[27px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mt-[24px]
+        rtl_lg_mr-[6px]
+        rtl_lg_max-w-[660px];
+}
+.headingOrderConfirm {
+    @apply mb-[8px]
+        text-[34px];
+
+    /* RTL */
+    @apply rtl_mb-[15px]
+        rtl_text-[54px]
+        rtl_leading-[44px];
+
+    /* Desktop */
+    @apply lg_text-7xl;
+
+    /* RTL Desktop */
+    @apply rtl_lg_mb-[4px]
+        rtl_lg_pr-0
+        rtl_lg_text-[80px]
+        rtl_lg_leading-[80px];
+}
+
+.orderDetailsItemBlock {
+    @apply mt-0
+        mb-[19px]
+        text-[15px]
+        leading-[20px];
+
+    /* RTL */
+    @apply rtl_text-[16px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mb-[23px];
+}
+
+.orderDetailsItemBlock:last-child {
+    /* RTL Desktop */
+    @apply rtl_lg_mb-0;
+}
+
+.orderDetailsItemBlock :global p {
+    /* Desktop */
+    @apply lg_leading-[18px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_leading-[20px];
+}
+
+.headingOrderConfirmDescription {
+    @apply max-w-[480px]
+        leading-[20px];
+
+    /* RTL */
+    @apply rtl_mr-[-2px]
+        rtl_font-arabicText
+        rtl_text-[19px]
+        rtl_leading-[24px]
+        rtl_tracking-[0.28px];
+
+    /* Desktop */
+    @apply lg_max-w-[485px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mr-0
+        rtl_lg_h-auto
+        rtl_lg_max-w-[inherit];
+}
+
+.telephone {
+    composes: rtl_text-right from global;
+    direction: ltr;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+@media (min-width: 1024px) {
+    .sidebarContainer {
+        grid-column: 2;
+    }
+}

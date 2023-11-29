@@ -1,0 +1,37 @@
+.megaMenuLink {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: text-base from global;
+    composes: text-green from global;
+    composes: min-h-12.5 from global;
+    composes: px-[11px] from global;
+    composes: box-content from global;
+    composes: whitespace-nowrap from global;
+    composes: fontBold-width-fix from global;
+
+    /* Hover state */
+    composes: hover_font-bold from global;
+    composes: ltr_hover_tracking-[-0.425px] from global;
+}
+
+.megaMenuLink::before {
+    @apply ltr_tracking-[-0.425px];
+}
+
+.megaMenuLinkActive {
+    composes: megaMenuLink;
+    composes: font-bold from global;
+    composes: ltr_tracking-[-0.425px] from global;
+}
+
+.megaMenuItem:hover > div,
+.megaMenuItem:focus > div {
+    @apply flex;
+}
+
+.megaMenuItem_active {
+    composes: megaMenuItem;
+    composes: flex from global;
+}

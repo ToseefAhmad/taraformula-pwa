@@ -1,0 +1,79 @@
+.home[class*='cms-page_wrapper'] {
+    @apply grid-cols-1
+        lg_flex-wrap
+        p-0;
+}
+
+.home [class*='fullBleed'] {
+    /* RTL */
+    @apply rtl_ml-0
+        rtl_mr-[50%]
+        rtl_translate-x-[50%];
+}
+
+.home [class*='cms-sidebar'] {
+    @apply hidden;
+}
+
+.home > div {
+    @apply w-[100%]
+        mt-0
+        pt-0
+        lg_pt-0;
+}
+
+.home .text-desktop h2 {
+    @apply hidden
+        lg_block;
+    @apply text-[4.5rem];
+    @apply max-w-[64%];
+    @apply mt-[33px];
+    @apply mb-[33px];
+    @apply mr-[38px];
+    @apply ml-[38px];
+}
+
+.home .text-desktop {
+    @apply hidden
+        lg_block;
+}
+
+.home .text-mobile h2 {
+    @apply lg_hidden;
+    letter-spacing: -0.336px;
+    line-height: 33px;
+
+    @apply mt-[12px];
+    @apply mb-[13px];
+    @apply mr-[33px];
+    @apply ml-[15px];
+    @apply text-[2.2rem];
+}
+
+.home .text-mobile {
+    @apply lg_hidden;
+}
+
+.home [class*='text-root'] p {
+    /* RTL */
+    @apply rtl_text-[15px]
+        rtl_font-arabicText;
+}
+
+.home [class*='text-root'] a {
+    @apply pb-1
+        text-[15px]
+        text-green
+        font-bold
+        uppercase
+        no-underline
+        border-b-2
+        border-transparent;
+    @apply lg_hover_border-green;
+
+    /* Desktop */
+    @apply lg_text-[18px];
+
+    /* RTL */
+    @apply rtl_font-arabicText;
+}

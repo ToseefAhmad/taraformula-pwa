@@ -1,0 +1,64 @@
+{
+    "veniaAppShell": {
+        "inline": {
+            "body": {
+                "provide": {
+                    "gtmId": "gtmId.value",
+                    "fbPixelId": "fbPixelId.value",
+                    "klaviyoKey": "klaviyoKey.value"
+                }
+            },
+            "headers": {
+                "inline": {
+                    "pragma": {
+                        "inline": "cache"
+                    },
+                    "cache-control": {
+                        "inline": "max-age=600"
+                    },
+                    "upward-response": {
+                        "inline": "true"
+                    }
+                }
+            }
+        }
+    },
+    "veniaResponse": {
+        "when": {
+            "2": {
+                "matches": "fileExtension",
+                "pattern": "(js|json|png|jpg|gif|svg|ico|css|txt|woff|woff2|otf|ttf)",
+                "use": "veniaStatic"
+            }
+        }
+    },
+    "staticFromRoot": {
+        "inline": {
+            "body": {
+                "file": {
+                    "template": {
+                        "inline": "./static-assets/{{ filename }}"
+                    }
+                }
+            }
+        }
+    },
+    "veniaSecurityHeaders": {
+        "inline": {
+            "content-security-policy": {
+                "template": {
+                    "when": {
+                        "1": {
+                            "use": {
+                                "inline": "loaded from ./csp.json"
+                            }
+                        }
+                    },
+                    "default": {
+                        "inline": "font-src 'self' fonts.gstatic.com staticw2.yotpo.com use.typekit.net cdn.tabby.ai;"
+                    }
+                }
+            }
+        }
+    }
+}

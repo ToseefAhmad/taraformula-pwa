@@ -1,0 +1,105 @@
+.trigger {
+    composes: truncate from global;
+    composes: text-[16px] from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: uppercase from global;
+    composes: text-pastelBrown from global;
+    composes: hover_font-bold from global;
+    composes: ltr_hover_tracking-[-0.4px] from global;
+}
+
+.triggerActive {
+    composes: trigger;
+    composes: font-bold from global;
+}
+
+.iconRoot {
+    composes: flex from global;
+    composes: w-[25px] from global;
+}
+
+.menuContainer {
+    composes: w-screen from global;
+    composes: left-0 from global;
+    composes: h-screen from global;
+    composes: p-[2.5vw] from global;
+    composes: absolute from global;
+    composes: bg-whitePinkish from global;
+    composes: z-[1000] from global;
+    composes: mt-[10px] from global;
+    composes: overflow-scroll from global;
+}
+
+.menuContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.menuTitle {
+    composes: text-center from global;
+    composes: font-sans from global;
+    composes: text-[1.75rem] from global;
+    composes: leading-[2.8rem] from global;
+    composes: mb-[40px] from global;
+
+    composes: rtl_font-arabicText from global;
+}
+
+.regionTitle {
+    composes: text-[1.4rem] from global;
+    composes: leading-[2.8rem] from global;
+    letter-spacing: -0.22px;
+}
+
+.menuRegionContainer {
+    composes: min-w-[250px] from global;
+}
+
+.menuRegionsContainer {
+    composes: flex from global;
+    composes: justify-center from global;
+}
+
+.menuVerticalSeparator {
+    composes: w-[0] from global;
+    composes: border-[1px] from global;
+    opacity: 0.5;
+    composes: h-[450px] from global;
+    composes: mx-[30px] from global;
+    composes: my-[0] from global;
+}
+
+.menuItem {
+    composes: flex from global;
+}
+
+.menuItem button {
+    @apply text-pastelBrown;
+    @apply text-left;
+    @apply text-[16px];
+    @apply leading-[22px];
+    @apply tracking-normal;
+    @apply uppercase;
+    @apply px-2.5;
+    @apply py-2;
+    @apply hover_font-bold;
+    @apply ltr_hover_tracking-[-0.3px];
+}
+
+.menuClose {
+    composes: absolute from global;
+    composes: h-[23px] from global;
+    composes: w-[23px] from global;
+    composes: right-[70px] from global;
+    composes: top-[8px] from global;
+    composes: text-pastelBrown-60 from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: hover_stroke-1.5 from global;
+    composes: hover_text-pastelBrown from global;
+
+    /* RTL */
+    composes: rtl_right-auto from global;
+    composes: rtl_left-[50px] from global;
+}

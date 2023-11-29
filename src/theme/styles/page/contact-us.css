@@ -1,0 +1,163 @@
+.contact-us .paragraph {
+    @apply lg_w-[74.803%];
+}
+
+.contact-us .paragraph p {
+    @apply mb-[18px];
+}
+
+.contact-us .faq-wrapper {
+    @apply mt-[23px]
+        lg_mt-[42px];
+}
+
+.contact-us .faq-wrapper > p {
+    @apply mb-0;
+}
+
+/* Contact us block */
+.contact-block {
+    /* Override inline styles */
+    @apply flex-wrap
+        flex-row !important;
+}
+
+.contact-block [class*='text-root'] {
+    @apply mb-[10px];
+}
+
+.contact-block .title-wrapper {
+    @apply w-full
+        mb-[8px]
+        leading-[28px];
+
+    /* LTR Desktop */
+    @apply ltr_lg_mb-[13px]
+        ltr_lg_inline-block
+        ltr_lg_max-w-[232px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mb-[3px]
+        rtl_lg_max-w-[290px];
+}
+
+.contact-block h4 {
+    @apply mb-0
+        leading-[28px]
+        tracking-normal;
+
+    /* RTL */
+    @apply rtl_mb-[6px]
+        rtl_pr-[17px]
+        rtl_font-arabicHeadline5
+        rtl_text-[28px]
+        rtl_leading-[34px]
+        rtl_tracking-[0.32px];
+
+    /* LTR Desktop */
+    @apply ltr_lg_inline;
+
+    /* RTL Desktop */
+    @apply rtl_lg_inline-block;
+}
+
+.contact-block [class*='text-root'] p,
+.contact-block [class*='text-root'] a {
+    @apply m-0
+        text-[15px];
+}
+
+.contact-block [class*='text-root'] a {
+    @apply pb-1
+        text-[15px]
+        text-green
+        font-bold
+        no-underline
+        border-b-2
+        border-transparent;
+    @apply lg_hover_border-green;
+}
+
+.contact-block [class*='text-root'] p {
+    @apply text-[16px];
+
+    /* RTL */
+    @apply rtl_font-arabicText
+        rtl_tracking-[0.24px];
+
+    /* Desktop */
+    @apply lg_text-[15px];
+}
+
+.contact-block [class*='buttons-root'] {
+    @apply mt-[8px]
+        w-full;
+
+    /* RTL */
+    @apply rtl_mt-[17px];
+
+    /* LTR Desktop */
+    @apply ltr_lg_mt-[22px]
+        ltr_lg_pl-[2px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mt-[20px]
+        rtl_lg_mr-5
+        rtl_lg_mb-[0]
+        rtl_lg_ml-auto
+        rtl_lg_w-[370px]
+        rtl_lg_max-w-full
+        rtl_lg_ml-5 !important;
+}
+
+.contact-block [class*='buttons-root'] > div {
+    @apply m-0
+        w-full;
+}
+
+.contact-block button {
+    @apply hover_text-green
+        hover_bg-white;
+
+    /* RTL */
+    @apply rtl_font-arabicHeadline5
+        rtl_font-bold
+        rtl_tracking-[0.32px];
+
+    /* Desktop */
+    @apply lg_text-green
+        lg_bg-transparent
+        lg_hover_text-white
+        lg_hover_bg-green;
+
+    /* RTL Desktop */
+    @apply rtl_lg_bg-green
+        rtl_lg_text-white
+        rtl_lg_hover_text-green
+        rtl_lg_hover_bg-white;
+}
+
+.contact-block .title-wrapper + div {
+    @apply mr-[24px]
+        w-[135px];
+
+    /* RTL */
+    @apply rtl_w-[138px]
+        rtl_mr-[9px]
+        rtl_ml-[15px];
+
+    /* LTR Desktop */
+    @apply ltr_lg_w-[160px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mr-[20px]
+        rtl_lg_max-w-[368px];
+}
+
+.phone p:last-child {
+    direction: ltr;
+}
+
+.contact-us .paragraph [class*='block-cms-link-inline'] {
+    @apply inline rtl_whitespace-nowrap;
+}

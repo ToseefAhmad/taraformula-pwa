@@ -1,0 +1,50 @@
+.post {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: mb-[25px] from global;
+}
+
+.post:hover .title {
+    @apply lg_underline;
+}
+
+.images img {
+    @apply object-cover
+        h-[63vw]
+        min-h-[14.25rem]
+        max-h-[450px]
+        max-w-[680px]
+        mx-auto
+        lg_min-h-[13.75rem]
+        lg_max-h-[auto]
+        lg_mx-0
+        lg_hover_scale-110
+        lg_transition-transform;
+}
+
+.images,
+.images div {
+    @apply overflow-hidden;
+}
+
+.date {
+    composes: mt-2.5 from global;
+    composes: text-sm from global;
+    composes: font-bold from global;
+    composes: leading-4	from global;
+}
+
+.title {
+    composes: text-4xl from global;
+    composes: leading-8	 from global;
+    composes: mt-1.5 from global;
+    composes: lg_text-3xl from global;
+    composes: lg_leading-[30px] from global;
+}
+
+.content {
+    composes: max-w-[656px] from global;
+    composes: lg_text-left from global;
+    composes: lg_mx-0 from global;
+    composes: rtl_text-right from global;
+}

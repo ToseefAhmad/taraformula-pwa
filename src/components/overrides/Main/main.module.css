@@ -1,0 +1,19 @@
+.root {
+    composes: relative from global;
+    composes: text-green from global;
+    composes: z-1 from global;
+}
+
+.root_masked {
+    composes: root;
+}
+
+.page {
+    composes: max-w-full from global;
+    composes: min-h-screen-mobile from global;
+    composes: lg_min-h-screen-desktop from global;
+}
+
+.page_masked {
+    composes: page;
+}

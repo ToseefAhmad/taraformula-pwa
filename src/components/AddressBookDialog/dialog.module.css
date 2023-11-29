@@ -1,0 +1,39 @@
+.dialog {
+    composes: grid from global;
+    composes: grid-rows-auto from global;
+}
+
+.contents {
+    composes: pb-7.5 from global;
+    composes: lg_pb-12.5 from global;
+}
+
+.submit {
+    composes: lg_border-t from global;
+    composes: lg_border-default from global;
+}
+
+.buttons {
+    composes: pt-0 from global;
+    composes: lg_pt-10 from global;
+    composes: mx-auto from global;
+    composes: flex from global;
+    composes: space-y-2.5 from global;
+    composes: md_space-y-0 from global;
+    composes: md_space-x-2.5 from global;
+    composes: rtl_md_space-x-reverse from global;
+    composes: flex-col from global;
+    composes: md_flex-row from global;
+    composes: justify-center from global;
+    composes: max-w-[630px] from global;
+}
+
+.confirmButton {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-full from global;
+    composes: lg_max-w-[310px] from global;
+}
+
+.cancelButton {
+    composes: root_lowPriority from '@app/components/overrides/Button/button.module.css';
+}

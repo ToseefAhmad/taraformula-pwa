@@ -1,0 +1,28 @@
+.hidden {
+    composes: hidden from global;
+}
+
+.visible {
+    composes: block from global;
+}
+
+.root {
+    composes: container from global;
+    composes: pt-1 from global;
+    composes: pb-4 from global;
+    composes: bg-transparent from global;
+
+    composes: lg_pt-[11px] from global;
+}
+
+.root_hidden {
+    composes: root hidden;
+}
+
+.root_visible {
+    composes: root visible;
+}
+
+.message {
+    composes: lg_text-base from global;
+}

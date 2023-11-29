@@ -1,0 +1,13 @@
+.root {
+    composes: pt-1 from global;
+
+    @apply text-[13px] text-[#545454];
+}
+
+.root:empty {
+    @apply hidden;
+}
+
+.root_error {
+    composes: root;
+}

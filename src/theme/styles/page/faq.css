@@ -1,0 +1,12 @@
+.faq .faq-wrapper p:only-child {
+    @apply mb-0;
+}
+
+.faq h4 {
+    @apply mb-[17px]
+        tracking-normal;
+}
+
+.faq .faq-widget {
+    @apply mb-[55px];
+}

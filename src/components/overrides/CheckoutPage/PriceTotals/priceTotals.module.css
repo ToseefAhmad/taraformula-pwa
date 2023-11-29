@@ -1,0 +1,84 @@
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.lineItem {
+    composes: col-span-2 from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: mb-[9px] from global;
+}
+
+.subTotal {
+    composes: lineItem;
+}
+
+.lineItemLabel {
+    composes: self-start from global;
+    composes: font-bold from global;
+    composes: text-base lg_text-sm from global;
+}
+
+.price {
+    composes: flex from global;
+    composes: justify-self-end from global;
+    composes: self-center from global;
+    composes: lg_text-sm from global;
+    composes: uppercase from global;
+}
+
+.totalLabel {
+    composes: lineItemLabel;
+}
+
+.discountDoubleLabel {
+    composes: hidden from global;
+}
+
+.totalPrice {
+    composes: price;
+}
+
+.totals {
+    composes: border-t-[1px] from global;
+    composes: border-solid from global;
+    composes: border-gray4 from global;
+
+    @apply mt-[13px]
+        mb-[24px]
+        pt-[16px]
+        flex
+        justify-between;
+
+    /* RTL */
+    @apply rtl_mt-[19px]
+        rtl_mb-[14px]
+        rtl_pt-[10px];
+
+    /* Desktop */
+    @apply lg_mt-[32px]
+        lg_pt-[20px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_mt-[41px];
+}
+
+.totals :global span {
+    @apply text-[18px]
+        font-normal;
+
+    /* RTL */
+    @apply rtl_font-arabicHeadline5
+        rtl_text-[19px]
+        rtl_leading-[24px];
+}
+
+.coupon {
+    font-weight: 100;
+
+    @apply w-full
+        block
+        text-[10px]
+        leading-[10px];
+}

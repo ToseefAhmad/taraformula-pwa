@@ -1,0 +1,113 @@
+.root {
+    composes: relative from global;
+}
+
+.form {
+    composes: relative from global;
+}
+
+.title {
+    composes: text-sm from global;
+    composes: tracking-normal from global;
+    composes: mb-0 from global;
+
+    composes: lg_mb-[18px] from global;
+}
+
+.newsletterInput {
+    composes: w-full from global;
+    composes: h-12.5 from global;
+    composes: text-green from global;
+    composes: border from global;
+    composes: border-green from global;
+    composes: text-sm from global;
+    composes: text-green from global;
+    composes: pr-9 from global;
+    composes: pl-3.5 from global;
+    composes: outline-none from global;
+    composes: bg-transparent from global;
+    composes: rounded-none from global;
+
+    composes: rtl_pr-3.5 from global;
+    composes: rtl_pl-9 from global;
+
+    composes: lg_pr-24 from global;
+    composes: lg_rtl_pl-24 from global;
+}
+
+.newsletter_text {
+    composes: text-sm from global;
+    composes: leading-[17px] from global;
+    composes: mb-[34px] from global;
+
+    composes: lg_text-[16px] from global;
+    composes: lg_leading-[20px] from global;
+    composes: lg_w-[65%] from global;
+    composes: lg_mb-[32px] from global;
+}
+
+.newsletterInput_error {
+    composes: newsletterInput;
+
+    @apply bg-red-5;
+}
+
+.newsletterInput::placeholder {
+    @apply text-green-40;
+}
+
+.newsletterInputLabel {
+    composes: hidden from global;
+}
+
+.subscribeLink {
+    composes: absolute from global;
+    composes: ltr_right-1 from global;
+    composes: top-2 from global;
+    composes: outline-none from global;
+
+    composes: rtl_rotate-180 from global;
+    composes: rtl_top-1 from global;
+    composes: rtl_left-1 from global;
+
+    composes: lg_hidden from global;
+}
+
+.subscribeLinkDesktop {
+    composes: hidden from global;
+    composes: absolute from global;
+    composes: ltr_right-5 from global;
+    composes: top-0 from global;
+    composes: h-12.5 from global;
+    composes: uppercase from global;
+    composes: font-bold from global;
+    composes: text-green from global;
+    composes: outline-none from global;
+
+    composes: lg_inline-block from global;
+
+    composes: rtl_left-5 from global;
+}
+
+.subscribeLinkDesktop span {
+    @apply hover_border-green
+        border-b-2
+        border-transparent
+        pb-1;
+}
+
+.loadingContainer {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: z-10 from global;
+}
+
+.message {
+    composes: text-colorDefault from global;
+    composes: text-subtle from global;
+    composes: uppercase from global;
+    composes: tracking-[normal] from global;
+}

@@ -1,0 +1,30 @@
+.root {
+    composes: link from 'src/components/StyleGuide/elementsSection.module.css';
+    composes: border-b-2 from global;
+    composes: border-transparent from global;
+    composes: border-solid from global;
+    composes: outline-none from global;
+    composes: lg_hover_border-green from global;
+}
+
+.root:disabled {
+    @apply
+        pointer-events-none
+        text-green-60;
+}
+
+.text {
+    display: inline;
+}
+
+@media (max-width: 640px) {
+    .root {
+        min-width: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .root {
+        min-width: 6.125rem;
+    }
+}

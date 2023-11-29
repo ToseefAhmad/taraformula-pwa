@@ -1,0 +1,60 @@
+.root {
+    composes: border-[1px] from global;
+    composes: border-solid from global;
+
+    @apply pt-[26px]
+        pr-[15px]
+        pl-[15px]
+        pb-[18px]
+        bg-white;
+
+    /* RTL */
+    @apply rtl_pt-[37px]
+        rtl_pr-[15px]
+        rtl_pl-[15px]
+        rtl_pb-[39px];
+
+    /* Desktop */
+    @apply lg_pt-[40px]
+        lg_pr-[35px]
+        lg_pl-[39px]
+        lg_pb-[33px];
+
+    /* LTR Desktop */
+    @apply ltr_lg_ml-[-3px]
+        ltr_lg_pl-[30px]
+        ltr_lg_pb-[38px];
+
+    /* LTR Desktop */
+    @apply rtl_lg_mr-[-13px]
+        rtl_lg_ml-[-2px];
+}
+
+.block {
+    composes: m-0 from global;
+}
+
+.block :global h4 {
+    /* RTL */
+    @apply rtl_pr-[21px];
+}
+
+.container {
+    background: linear-gradient(270deg, #fff, #f4f5f5) 0 0/400% 400%;
+    animation: element-loader 2s ease infinite;
+
+    @apply mt-[19px]
+        mb-[20px]
+        min-h-[200px];
+
+    /* RTL */
+    @apply rtl_mt-[11px]
+        rtl_mb-[17px];
+
+    /* Desktop */
+    @apply lg_mt-[10px]
+        lg_ml-[-3px];
+
+    /* RTL Desktop */
+    @apply rtl_lg_ml-0;
+}

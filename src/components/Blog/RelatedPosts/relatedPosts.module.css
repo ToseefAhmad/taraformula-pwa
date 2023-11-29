@@ -1,0 +1,103 @@
+.root {
+    composes: pb-6 from global;
+    composes: lg_pb-2.5 from global;
+    composes: max-w-[660px] from global;
+    composes: lg_max-w-[1440px] from global;
+    composes: mx-auto from global;
+    composes: pl-[17px] from global;
+    composes: pr-[17px] from global;
+    composes: lg_pl-[50px] from global;
+    composes: lg_pr-[55px] from global;
+}
+
+.post {
+    composes: block from global;
+    composes: text-left from global;
+    composes: rtl_text-right from global;
+    composes: lg_mb-16 from global;
+    composes: mb-[34px] from global;
+}
+
+.images {
+    composes: block from global;
+    composes: mb-[0.4rem] from global;
+    composes: relative from global;
+    composes: pt-[66.67%] from global;
+    composes: min-h-[229px] from global;
+    composes: lg_min-h-[308px] from global;
+}
+
+.images img {
+    @apply object-cover
+        lg_hover_scale-110
+        lg_transition-transform;
+}
+
+.imageContainer {
+    composes: bg-transparent from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: overflow-hidden from global;
+}
+
+.imageContainer img:first-of-type {
+    @apply absolute
+        w-full
+        h-full;
+}
+
+.image {
+    composes: h-full from global;
+    composes: min-w-[1rem] from global;
+}
+
+.date {
+    composes: font-bold from global;
+    composes: leading-5	from global;
+    composes: mt-2 from global;
+    composes: lg_leading-4	from global;
+    composes: lg_leading-4	from global;
+    composes: lg_text-sm from global;
+    composes: lg_mt-3 from global;
+}
+
+.postTitle {
+    composes: mt-[3px] from global;
+    composes: lg_text-3xl from global;
+    composes: lg_mb-3 from global;
+
+    @apply leading-7 !important;
+}
+
+.postTitle:hover {
+    @apply underline;
+}
+
+.tag {
+    composes: mt-[3px] from global;
+}
+
+.related {
+    composes: lg_grid from global;
+    composes: lg_grid-cols-3 from global;
+    composes: lg_gap-x-[0.656rem] from global;
+}
+
+.title {
+    composes: text-left from global;
+    composes: lg_mb-[47px] from global;
+    composes: mb-[10px] from global;
+    composes: lg_text-center from global;
+    composes: lg_text-[46px] from global;
+    composes: lg_tracking-[0.5px] from global;
+    composes: rtl_text-right from global;
+    composes: rtl_lg_text-center from global;
+    composes: rtl_text-[40px] from global;
+    composes: rtl_tracking-[1.8px] from global;
+    composes: rtl_lg_text-[60px] from global;
+    composes: rtl_mb-0 from global;
+    composes: rtl_lg_mb-[28px] from global;
+}

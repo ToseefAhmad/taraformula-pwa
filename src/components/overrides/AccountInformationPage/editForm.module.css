@@ -1,0 +1,146 @@
+.root {
+    composes: grid from global;
+    composes: gap-[11px] from global;
+    composes: w-100 from global;
+    composes: lg_grid-cols-2 from global;
+}
+
+.field {
+    composes: col-span-1 from global;
+}
+
+.firstname {
+    composes: field;
+    composes: lg_col-start-1 from global;
+    composes: lg_row-start-1 from global;
+}
+
+.lastname {
+    composes: field;
+    composes: lg_col-start-2 from global;
+    composes: lg_row-start-1 from global;
+}
+
+.email {
+    composes: field;
+    composes: lg_col-start-1 from global;
+    composes: lg_row-start-2 from global;
+}
+
+.gender {
+    composes: field;
+    composes: lg_col-start-2 from global;
+    composes: lg_row-start-2 from global;
+}
+
+.dobSection {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: lg_grid-cols-3 from global;
+    composes: lg_gap-x-2 from global;
+    composes: lg_gap-y-0 from global;
+    composes: lg_col-start-1 from global;
+    composes: lg_row-start-3 from global;
+}
+
+.checkboxField {
+    composes: field;
+    composes: col-start-1 from global;
+    composes: lg_row-start-4 from global;
+    composes: pt-[13px] from global;
+    composes: lg_pt-4 from global;
+    composes: pb-[19px] from global;
+    composes: ml-0.5 from global;
+    composes: lg_ml-0 from global;
+    composes: rtl_mr-0.5 from global;
+    composes: rtl_lg_ml-0 from global;
+}
+
+.checkbox {
+    composes: h-[22px] from global;
+    composes: w-[22px] from global;
+    composes: lg_h-4 from global;
+    composes: lg_w-4 from global;
+}
+
+.checkboxInput {
+    composes: input from '../Checkbox/checkbox.module.css';
+    composes: checkbox;
+}
+
+.checkboxLabel {
+    composes: label from '../Checkbox/checkbox.module.css';
+    composes: text-[14px] from global;
+}
+
+.checkboxInactive {
+    composes: checkbox_inactive from '../Checkbox/checkbox.module.css';
+    composes: checkbox;
+}
+
+.checkboxActive {
+    composes: checkbox_active from '../Checkbox/checkbox.module.css';
+    composes: checkbox;
+}
+
+.passwordRoot {
+    composes: lg_col-start-1 from global;
+    composes: lg_col-span-2 from global;
+    composes: root;
+    composes: gap-[10px] from global;
+    composes: pb-[19px] from global;
+}
+
+.currentPassword {
+    composes: field;
+    composes: lg_row-start-1 from global;
+}
+
+.currentPasswordEmail {
+    composes: field;
+}
+
+.newPassword {
+    composes: lg_col-start-1 from global;
+    composes: lg_col-span-1 from global;
+    composes: lg_row-start-2 from global;
+}
+
+.repeatPassword {
+    composes: field;
+    composes: lg_col-start-2 from global;
+    composes: lg_row-start-2 from global;
+}
+
+.buttonsContainer {
+    composes: root;
+    composes: lg_col-span-2 from global;
+}
+
+.saveButtonContainer,
+.discardButtonContainer {
+    composes: text-center from global;
+    composes: col-start-1 from global;
+    composes: col-span-1 from global;
+    composes: lg_row-start-1 from global;
+}
+
+.saveButtonContainer {
+    composes: w-full from global;
+}
+
+.saveButton {
+    composes: root_normalPriority from '../Button/button.module.css';
+    composes: font-bold from global;
+}
+
+.discardButtonContainer {
+    composes: lg_col-start-2 from global;
+    composes: lg_col-span-1 from global;
+    composes: lg_max-w-max from global;
+}
+
+.discardButton {
+    composes: root_lowPriority from '../Button/button.module.css';
+    composes: lg_px-[50px] from global;
+}

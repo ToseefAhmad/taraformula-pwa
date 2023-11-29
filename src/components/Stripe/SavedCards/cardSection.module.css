@@ -1,0 +1,43 @@
+.root {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: gap-2.5 from global;
+}
+
+.errorMessage {
+    composes: root from '@app/components/overrides/Field/message.module.css';
+}
+
+.cardNumberContainer {
+    composes: col-span-2 from global;
+}
+
+.cardNumberField {
+    @apply py-5;
+
+    composes: border from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+    composes: w-full from global;
+    composes: h-15 from global;
+    composes: pl-3.5 from global;
+    composes: pr-14 from global;
+    composes: rtl_pl-14 from global;
+    composes: rtl_pr-3.5 from global;
+    composes: font-bold from global;
+    composes: text-sm from global;
+    composes: focus_border-2 from global;
+    composes: rounded-none from global;
+}
+
+.cardExpiryField,
+.cardCvcField {
+    composes: cardNumberField;
+}
+
+.cardNumberFieldError,
+.cardExpiryFieldError,
+.cardCvcFieldError {
+    composes: cardNumberField;
+    composes: bg-red-5 from global;
+}

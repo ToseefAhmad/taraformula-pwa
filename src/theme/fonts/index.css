@@ -1,0 +1,232 @@
+/**
+* Used FreightBig Pro fonts
+*/
+@font-face {
+    font-family: 'FreightBig Pro';
+    src:
+        local('FreightBig Pro Light'),
+        local('FreightBigProLight-Regular'),
+        url('./fonts/FreightBigPro/FreightBigProLight-Regular.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProLight-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**
+* Used Tara Arabic font
+*/
+@font-face {
+    font-family: 'TaraArabic Light';
+    src:
+        local('Tara Arabic Light'),
+        local('TaraArabic-Light'),
+        url('./fonts/TaraArabic/TaraArabic-Light.woff2') format('woff2'),
+        url('./fonts/TaraArabic/TaraArabic-Light.woff') format('woff'),
+        url('./fonts/TaraArabic/TaraArabic-Light.ttf') format('truetype'),
+        url('./fonts/TaraArabic/TaraArabic-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**
+* Used Tajawal Regular font
+*/
+@font-face {
+    font-family: 'Tajawal Regular';
+    src:
+        local('Tajawal Regular'),
+        local('Tajawal-Regular'),
+        url('./fonts/Tajawal/Tajawal-Regular.woff') format('woff'),
+        url('./fonts/Tajawal/Tajawal-Regular.ttf') format('truetype'),
+        url('./fonts/Tajawal/Tajawal-Regular.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**
+* Used Tajawal Medium font
+*/
+@font-face {
+    font-family: 'Tajawal Medium';
+    src:
+        local('Tajawal Medium'),
+        local('Tajawal-Medium'),
+        url('./fonts/Tajawal/Tajawal-Medium.woff') format('woff'),
+        url('./fonts/Tajawal/Tajawal-Medium.woff2') format('woff2'),
+        url('./fonts/Tajawal/Tajawal-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**
+* Used Icomoon fonts
+*/
+
+@font-face {
+    font-family: icomoon;
+    src: url('./fonts/Icomoon/icomoon.woff') format('woff'), url('./fonts/Icomoon/icomoon.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    font-display: block;
+}
+
+/**
+* Used Yotpo fonts
+*/
+
+@font-face {
+    font-family: 'Yotpo Font';
+    src: url('./fonts/Yotpo/yotpo-widget-font.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: icomoon, serif !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    font-feature-settings: 'liga';
+    font-variant-ligatures: discretionary-ligatures;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minus::before {
+    content: '\e900';
+}
+
+.icon-plus::before {
+    content: '\e901';
+}
+
+/**
+* Unused FreightBig Pro fonts that are added just in case will be used futher
+*/
+
+/* ----------------------------------------------------------------
+@font-face {
+    font-family: 'FreightBig Pro Book';
+    src: local('FreightBig Pro Book Italic'), local('FreightBigProBook-Italic'),
+        url('./fonts/FreightBigPro/FreightBigProBook-Italic.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProBook-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Bold Italic'), local('FreightBigProBold-Italic'),
+        url('./fonts/FreightBigPro/FreightBigProBold-Italic.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProBold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro Book';
+    src: local('FreightBig Pro Book'), local('FreightBigProBook-Regular'),
+        url('./fonts/FreightBigPro/FreightBigProBook-Regular.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProBook-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Black Italic'), local('FreightBigProBlack-Italic'),
+        url('./fonts/FreightBigPro/FreightBigProBlack-Italic.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProBlack-Italic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Light Italic'), local('FreightBigProLight-Italic'),
+        url('./fonts/FreightBigPro/FreightBigProLight-Italic.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProLight-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Bold'), local('FreightBigProBold-Regular'),
+        url('./fonts/FreightBigPro/FreightBigProBold-Regular.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProBold-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Black'), local('FreightBigProBlack-Regular'),
+        url('./fonts/FreightBigPro/FreightBigProBlack-Regular.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProBlack-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Medium'), local('FreightBigProMedium-Regular'),
+        url('./fonts/FreightBigPro/FreightBigProMedium-Regular.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProMedium-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Semibold Italic'), local('FreightBigProSemibold-Italic'),
+        url('./fonts/FreightBigPro/FreightBigProSemibold-Italic.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProSemibold-Italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Semibold'), local('FreightBigProSemibold-Regular'),
+        url('./fonts/FreightBigPro/FreightBigProSemibold-Regular.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProSemibold-Regular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: local('FreightBig Pro Medium Italic'), local('FreightBigProMedium-Italic'),
+        url('./fonts/FreightBigPro/FreightBigProMedium-Italic.woff2') format('woff2'),
+        url('./fonts/FreightBigPro/FreightBigProMedium-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+*/

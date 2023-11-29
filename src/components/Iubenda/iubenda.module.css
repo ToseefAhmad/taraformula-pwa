@@ -1,0 +1,21 @@
+.root h1,
+.root h2,
+.root h3 {
+    @apply rtl_font-serif;
+}
+
+.root h4,
+.root h5,
+.root h6,
+.root p,
+.root li {
+    @apply rtl_font-sans;
+}
+
+.root hr {
+    @apply mb-3;
+}
+
+.root :global div.one_line_col {
+    @apply mt-6;
+}

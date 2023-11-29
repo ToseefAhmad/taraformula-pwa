@@ -1,0 +1,52 @@
+.input {
+    @apply pt-[28px] pb-[12px];
+
+    composes: inline-flex from global;
+    composes: border from global;
+    composes: border-green from global;
+    composes: border-solid from global;
+    composes: w-full from global;
+    composes: h-15 from global;
+    composes: appearance-none from global;
+    composes: outline-none from global;
+    composes: pl-3.5 from global;
+    composes: pr-14 from global;
+
+    composes: rtl_pl-14 from global;
+    composes: rtl_pr-3.5 from global;
+
+    composes: font-bold from global;
+    composes: text-sm from global;
+
+    composes: placeholder-green from global;
+
+    composes: focus_border-2 from global;
+    composes: rounded-none from global;
+}
+
+.input_error {
+    composes: input;
+
+    @apply bg-red-5;
+}
+
+.input:placeholder-shown {
+    @apply py-5;
+}
+
+.input:placeholder-shown ~ .label {
+    @apply hidden;
+}
+
+.input::placeholder {
+    @apply font-normal;
+}
+
+.label {
+    @apply top-[11px] text-[13px];
+
+    composes: absolute from global;
+    composes: ltr_left-3.5 from global;
+
+    composes: rtl_right-3.5 from global;
+}

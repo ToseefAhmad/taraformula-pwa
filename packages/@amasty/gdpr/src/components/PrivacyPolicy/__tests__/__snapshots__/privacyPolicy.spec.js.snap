@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders isModalClosed true  1`] = `null`;
+
+exports[`renders loading true  1`] = `null`;
+
+exports[`renders privacyData needShow false  1`] = `null`;
+
+exports[`renders privacyPolicy  1`] = `
+<PrivacyModal
+  content={
+    Object {
+      "content": "<div>test</div>",
+      "need_show": true,
+    }
+  }
+/>
+`;

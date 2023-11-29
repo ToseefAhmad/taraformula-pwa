@@ -1,0 +1,119 @@
+.root {
+    composes: lg_px-[52px] from global;
+    composes: lg_max-w-[1440px] from global;
+    composes: px-4 from global;
+    composes: mx-auto from global;
+    composes: lg_flex from global;
+    composes: lg_flex-no-wrap from global;
+}
+
+.noResult {
+    composes: flex from global;
+}
+
+.headerButtons {
+    composes: grid from global;
+    composes: xs_grid-cols-2 from global;
+    composes: gap-2.5 from global;
+    composes: lg_flex from global;
+    composes: mb-2.5 from global;
+    composes: lg_mb-0 from global;
+    composes: justify-center from global;
+}
+
+.heading {
+    composes: justify-center from global;
+}
+
+.headingRow {
+    composes: lg_grid from global;
+    composes: lg_grid-cols-3 from global;
+    composes: lg_gap-2.5 from global;
+    composes: lg_flex-1 from global;
+    composes: lg_items-center from global;
+    composes: lg_mb-2.5 from global;
+    composes: lg_mt-[43px] from global;
+    composes: lg_justify-end from global;
+}
+
+.searchInfo {
+    composes: lg_col-span-2 from global;
+    composes: mx-auto from global;
+    composes: text-center from global;
+    composes: lg_text-left from global;
+    composes: rtl_lg_text-right from global;
+    composes: max-w-[75vw] from global;
+    composes: mt-10 from global;
+    composes: mb-2.5 from global;
+    composes: lg_m-0 from global;
+    composes: lg_basis-full	from global;
+}
+
+.totalPages {
+    composes: ml-2 from global;
+}
+
+.headingHighlight {
+    composes: font-bold from global;
+}
+
+.sidebar {
+    composes: hidden from global;
+    composes: lg_flex from global;
+    composes: lg_self-start from global;
+}
+
+.searchContent {
+    composes: flex-grow from global;
+}
+
+.searchContentError {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: flex-col-reverse from global;
+    composes: my-4.5 from global;
+    composes: lg_my-[5.5rem] from global;
+}
+
+.searchContentError .headerButtons,
+.searchContentError [class*='sortedByContainer'] {
+    @apply hidden;
+}
+
+.searchContentError .noResult {
+    @apply justify-center;
+}
+
+.searchContentError .noResult h1 {
+    @apply text-center;
+}
+
+.searchContentError .heading,
+.backButtonContainer {
+    @apply
+        justify-center
+        flex;
+}
+
+.searchContentError .searchInfo {
+    @apply
+        mt-4
+        lg_mt-0;
+}
+
+.searchContentError .headingRow {
+    @apply grid-cols-2 flex-none;
+}
+
+.backButton {
+    composes: rtl_max-w-[320px] from global;
+    composes: ltr_max-w-[320px] from global;
+    composes: mt-[33px] from global;
+    composes: root_primary_transparent from '@app/components/overrides/Button/button.module.css';
+}
+
+.items {
+    composes: items from '@magento/venia-ui/lib/components/Gallery/gallery.module.css';
+    composes: md_grid-cols-3 from global;
+    composes: lg_grid-cols-3 from global;
+}

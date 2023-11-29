@@ -1,0 +1,105 @@
+.imageContainer {
+    composes: overflow-hidden from global;
+}
+
+.imageContainer img {
+    @apply lg_transition-transform;
+}
+
+.imageContainer:hover img {
+    @apply lg_scale-110;
+}
+
+.image {
+    composes: m-auto from global;
+    composes: w-[214px] from global;
+    composes: h-[215px] from global;
+    composes: overflow-hidden from global;
+
+    composes: md_w-[245px] from global;
+    composes: md_h-[245px] from global;
+
+    composes: lg_w-[229px] from global;
+    composes: lg_h-[229px] from global;
+    composes: lg_min-w-[229px] from global;
+}
+
+.image :global img {
+    @apply m-0
+        h-full
+        w-full
+        object-cover;
+}
+
+.centeredImage {
+    composes: m-auto from global;
+    composes: w-[101px] from global;
+    composes: h-[101px] from global;
+    composes: overflow-hidden from global;
+
+    composes: sm_w-[140px] from global;
+    composes: sm_h-[140px] from global;
+
+    composes: md_w-[180px] from global;
+    composes: md_h-[180px] from global;
+    composes: md_min-w-[180px] from global;
+
+    composes: lg_w-[200px] from global;
+    composes: lg_h-[200px] from global;
+    composes: lg_min-w-[200px] from global;
+
+    composes: xl_w-[325px] from global;
+    composes: xl_h-[325px] from global;
+    composes: xl_min-w-[325px] from global;
+}
+
+.centeredImage :global img {
+    @apply m-0
+        w-full
+        h-full
+        object-cover;
+}
+
+.productImage {
+    composes: m-auto from global;
+    composes: w-[214px] from global;
+    composes: h-[214px] from global;
+    composes: min-w-[214px] from global;
+    composes: overflow-hidden from global;
+
+    composes: md_w-[192px] from global;
+    composes: md_h-[192px] from global;
+    composes: md_min-w-[192px] from global;
+
+    composes: lg_w-[265px] from global;
+    composes: lg_h-[265px] from global;
+    composes: lg_min-w-[265px] from global;
+
+    composes: xl_w-[438px] from global;
+    composes: xl_h-[438px] from global;
+    composes: xl_min-w-[438px] from global;
+}
+
+.productImage :global img {
+    @apply m-0
+        w-full
+        h-full
+        object-cover;
+}
+
+.link {
+    composes: pb-[2px] from global;
+    composes: mb-[2px] from global;
+    composes: inline-block from global;
+    composes: font-normal from global;
+    composes: border-b-2 from global;
+    composes: border-transparent from global;
+    composes: border-solid from global;
+    composes: lg_mt-[8px] from global;
+    composes: lg_leading-[22px] from global;
+    composes: lg_hover_border-brown from global;
+
+    @apply text-[15px]
+        text-brown
+        lg_text-[20px] !important;
+}

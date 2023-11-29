@@ -1,0 +1,23 @@
+.root {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: w-full from global;
+    composes: text-[14px] from global;
+    composes: leading-[22px] from global;
+    composes: tracking-normal from global;
+    composes: uppercase from global;
+    composes: text-pastelBrown from global;
+    composes: justify-between from global;
+    composes: text-left from global;
+    composes: px-4 from global;
+    composes: py-2 from global;
+}
+
+.arabicRoot {
+    composes: root;
+    composes: font-arabicText from global;
+}
+
+.root:focus {
+    -webkit-tap-highlight-color: transparent;
+}

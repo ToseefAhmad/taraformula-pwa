@@ -1,0 +1,81 @@
+.hidden {
+    composes: hidden from './cityModal.module.css';
+}
+.visible {
+    composes: visible from './cityModal.module.css';
+}
+.heading {
+    composes: text-green from global;
+    composes: font-serif from global;
+    composes: text-3xl from global;
+    composes: px-1 from global;
+    composes: py-1 from global;
+    composes: mb-[25px] from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: capitalize from global;
+}
+.root {
+    composes: hidden;
+    composes: fixed from global;
+    composes: left-[50%] from global;
+    composes: translate-x-[-50%] from global;
+    composes: w-full from global;
+    composes: px-4.5 from global;
+    composes: py-3 from global;
+    composes: top-[100px] from global;
+    composes: max-w-[400px] from global;
+    composes: max-h-[600px] from global;
+    composes: z-30 from global;
+    composes: top-0 from global;
+    composes: bottom-0 from global;
+    composes: bottom-[inherit] from global;
+    composes: mt-0 from global;
+    composes: h-screen from global;
+
+    @apply bg-[#FAF9F9];
+}
+.root_open {
+    composes: visible;
+    composes: root;
+}
+.body_masked {
+    composes: body_masked from './cityModal.module.css';
+}
+.modal {
+    composes: modal from './cityModal.module.css';
+}
+.modal_open {
+    composes: modal_open from './cityModal.module.css';
+}
+.content {
+    composes: overflow-y-auto from global;
+    composes: max-h-[500px] from global;
+}
+.customLink {
+    composes: text-green from global;
+    composes: text-base from global;
+    composes: leading-5 from global;
+    composes: items-center from global;
+    composes: flex from global;
+    composes: p-1 from global;
+    composes: pt-3.5 from global;
+}
+.customLinkContainer {
+    composes: customLinkContainer from './cityModal.module.css';
+}
+.openButton {
+    composes: cursor-pointer from global;
+}
+.iconRoot {
+    composes: absolute from global;
+    composes: right-2.5 from global;
+    composes: cursor-pointer from global;
+    composes: mt-[3px] from global;
+    composes: rtl_mt-0 from global;
+    composes: rtl_right-auto from global;
+    composes: rtl_left-2.5 from global;
+}
+.maskRootActive {
+    composes: maskRootActive from '@app/components/overrides/AuthModal/authModal.module.css';
+}

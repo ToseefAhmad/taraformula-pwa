@@ -1,0 +1,131 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: min-h-15 from global;
+    composes: w-full from global;
+    composes: max-w-full from global;
+    composes: text-base from global;
+    composes: border-green from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: outline-none from global;
+    composes: py-4 from global;
+    composes: px-8 from global;
+    composes: outline-none from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    composes: disabled_bg-white from global;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.root:disabled,
+.root:disabled:hover,
+.root:disabled:focus {
+    @apply text-[#4a4a4a] border-[#979797];
+}
+
+.content {
+    composes: inline-grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-2.5 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: justify-items-center from global;
+}
+
+/* derived classes */
+
+/* Presets for solid and outline buttons */
+.solid {
+    composes: root;
+
+    composes: bg-green from global;
+    composes: text-white from global;
+
+    composes: md_hover_bg-white from global;
+    composes: md_hover_text-green from global;
+}
+
+.outline {
+    composes: root;
+
+    composes: bg-white from global;
+    composes: text-green from global;
+
+    composes: lg_hover_bg-green from global;
+    composes: lg_hover_text-white from global;
+}
+
+/* Custom Tara buttons */
+.root_primary_solid {
+    composes: solid;
+
+    composes: font-bold from global;
+}
+
+.root_primary_outline {
+    composes: outline;
+
+    composes: font-bold from global;
+}
+
+.root_secondary_solid {
+    composes: solid;
+}
+
+.root_secondary_outline {
+    composes: outline;
+}
+
+.root_tertiary_solid {
+    composes: solid;
+
+    composes: font-bold from global;
+    composes: uppercase from global;
+}
+
+.root_tertiary_outline {
+    composes: outline;
+
+    composes: font-bold from global;
+    composes: uppercase from global;
+}
+
+.root_primary_transparent {
+    composes: root;
+
+    composes: bg-transparent from global;
+    composes: font-bold from global;
+    composes: text-green from global;
+    composes: md_hover_bg-green from global;
+    composes: md_hover_text-white from global;
+}
+
+/* Support for default venia-ui buttons */
+.root_high_solid {
+    composes: root_primary_solid;
+}
+
+.root_normal_solid {
+    composes: root_secondary_solid;
+}
+
+.root_low_solid {
+    composes: root_secondary_outline;
+}
+
+.root_highPriority {
+    composes: root_primary_solid;
+}
+
+.root_normalPriority {
+    composes: root_secondary_solid;
+}
+
+.root_lowPriority {
+    composes: root_secondary_outline;
+}

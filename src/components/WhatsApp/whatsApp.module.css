@@ -1,0 +1,11 @@
+.container {
+    position: fixed;
+    z-index: 9999;
+    width: 50px;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.2);
+}

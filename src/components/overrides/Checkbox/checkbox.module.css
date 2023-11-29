@@ -1,0 +1,119 @@
+.root {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: grid from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: grid-flow-col from global;
+}
+
+.input {
+    grid-area: input;
+
+    composes: w-4 from global;
+    composes: h-4 from global;
+    composes: opacity-0 from global;
+    composes: z-10 from global;
+    composes: cursor-pointer from global;
+
+    composes: disabled_cursor-default from global;
+}
+
+.iconWrapper {
+    grid-area: input;
+
+    composes: relative from global;
+}
+
+.checkbox {
+    grid-area: input;
+
+    composes: relative from global;
+    composes: flex from global;
+    composes: w-4 from global;
+    composes: h-4 from global;
+    composes: border from global;
+    composes: cursor-pointer from global;
+    composes: pointer-events-none from global;
+}
+
+.checkbox_inactive {
+    composes: checkbox;
+
+    composes: border-gray-80 from global;
+    composes: bg-white from global;
+}
+
+.checkbox_active {
+    composes: checkbox;
+
+    composes: bg-green from global;
+    composes: border-green from global;
+}
+
+.checkbox_circle {
+    composes: bg-white from global;
+    composes: w-[22px] from global;
+    composes: md_w-[16px] from global;
+    composes: h-[22px] from global;
+    composes: md_h-[16px] from global;
+    grid-area: input;
+    composes: relative from global;
+    composes: flex from global;
+    composes: border from global;
+    composes: border-gray5 from global;
+    composes: cursor-pointer from global;
+    composes: pointer-events-none from global;
+}
+
+.checkbox_circle_active,
+.checkbox_circle_inactive {
+    composes: checkbox_circle;
+    composes: rounded-full from global;
+}
+
+.circle {
+    composes: rounded-full from global;
+    composes: m-1 from global;
+    composes: md_m-0.5 from global;
+    composes: w-[12px] from global;
+    composes: md_w-[10px] from global;
+    composes: h-[12px] from global;
+    composes: md_h-[10px] from global;
+}
+
+.checkbox_circle_active .circle {
+    @apply bg-green;
+}
+
+.icon {
+    composes: hidden from global;
+    composes: absolute from global;
+    composes: text-white from global;
+    composes: top-2/4 from global;
+    composes: left-2/4 from global;
+    composes: -translate-y-2/4 from global;
+    composes: -translate-x-2/4 from global;
+}
+
+.label {
+    grid-area: label;
+
+    composes: text-green from global;
+    composes: text-sm from global;
+    composes: justify-self-start from global;
+    composes: pl-2.5 from global;
+    composes: cursor-pointer from global;
+
+    composes: rtl-pl-0 from global;
+    composes: rtl_pr-2.5 from global;
+}
+
+.input:checked ~ .checkbox .icon {
+    @apply block;
+}
+
+.input:disabled ~ .label {
+    @apply cursor-default;
+}

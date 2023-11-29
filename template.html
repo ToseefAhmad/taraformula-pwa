@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html
+    lang="<%= global.LOCALE %>"
+    data-image-optimizing-origin="<%= process.env.IMAGE_OPTIMIZING_ORIGIN %>"
+    data-media-backend="<%= global.MAGENTO_MEDIA_BACKEND_URL %>"
+>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="theme-color" content="#ff6334" />
+    <meta name="p:domain_verify" content="G5dIAeU8xvjk6oxAgDHbfbZUl8CsnITf"/>
+    <link rel="manifest" href="/static-assets/manifest.json" crossorigin="use-credentials" />
+
+    <!-- //favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static-assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32 " href="/static-assets/icons/Favicon-32x32.ico" />
+    <link rel="icon" type="image/png" sizes="16x16 " href="/static-assets/icons/Favicon-16x16.ico" />
+    <link rel="mask-icon" href="/static-assets/icons/safari-pinned-tab.svg" color="#da532c">
+
+    <!--
+        Apple Specific Tags
+        To be included until Safari supports WebAppManifest
+        See Docs:
+        - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+        - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+    -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="TARA" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!--
+        Apple Icons for Homescreen
+        Sizes: https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
+    -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/static-assets/icons/Apple_touch_icon.png" />
+
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/static-assets/icons/apple_splash_640.png"
+    />
+
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/static-assets/icons/apple_splash_750.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/static-assets/icons/apple_splash_1125.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/static-assets/icons/apple_splash_1242.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/static-assets/icons/apple_splash_1536.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/static-assets/icons/apple_splash_1668.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/static-assets/icons/apple_splash_2048.png"
+    />
+
+    <link rel="preconnect" href="<%= process.env.MAGENTO_BACKEND_URL %>" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/FreightBigProLight-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/TaraArabic-Light.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/Tajawal-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/yotpo-widget-font.woff" as="font" type="font/woff" crossorigin />
+    <!-- GTM -->
+    {{#gtmId}}
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{gtmId}}');</script>
+    {{/gtmId}}
+    <!-- /GTM -->
+
+    <!-- FB PIXEL -->
+    {{#fbPixelId}}
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','//connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '{{fbPixelId}}');
+    </script>
+    {{/fbPixelId}}
+    <script async type="text/javascript" src="https://www.instagram.com/embed.js"></script>
+    <!-- /FB PIXEL -->
+
+    <!-- Klaviyo popup -->
+    {{#klaviyoKey}}
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id={{klaviyoKey}}"></script>
+    <!-- /Klaviyo popup -->
+    {{/klaviyoKey}}
+
+    <!--
+        This following CSS is a copy of the css returned by Google's font API that
+        allows us to "skip" a network round trip.
+
+        CSS requests are _render_ blocking, while font requests are only _text_
+        blocking. By removing the link request we only wait for font request, to
+        shave off a few ms :)
+
+        The CSS below this comment is the response copied wholesale from Google's font
+        API. If you ever need to update it, get the response and replace what is below
+        this comment. Remember to replace the preload link above with the src URL!
+
+        Example API responses:
+        https://fonts.googleapis.com/css?family=Muli:400&display=swap
+        https://fonts.googleapis.com/css?family=Source+Serif+Pro:600&display=swap
+    -->
+    <style type="text/css">
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKpE3kQtZQ4pF3D513sD8Qvt3U7teDT.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKpE3kQtZQ4pF3D513sBsQvt3U7teDT.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKpE3kQtZQ4pF3D513sDcQvt3U7teDT.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9,
+            U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKpE3kQtZQ4pF3D513sDMQvt3U7teDT.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+            U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKpE3kQtZQ4pF3D513sAsQvt3U7tQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+            U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKsE3kQtZQ4pF3D513kueE6l1c2n9rajrJu.woff2)
+            format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKsE3kQtZQ4pF3D513kueE6nlc2n9rajrJu.woff2)
+            format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKsE3kQtZQ4pF3D513kueE6lVc2n9rajrJu.woff2)
+            format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9,
+            U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKsE3kQtZQ4pF3D513kueE6lFc2n9rajrJu.woff2)
+            format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+            U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKsE3kQtZQ4pF3D513kueE6mlc2n9rajg.woff2)
+            format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+            U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKrE3kQtZQ4pF3D51XcAM4olXcLtA.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKrE3kQtZQ4pF3D51zcAM4olXcLtA.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKrE3kQtZQ4pF3D51fcAM4olXcLtA.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9,
+            U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKrE3kQtZQ4pF3D51bcAM4olXcLtA.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+            U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKrE3kQtZQ4pF3D51jcAM4olXc.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+            U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKuE3kQtZQ4pF3D7-P5Fe4KmF0xvdjqjw.woff2)
+            format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKuE3kQtZQ4pF3D7-P5FecKmF0xvdjqjw.woff2)
+            format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKuE3kQtZQ4pF3D7-P5FewKmF0xvdjqjw.woff2)
+            format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9,
+            U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKuE3kQtZQ4pF3D7-P5Fe0KmF0xvdjqjw.woff2)
+            format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+            U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/arsenal/v5/wXKuE3kQtZQ4pF3D7-P5FeMKmF0xvdg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+            U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: "Open Sans, Arial";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/opensans/v29/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVIUx6EQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: "Roboto, sans-serif";
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: "Roboto, sans-serif";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+</head>
+<body>
+<!-- GTM NS -->
+{{#gtmId}}
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id={{gtmId}}" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+{{/gtmId}}
+<!-- /GTM NS -->
+
+<!-- FB PIXEL NS -->
+{{#fbPixelId}}
+<noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{fbPixelId}}&ev=PageView&noscript=1"/>
+</noscript>
+{{/fbPixelId}}
+<!-- /FB PIXEL NS -->
+
+<div id="root"></div>
+
+<!-- Fallback for when JavaScript is disabled. -->
+<noscript>
+    <style>
+        .fallback-nojs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .fallback-nojs a {
+            color: currentColor;
+        }
+        .fallback-closed {
+            height: 40vh;
+        }
+        .fallback-heading {
+            font-family: 'Arsenal';
+            font-weight: 600;
+            padding-bottom: 16px;
+            font-size: 18px;
+        }
+        .fallback-message {
+            font-family: 'Arsenal';
+        }
+        @media only screen and (max-width: 768px) {
+            .fallback-heading {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <div class="fallback-nojs">
+        <img class="fallback-closed" alt="JavaScript is disabled" src="/static-assets/veniaClosed.png" />
+        <div class="fallback-heading">Oops! JavaScript is disabled</div>
+        <div class="fallback-message">
+            To browse the Tara store,<br />
+            <a href="https://www.enable-javascript.com">enable JavaScript in your browser.</a>
+        </div>
+    </div>
+</noscript>
+<!-- Inlined Data -->
+{{#pageTypeNonce}}
+<script nonce="{{pageTypeNonce}}">
+    try {
+        var INLINED_PAGE_TYPE = JSON.parse('{{pageType}}'.replace(/&quot;/g, '"'));
+    } catch (error) {}
+</script>
+
+{{#webpackChunks}}
+<script type="text/javascript" src="/{{.}}"></script>
+{{/webpackChunks}} {{/pageTypeNonce}}
+<!-- /Inlined Data -->
+</body>
+</html>

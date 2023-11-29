@@ -1,0 +1,57 @@
+.root {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: w-full from global;
+    composes: gap-x-2.5 from global;
+    composes: gap-y-2.5 from global;
+}
+
+.field {
+    grid-column-end: span 2;
+}
+
+.field [class*='select-input'] {
+    @apply py-4.5;
+}
+
+.formMessage,
+.email,
+.country,
+.street0,
+.street1,
+.city,
+.region,
+.postcode,
+.telephone {
+    composes: field;
+}
+
+.defaultShipping {
+    composes: field;
+    composes: pt-4 from global;
+}
+
+.firstname,
+.lastname {
+    grid-column-end: span 1;
+}
+
+.buttons {
+    composes: field;
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: justify-self-center from global;
+    composes: grid-flow-col from global;
+    composes: py-4 from global;
+    composes: w-full from global;
+}
+
+@media (max-width: 960px) {
+    .firstname {
+        grid-column: 1 / span 2;
+    }
+
+    .lastname {
+        grid-column: 1 / span 2;
+    }
+}

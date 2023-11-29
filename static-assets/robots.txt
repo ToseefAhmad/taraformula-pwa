@@ -1,0 +1,85 @@
+User-agent: *
+crawl-delay: 10
+
+Disallow: /index.php/
+Disallow: /*?
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /account/
+Disallow: /*/checkout/
+Disallow: /*/cart/
+Disallow: /*/account/
+Disallow: /app/
+Disallow: /lib/
+Disallow: /*.php$
+Disallow: /pkginfo/
+Disallow: /report/
+Disallow: /var/
+Disallow: /catalog/
+Disallow: /customer/
+Disallow: /sendfriend/
+Disallow: /review/
+Disallow: /*SID=
+
+Allow: /*?page=*
+Allow: /product/
+Allow: /media/catalog/
+Allow: /media/wysiwyg/
+
+# Sitemap Locations
+# Global Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_gl_en.xml
+
+# US English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_us_en.xml
+
+# Kuwait English Store Sitemap Location
+Sitemap: https://taraformula.com.kw/media/sitemap/sitemap_kw_en.xml
+
+# Kuwait Arabic Store Sitemap Location
+Sitemap: https://taraformula.com.kw/media/sitemap/sitemap_kw_ar.xml
+
+# Oman English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_om_en.xml
+
+# Oman Arabic Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_om_ar.xml
+
+# UAE English Store Sitemap Location
+Sitemap: https://taraformula.ae/media/sitemap/sitemap_ae_en.xml
+
+# UAE Arabic Store Sitemap Location
+Sitemap: https://taraformula.ae/media/sitemap/sitemap_ae_ar.xml
+
+# Bahrain English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_bh_en.xml
+
+# Bahrain Arabic Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_bh_ar.xml
+
+# Qatar English Store Sitemap Location
+Sitemap: https://taraformula.qa/media/sitemap/sitemap_qa_en.xml
+
+# Qatar Arabic Store Sitemap Location
+Sitemap: https://taraformula.qa/media/sitemap/sitemap_qa_ar.xml
+
+# Saudi Arabia English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_sa_en.xml
+
+# Saudi Arabia Arabic Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_sa_ar.xml
+
+# India English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_in_en.xml
+
+# Australia English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_au_en.xml
+
+# UK English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_gb_en.xml
+
+# Jordan English Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_jo_en.xml
+
+# Jordan Arabic Store Sitemap Location
+Sitemap: https://taraformula.com/media/sitemap/sitemap_jo_ar.xml
